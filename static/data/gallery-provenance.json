@@ -1,0 +1,4539 @@
+{
+  "selection": "All 12 push and all 4 toss decoded cases available locally; no additional outcome filtering. This convenience sample is not a benchmark estimate.",
+  "cases": {
+    "push": [
+      {
+        "id": "q25_y+0.00",
+        "label": "Q25 \u00b7 CoM +0.00 cm",
+        "path": "static/gallery/push/q25_y+0.00",
+        "crop": [
+          51,
+          106,
+          145,
+          204
+        ]
+      },
+      {
+        "id": "q25_y+3.50",
+        "label": "Q25 \u00b7 CoM +3.50 cm",
+        "path": "static/gallery/push/q25_y+3.50",
+        "crop": [
+          51,
+          101,
+          145,
+          203
+        ]
+      },
+      {
+        "id": "q25_y-1.75",
+        "label": "Q25 \u00b7 CoM -1.75 cm",
+        "path": "static/gallery/push/q25_y-1.75",
+        "crop": [
+          51,
+          106,
+          146,
+          203
+        ]
+      },
+      {
+        "id": "q25_y-3.50",
+        "label": "Q25 \u00b7 CoM -3.50 cm",
+        "path": "static/gallery/push/q25_y-3.50",
+        "crop": [
+          51,
+          107,
+          146,
+          203
+        ]
+      },
+      {
+        "id": "q50_y+0.00",
+        "label": "Q50 \u00b7 CoM +0.00 cm",
+        "path": "static/gallery/push/q50_y+0.00",
+        "crop": [
+          108,
+          113,
+          215,
+          224
+        ]
+      },
+      {
+        "id": "q50_y+3.50",
+        "label": "Q50 \u00b7 CoM +3.50 cm",
+        "path": "static/gallery/push/q50_y+3.50",
+        "crop": [
+          108,
+          113,
+          203,
+          206
+        ]
+      },
+      {
+        "id": "q50_y-1.75",
+        "label": "Q50 \u00b7 CoM -1.75 cm",
+        "path": "static/gallery/push/q50_y-1.75",
+        "crop": [
+          108,
+          113,
+          215,
+          224
+        ]
+      },
+      {
+        "id": "q50_y-3.50",
+        "label": "Q50 \u00b7 CoM -3.50 cm",
+        "path": "static/gallery/push/q50_y-3.50",
+        "crop": [
+          107,
+          113,
+          214,
+          224
+        ]
+      },
+      {
+        "id": "q75_y+0.00",
+        "label": "Q75 \u00b7 CoM +0.00 cm",
+        "path": "static/gallery/push/q75_y+0.00",
+        "crop": [
+          25,
+          39,
+          127,
+          117
+        ]
+      },
+      {
+        "id": "q75_y+3.50",
+        "label": "Q75 \u00b7 CoM +3.50 cm",
+        "path": "static/gallery/push/q75_y+3.50",
+        "crop": [
+          26,
+          23,
+          128,
+          117
+        ]
+      },
+      {
+        "id": "q75_y-1.75",
+        "label": "Q75 \u00b7 CoM -1.75 cm",
+        "path": "static/gallery/push/q75_y-1.75",
+        "crop": [
+          26,
+          39,
+          127,
+          117
+        ]
+      },
+      {
+        "id": "q75_y-3.50",
+        "label": "Q75 \u00b7 CoM -3.50 cm",
+        "path": "static/gallery/push/q75_y-3.50",
+        "crop": [
+          26,
+          39,
+          129,
+          117
+        ]
+      }
+    ],
+    "toss": [
+      {
+        "id": "bs13_by10_a083",
+        "label": "Damping 13/10 \u00b7 action 083",
+        "path": "static/gallery/toss/bs13_by10_a083",
+        "crop": [
+          35,
+          15,
+          155,
+          175
+        ]
+      },
+      {
+        "id": "bs13_by10_a173",
+        "label": "Damping 13/10 \u00b7 action 173",
+        "path": "static/gallery/toss/bs13_by10_a173",
+        "crop": [
+          35,
+          15,
+          155,
+          175
+        ]
+      },
+      {
+        "id": "bs13_by34_a083",
+        "label": "Damping 13/34 \u00b7 action 083",
+        "path": "static/gallery/toss/bs13_by34_a083",
+        "crop": [
+          35,
+          15,
+          155,
+          175
+        ]
+      },
+      {
+        "id": "bs13_by34_a173",
+        "label": "Damping 13/34 \u00b7 action 173",
+        "path": "static/gallery/toss/bs13_by34_a173",
+        "crop": [
+          35,
+          15,
+          155,
+          175
+        ]
+      }
+    ]
+  },
+  "assets": [
+    {
+      "file": "static/gallery/push/q25_y+0.00/actual-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/gt_t1.png",
+      "sha256": "96016d6c8c5cc3cf68d4890f961d4b59ead38d89051e2f2e0caf11ec8f381ecc",
+      "crop": [
+        51,
+        106,
+        145,
+        204
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/actual-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/gt_t1.png",
+      "sha256": "96016d6c8c5cc3cf68d4890f961d4b59ead38d89051e2f2e0caf11ec8f381ecc",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/actual-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/gt_t2.png",
+      "sha256": "2ce9dea27daf4d216e976442bceef2ca36aed504044757511fa180b8dd1c5c51",
+      "crop": [
+        51,
+        106,
+        145,
+        204
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/actual-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/gt_t2.png",
+      "sha256": "2ce9dea27daf4d216e976442bceef2ca36aed504044757511fa180b8dd1c5c51",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/actual-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/gt_t3.png",
+      "sha256": "a4cc4437e019e840740bde3d2293599e980f5ad2fc3ccbbcb611ca8e148540e2",
+      "crop": [
+        51,
+        106,
+        145,
+        204
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/actual-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/gt_t3.png",
+      "sha256": "a4cc4437e019e840740bde3d2293599e980f5ad2fc3ccbbcb611ca8e148540e2",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/actual-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/gt_t4.png",
+      "sha256": "8e062d7777006bbd28c43fdd4295f5e1ad6328f1dbd681316b6e9811aed4898e",
+      "crop": [
+        51,
+        106,
+        145,
+        204
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/actual-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/gt_t4.png",
+      "sha256": "8e062d7777006bbd28c43fdd4295f5e1ad6328f1dbd681316b6e9811aed4898e",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/reference-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/blind_t1.png",
+      "sha256": "fcb3f62356be1499416b3d89a44993c085b40c66e9309f8c71da29e0b8313700",
+      "crop": [
+        51,
+        106,
+        145,
+        204
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/reference-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/blind_t1.png",
+      "sha256": "fcb3f62356be1499416b3d89a44993c085b40c66e9309f8c71da29e0b8313700",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/reference-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/blind_t2.png",
+      "sha256": "6b1ae8cc75572b65fc08883341bd18205ec450ec99683aa5c42e4bd01128e39c",
+      "crop": [
+        51,
+        106,
+        145,
+        204
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/reference-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/blind_t2.png",
+      "sha256": "6b1ae8cc75572b65fc08883341bd18205ec450ec99683aa5c42e4bd01128e39c",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/reference-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/blind_t3.png",
+      "sha256": "d20f8766a008361b173dcf47f99f8374b3a7443818e6a430b2eeb7898db4fc53",
+      "crop": [
+        51,
+        106,
+        145,
+        204
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/reference-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/blind_t3.png",
+      "sha256": "d20f8766a008361b173dcf47f99f8374b3a7443818e6a430b2eeb7898db4fc53",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/reference-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/blind_t4.png",
+      "sha256": "4d0a450ddffbaf4ebd47540bb463ecd972ab033d304e9f81202eb8337f007dd5",
+      "crop": [
+        51,
+        106,
+        145,
+        204
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/reference-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/blind_t4.png",
+      "sha256": "4d0a450ddffbaf4ebd47540bb463ecd972ab033d304e9f81202eb8337f007dd5",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/history-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/history_t1.png",
+      "sha256": "bfa21b1c56ff5bc11bb003102e7c6ffcc988a0f32fa946ed2373ed019ccc2750",
+      "crop": [
+        51,
+        106,
+        145,
+        204
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/history-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/history_t1.png",
+      "sha256": "bfa21b1c56ff5bc11bb003102e7c6ffcc988a0f32fa946ed2373ed019ccc2750",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/history-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/history_t2.png",
+      "sha256": "9af788a3686041a3bc85978b4e42caeea7041db1ac47e336b04c3b8251ee095c",
+      "crop": [
+        51,
+        106,
+        145,
+        204
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/history-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/history_t2.png",
+      "sha256": "9af788a3686041a3bc85978b4e42caeea7041db1ac47e336b04c3b8251ee095c",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/history-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/history_t3.png",
+      "sha256": "922f429ea2f18925b2467234ae2615225a7c887dd3887c8bb3dce8f668f8d5b9",
+      "crop": [
+        51,
+        106,
+        145,
+        204
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/history-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/history_t3.png",
+      "sha256": "922f429ea2f18925b2467234ae2615225a7c887dd3887c8bb3dce8f668f8d5b9",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/history-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/history_t4.png",
+      "sha256": "a5031bbd25ede6fa1ef5001b119ea2e99763c2874c044ae91f5ff09a37cff79d",
+      "crop": [
+        51,
+        106,
+        145,
+        204
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/history-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/history_t4.png",
+      "sha256": "a5031bbd25ede6fa1ef5001b119ea2e99763c2874c044ae91f5ff09a37cff79d",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/ddm-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/offset_t1.png",
+      "sha256": "168cdf794536043a9313237c9f87a06e4f346e232b03ab63a2ffbf6eb1b695f9",
+      "crop": [
+        51,
+        106,
+        145,
+        204
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/ddm-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/offset_t1.png",
+      "sha256": "168cdf794536043a9313237c9f87a06e4f346e232b03ab63a2ffbf6eb1b695f9",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/ddm-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/offset_t2.png",
+      "sha256": "2b6a10852184ae453c8d81a61240b0b1c31d318af85df4630714f58d81d183f5",
+      "crop": [
+        51,
+        106,
+        145,
+        204
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/ddm-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/offset_t2.png",
+      "sha256": "2b6a10852184ae453c8d81a61240b0b1c31d318af85df4630714f58d81d183f5",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/ddm-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/offset_t3.png",
+      "sha256": "bafa4de5796c643849e45c738c99340cda28154d7940d26bd09fb650fc8e9bab",
+      "crop": [
+        51,
+        106,
+        145,
+        204
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/ddm-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/offset_t3.png",
+      "sha256": "bafa4de5796c643849e45c738c99340cda28154d7940d26bd09fb650fc8e9bab",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/ddm-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/offset_t4.png",
+      "sha256": "e2d6bdd2f507a089234d9d4cb3250706f76f1deaca469f386c4133f0f8fb1378",
+      "crop": [
+        51,
+        106,
+        145,
+        204
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+0.00/ddm-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+0.00/offset_t4.png",
+      "sha256": "e2d6bdd2f507a089234d9d4cb3250706f76f1deaca469f386c4133f0f8fb1378",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/actual-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/gt_t1.png",
+      "sha256": "42db1d3f228e5b9f60925d66cb75eb1aa4c4dfaf836639215ca742d4b4823a69",
+      "crop": [
+        51,
+        101,
+        145,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/actual-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/gt_t1.png",
+      "sha256": "42db1d3f228e5b9f60925d66cb75eb1aa4c4dfaf836639215ca742d4b4823a69",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/actual-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/gt_t2.png",
+      "sha256": "e0ce13584018781e725f3e16d874a70d77e832019aa44bea3b206a707c267930",
+      "crop": [
+        51,
+        101,
+        145,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/actual-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/gt_t2.png",
+      "sha256": "e0ce13584018781e725f3e16d874a70d77e832019aa44bea3b206a707c267930",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/actual-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/gt_t3.png",
+      "sha256": "340169e378bdf8d50343bc82d6482f150cd0521e6d496518b876b7ad5fff7bc9",
+      "crop": [
+        51,
+        101,
+        145,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/actual-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/gt_t3.png",
+      "sha256": "340169e378bdf8d50343bc82d6482f150cd0521e6d496518b876b7ad5fff7bc9",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/actual-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/gt_t4.png",
+      "sha256": "e363aad5bd1098c25ef06c993b608b834bba09a20137102154b8ee76e93c2090",
+      "crop": [
+        51,
+        101,
+        145,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/actual-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/gt_t4.png",
+      "sha256": "e363aad5bd1098c25ef06c993b608b834bba09a20137102154b8ee76e93c2090",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/reference-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/blind_t1.png",
+      "sha256": "fcb3f62356be1499416b3d89a44993c085b40c66e9309f8c71da29e0b8313700",
+      "crop": [
+        51,
+        101,
+        145,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/reference-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/blind_t1.png",
+      "sha256": "fcb3f62356be1499416b3d89a44993c085b40c66e9309f8c71da29e0b8313700",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/reference-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/blind_t2.png",
+      "sha256": "6b1ae8cc75572b65fc08883341bd18205ec450ec99683aa5c42e4bd01128e39c",
+      "crop": [
+        51,
+        101,
+        145,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/reference-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/blind_t2.png",
+      "sha256": "6b1ae8cc75572b65fc08883341bd18205ec450ec99683aa5c42e4bd01128e39c",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/reference-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/blind_t3.png",
+      "sha256": "d20f8766a008361b173dcf47f99f8374b3a7443818e6a430b2eeb7898db4fc53",
+      "crop": [
+        51,
+        101,
+        145,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/reference-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/blind_t3.png",
+      "sha256": "d20f8766a008361b173dcf47f99f8374b3a7443818e6a430b2eeb7898db4fc53",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/reference-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/blind_t4.png",
+      "sha256": "4d0a450ddffbaf4ebd47540bb463ecd972ab033d304e9f81202eb8337f007dd5",
+      "crop": [
+        51,
+        101,
+        145,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/reference-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/blind_t4.png",
+      "sha256": "4d0a450ddffbaf4ebd47540bb463ecd972ab033d304e9f81202eb8337f007dd5",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/history-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/history_t1.png",
+      "sha256": "5498041acc76f098a18693de2a390396fcd00bcadaaec23f1e39ba6d6c604810",
+      "crop": [
+        51,
+        101,
+        145,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/history-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/history_t1.png",
+      "sha256": "5498041acc76f098a18693de2a390396fcd00bcadaaec23f1e39ba6d6c604810",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/history-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/history_t2.png",
+      "sha256": "a8ca95dc2aea0625c75b7a26a374ec360478a6b9a57a80773e8a22eee078ae91",
+      "crop": [
+        51,
+        101,
+        145,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/history-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/history_t2.png",
+      "sha256": "a8ca95dc2aea0625c75b7a26a374ec360478a6b9a57a80773e8a22eee078ae91",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/history-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/history_t3.png",
+      "sha256": "a69c737dd335ee1723b5fc86c833ecc68825179814a0e16585fd4f2057601ef2",
+      "crop": [
+        51,
+        101,
+        145,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/history-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/history_t3.png",
+      "sha256": "a69c737dd335ee1723b5fc86c833ecc68825179814a0e16585fd4f2057601ef2",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/history-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/history_t4.png",
+      "sha256": "f2c9f328756abe9ed06d3f80bdbe755fd1db70b96cfd294b080a1adea302d7d1",
+      "crop": [
+        51,
+        101,
+        145,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/history-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/history_t4.png",
+      "sha256": "f2c9f328756abe9ed06d3f80bdbe755fd1db70b96cfd294b080a1adea302d7d1",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/ddm-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/offset_t1.png",
+      "sha256": "39145fd1152e5c29f3fc6e487e4e968d0ce84700d1b889ad62df619aba80271a",
+      "crop": [
+        51,
+        101,
+        145,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/ddm-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/offset_t1.png",
+      "sha256": "39145fd1152e5c29f3fc6e487e4e968d0ce84700d1b889ad62df619aba80271a",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/ddm-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/offset_t2.png",
+      "sha256": "c98c974cb4115b97d6bd7030be23c2f88933fe6c61239d349cb4748878dddfbc",
+      "crop": [
+        51,
+        101,
+        145,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/ddm-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/offset_t2.png",
+      "sha256": "c98c974cb4115b97d6bd7030be23c2f88933fe6c61239d349cb4748878dddfbc",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/ddm-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/offset_t3.png",
+      "sha256": "31b01aa4adea2034364b5178f6dea5dfade600f7d794b46d619dea050c6acc38",
+      "crop": [
+        51,
+        101,
+        145,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/ddm-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/offset_t3.png",
+      "sha256": "31b01aa4adea2034364b5178f6dea5dfade600f7d794b46d619dea050c6acc38",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/ddm-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/offset_t4.png",
+      "sha256": "84858bb8a0648072aaab025dff3dec5ddeef5f64c660181688725d18428a2ebd",
+      "crop": [
+        51,
+        101,
+        145,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y+3.50/ddm-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y+3.50/offset_t4.png",
+      "sha256": "84858bb8a0648072aaab025dff3dec5ddeef5f64c660181688725d18428a2ebd",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/actual-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/gt_t1.png",
+      "sha256": "db55ef4665103704f3d8b69469da4b46ce8027d04b4fc92813568359649da649",
+      "crop": [
+        51,
+        106,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/actual-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/gt_t1.png",
+      "sha256": "db55ef4665103704f3d8b69469da4b46ce8027d04b4fc92813568359649da649",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/actual-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/gt_t2.png",
+      "sha256": "e84b21484891a84a4bec636ce9fc561ae7e96a8786508ed400e4591bfcd09b3c",
+      "crop": [
+        51,
+        106,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/actual-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/gt_t2.png",
+      "sha256": "e84b21484891a84a4bec636ce9fc561ae7e96a8786508ed400e4591bfcd09b3c",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/actual-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/gt_t3.png",
+      "sha256": "518173e79f7c51e676a636e0cae57175e9a8442a19bce843d21b3f71e4087ddb",
+      "crop": [
+        51,
+        106,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/actual-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/gt_t3.png",
+      "sha256": "518173e79f7c51e676a636e0cae57175e9a8442a19bce843d21b3f71e4087ddb",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/actual-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/gt_t4.png",
+      "sha256": "fc486c594b8d5a09ce31587d90983a0d345b2a4be6e01c0bdf0237def94c9fcd",
+      "crop": [
+        51,
+        106,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/actual-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/gt_t4.png",
+      "sha256": "fc486c594b8d5a09ce31587d90983a0d345b2a4be6e01c0bdf0237def94c9fcd",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/reference-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/blind_t1.png",
+      "sha256": "fcb3f62356be1499416b3d89a44993c085b40c66e9309f8c71da29e0b8313700",
+      "crop": [
+        51,
+        106,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/reference-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/blind_t1.png",
+      "sha256": "fcb3f62356be1499416b3d89a44993c085b40c66e9309f8c71da29e0b8313700",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/reference-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/blind_t2.png",
+      "sha256": "6b1ae8cc75572b65fc08883341bd18205ec450ec99683aa5c42e4bd01128e39c",
+      "crop": [
+        51,
+        106,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/reference-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/blind_t2.png",
+      "sha256": "6b1ae8cc75572b65fc08883341bd18205ec450ec99683aa5c42e4bd01128e39c",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/reference-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/blind_t3.png",
+      "sha256": "d20f8766a008361b173dcf47f99f8374b3a7443818e6a430b2eeb7898db4fc53",
+      "crop": [
+        51,
+        106,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/reference-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/blind_t3.png",
+      "sha256": "d20f8766a008361b173dcf47f99f8374b3a7443818e6a430b2eeb7898db4fc53",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/reference-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/blind_t4.png",
+      "sha256": "4d0a450ddffbaf4ebd47540bb463ecd972ab033d304e9f81202eb8337f007dd5",
+      "crop": [
+        51,
+        106,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/reference-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/blind_t4.png",
+      "sha256": "4d0a450ddffbaf4ebd47540bb463ecd972ab033d304e9f81202eb8337f007dd5",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/history-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/history_t1.png",
+      "sha256": "00cd8024a05353d361356062e96f69ae4066f8b178eeb78eb162b96f9f3b29df",
+      "crop": [
+        51,
+        106,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/history-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/history_t1.png",
+      "sha256": "00cd8024a05353d361356062e96f69ae4066f8b178eeb78eb162b96f9f3b29df",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/history-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/history_t2.png",
+      "sha256": "3a260023a945adca8ae12899c4cf689f61d773009cd129ba2404cacf04bf8608",
+      "crop": [
+        51,
+        106,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/history-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/history_t2.png",
+      "sha256": "3a260023a945adca8ae12899c4cf689f61d773009cd129ba2404cacf04bf8608",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/history-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/history_t3.png",
+      "sha256": "c85f7c2e23ee5e85974486bd234d7a239f05a3d6f0b501db9b6c7e6b758e267c",
+      "crop": [
+        51,
+        106,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/history-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/history_t3.png",
+      "sha256": "c85f7c2e23ee5e85974486bd234d7a239f05a3d6f0b501db9b6c7e6b758e267c",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/history-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/history_t4.png",
+      "sha256": "2f30dd18a583abefc66f5c493cba618e3861bb24dbc75c60f6fbbf0589441b00",
+      "crop": [
+        51,
+        106,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/history-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/history_t4.png",
+      "sha256": "2f30dd18a583abefc66f5c493cba618e3861bb24dbc75c60f6fbbf0589441b00",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/ddm-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/offset_t1.png",
+      "sha256": "4d480aa31fa7559386d848489d17686153c14820973a0d0be8604b1d6f47bb2f",
+      "crop": [
+        51,
+        106,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/ddm-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/offset_t1.png",
+      "sha256": "4d480aa31fa7559386d848489d17686153c14820973a0d0be8604b1d6f47bb2f",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/ddm-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/offset_t2.png",
+      "sha256": "e585812e418d7322b2406aaab5bb1ef00c45c28139723cf8ff8dcb0262de64de",
+      "crop": [
+        51,
+        106,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/ddm-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/offset_t2.png",
+      "sha256": "e585812e418d7322b2406aaab5bb1ef00c45c28139723cf8ff8dcb0262de64de",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/ddm-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/offset_t3.png",
+      "sha256": "483e821097464cf0977d1b61d73872807656e1df51023d8b102adeb6db6749a8",
+      "crop": [
+        51,
+        106,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/ddm-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/offset_t3.png",
+      "sha256": "483e821097464cf0977d1b61d73872807656e1df51023d8b102adeb6db6749a8",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/ddm-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/offset_t4.png",
+      "sha256": "e18cac93bbf92750cce64236e964b5efb2e71a3af174c90ebb8f63c7f09c7dd8",
+      "crop": [
+        51,
+        106,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-1.75/ddm-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-1.75/offset_t4.png",
+      "sha256": "e18cac93bbf92750cce64236e964b5efb2e71a3af174c90ebb8f63c7f09c7dd8",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/actual-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/gt_t1.png",
+      "sha256": "7e81b737ce5146038a5f7d8b37bcbba3a7c00fa30ab274a695dd31dcd1053329",
+      "crop": [
+        51,
+        107,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/actual-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/gt_t1.png",
+      "sha256": "7e81b737ce5146038a5f7d8b37bcbba3a7c00fa30ab274a695dd31dcd1053329",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/actual-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/gt_t2.png",
+      "sha256": "a7de46dec7bbe847a7be6fcc80fe9760796faf904cd32ef629b73837c190b23e",
+      "crop": [
+        51,
+        107,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/actual-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/gt_t2.png",
+      "sha256": "a7de46dec7bbe847a7be6fcc80fe9760796faf904cd32ef629b73837c190b23e",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/actual-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/gt_t3.png",
+      "sha256": "071fb91c74255e66f5c9495db52a9fd9ae24875a512300e68bdb367286f5e0ac",
+      "crop": [
+        51,
+        107,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/actual-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/gt_t3.png",
+      "sha256": "071fb91c74255e66f5c9495db52a9fd9ae24875a512300e68bdb367286f5e0ac",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/actual-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/gt_t4.png",
+      "sha256": "ca5f107eabab05a3c2ba810fb72a4189d5b473237470a504fe205966052ce1e3",
+      "crop": [
+        51,
+        107,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/actual-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/gt_t4.png",
+      "sha256": "ca5f107eabab05a3c2ba810fb72a4189d5b473237470a504fe205966052ce1e3",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/reference-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/blind_t1.png",
+      "sha256": "fcb3f62356be1499416b3d89a44993c085b40c66e9309f8c71da29e0b8313700",
+      "crop": [
+        51,
+        107,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/reference-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/blind_t1.png",
+      "sha256": "fcb3f62356be1499416b3d89a44993c085b40c66e9309f8c71da29e0b8313700",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/reference-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/blind_t2.png",
+      "sha256": "6b1ae8cc75572b65fc08883341bd18205ec450ec99683aa5c42e4bd01128e39c",
+      "crop": [
+        51,
+        107,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/reference-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/blind_t2.png",
+      "sha256": "6b1ae8cc75572b65fc08883341bd18205ec450ec99683aa5c42e4bd01128e39c",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/reference-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/blind_t3.png",
+      "sha256": "d20f8766a008361b173dcf47f99f8374b3a7443818e6a430b2eeb7898db4fc53",
+      "crop": [
+        51,
+        107,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/reference-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/blind_t3.png",
+      "sha256": "d20f8766a008361b173dcf47f99f8374b3a7443818e6a430b2eeb7898db4fc53",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/reference-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/blind_t4.png",
+      "sha256": "4d0a450ddffbaf4ebd47540bb463ecd972ab033d304e9f81202eb8337f007dd5",
+      "crop": [
+        51,
+        107,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/reference-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/blind_t4.png",
+      "sha256": "4d0a450ddffbaf4ebd47540bb463ecd972ab033d304e9f81202eb8337f007dd5",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/history-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/history_t1.png",
+      "sha256": "7e127b2fa93b353a7cc8e0db16725a2df0936ba918e47d952eb62acfb15b5b8d",
+      "crop": [
+        51,
+        107,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/history-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/history_t1.png",
+      "sha256": "7e127b2fa93b353a7cc8e0db16725a2df0936ba918e47d952eb62acfb15b5b8d",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/history-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/history_t2.png",
+      "sha256": "9e0ae736cca50eb5d7a07614dad26e3e2ec81bb1d9980bf439adaa6f28c8171c",
+      "crop": [
+        51,
+        107,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/history-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/history_t2.png",
+      "sha256": "9e0ae736cca50eb5d7a07614dad26e3e2ec81bb1d9980bf439adaa6f28c8171c",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/history-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/history_t3.png",
+      "sha256": "ed8151a71930c2753fcfbe1646b3c62ebb414a7ebd3e7a26a5b511ad277efa82",
+      "crop": [
+        51,
+        107,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/history-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/history_t3.png",
+      "sha256": "ed8151a71930c2753fcfbe1646b3c62ebb414a7ebd3e7a26a5b511ad277efa82",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/history-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/history_t4.png",
+      "sha256": "2f7e348a5b8e161813f5b676b21c9bc3c57cbe84c71330cc96aebc2c72e3090e",
+      "crop": [
+        51,
+        107,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/history-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/history_t4.png",
+      "sha256": "2f7e348a5b8e161813f5b676b21c9bc3c57cbe84c71330cc96aebc2c72e3090e",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/ddm-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/offset_t1.png",
+      "sha256": "ea82268b61302efafdd06ec631c8592ee0e5de4eaa193a1490bc38cb8a517438",
+      "crop": [
+        51,
+        107,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/ddm-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/offset_t1.png",
+      "sha256": "ea82268b61302efafdd06ec631c8592ee0e5de4eaa193a1490bc38cb8a517438",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/ddm-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/offset_t2.png",
+      "sha256": "4f7a63c65d8346ade2fc89a836928233ea6cf6ab6a1584a3b90d25c16129ac37",
+      "crop": [
+        51,
+        107,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/ddm-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/offset_t2.png",
+      "sha256": "4f7a63c65d8346ade2fc89a836928233ea6cf6ab6a1584a3b90d25c16129ac37",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/ddm-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/offset_t3.png",
+      "sha256": "f185a8875319197ce5560fb44981708432b6f3a1ec5fc4d864efe82f49294583",
+      "crop": [
+        51,
+        107,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/ddm-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/offset_t3.png",
+      "sha256": "f185a8875319197ce5560fb44981708432b6f3a1ec5fc4d864efe82f49294583",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/ddm-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/offset_t4.png",
+      "sha256": "1e0d4ac699f0d682ec357f2e3b735f64723e524ace4647ce86ba8b6f7beab4e5",
+      "crop": [
+        51,
+        107,
+        146,
+        203
+      ]
+    },
+    {
+      "file": "static/gallery/push/q25_y-3.50/ddm-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q25_y-3.50/offset_t4.png",
+      "sha256": "1e0d4ac699f0d682ec357f2e3b735f64723e524ace4647ce86ba8b6f7beab4e5",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/actual-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/gt_t1.png",
+      "sha256": "f6bba187448c2b2f8af790b3ac60b99f59a78c2093e8bcefadc9c2b8bb5500df",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/actual-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/gt_t1.png",
+      "sha256": "f6bba187448c2b2f8af790b3ac60b99f59a78c2093e8bcefadc9c2b8bb5500df",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/actual-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/gt_t2.png",
+      "sha256": "7b521fd5308bbffaf70a23b9da7faa769b26ca005489dcbdcd0d284eaa65658a",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/actual-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/gt_t2.png",
+      "sha256": "7b521fd5308bbffaf70a23b9da7faa769b26ca005489dcbdcd0d284eaa65658a",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/actual-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/gt_t3.png",
+      "sha256": "226bb6eb28dc488e948b2f3261dfa0f052f658f76789bea0c9a702810de15277",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/actual-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/gt_t3.png",
+      "sha256": "226bb6eb28dc488e948b2f3261dfa0f052f658f76789bea0c9a702810de15277",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/actual-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/gt_t4.png",
+      "sha256": "e1b7d7f6291ce60bae3245515b3e289cfb78a025323af64fd7347570f3e7069c",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/actual-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/gt_t4.png",
+      "sha256": "e1b7d7f6291ce60bae3245515b3e289cfb78a025323af64fd7347570f3e7069c",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/reference-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/blind_t1.png",
+      "sha256": "1facb825e099851059668e2a63a650eca1d5064fd15fb3d9b3464348074292ee",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/reference-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/blind_t1.png",
+      "sha256": "1facb825e099851059668e2a63a650eca1d5064fd15fb3d9b3464348074292ee",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/reference-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/blind_t2.png",
+      "sha256": "c0c20e324ec38c8bbb979c47e7bc5fa3b390344e1dd228674b5335504daf6964",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/reference-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/blind_t2.png",
+      "sha256": "c0c20e324ec38c8bbb979c47e7bc5fa3b390344e1dd228674b5335504daf6964",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/reference-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/blind_t3.png",
+      "sha256": "68b9f3457179881931e3e8eba8977fb4e721049f10f920a23d1d04012afc7bed",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/reference-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/blind_t3.png",
+      "sha256": "68b9f3457179881931e3e8eba8977fb4e721049f10f920a23d1d04012afc7bed",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/reference-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/blind_t4.png",
+      "sha256": "de3914a3fc4acd124c8e66b18693301a12fade45d1fb960e1f88e51862f303e2",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/reference-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/blind_t4.png",
+      "sha256": "de3914a3fc4acd124c8e66b18693301a12fade45d1fb960e1f88e51862f303e2",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/history-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/history_t1.png",
+      "sha256": "e3016646aebe5c6351733eb47068e76da57cac3b98707f112a75e98071399c27",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/history-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/history_t1.png",
+      "sha256": "e3016646aebe5c6351733eb47068e76da57cac3b98707f112a75e98071399c27",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/history-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/history_t2.png",
+      "sha256": "d990b2150cab94c56e7f17b3c86fd4075f738ae0ab8b167550292442162aadb1",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/history-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/history_t2.png",
+      "sha256": "d990b2150cab94c56e7f17b3c86fd4075f738ae0ab8b167550292442162aadb1",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/history-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/history_t3.png",
+      "sha256": "835d6be8f62e89f2a21e32bc0e2ff1ce25534caa1e5f22b18b4ec1bcff80984c",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/history-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/history_t3.png",
+      "sha256": "835d6be8f62e89f2a21e32bc0e2ff1ce25534caa1e5f22b18b4ec1bcff80984c",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/history-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/history_t4.png",
+      "sha256": "3e011f530140aac6caeef28e320cf0ab20459a6ca0aac54bb502d863497073c0",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/history-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/history_t4.png",
+      "sha256": "3e011f530140aac6caeef28e320cf0ab20459a6ca0aac54bb502d863497073c0",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/ddm-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/offset_t1.png",
+      "sha256": "3ca098ffdc6ad81b1b5acb95d580e63fc5f89a5d07e4b4c62b431a58d63d8135",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/ddm-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/offset_t1.png",
+      "sha256": "3ca098ffdc6ad81b1b5acb95d580e63fc5f89a5d07e4b4c62b431a58d63d8135",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/ddm-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/offset_t2.png",
+      "sha256": "7fa248c074516ca8ae9090a09809d560de4e877802198493c77802d8e3ebd2ac",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/ddm-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/offset_t2.png",
+      "sha256": "7fa248c074516ca8ae9090a09809d560de4e877802198493c77802d8e3ebd2ac",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/ddm-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/offset_t3.png",
+      "sha256": "6b9291e8a994eea1ccc11d9c6aa60c758bf8eab5754b4c704da061924ea60f79",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/ddm-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/offset_t3.png",
+      "sha256": "6b9291e8a994eea1ccc11d9c6aa60c758bf8eab5754b4c704da061924ea60f79",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/ddm-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/offset_t4.png",
+      "sha256": "927b5d9f49b22c1094e1f46a452b5cbee6762f452ce3a17fe2bbb670098c0775",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+0.00/ddm-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+0.00/offset_t4.png",
+      "sha256": "927b5d9f49b22c1094e1f46a452b5cbee6762f452ce3a17fe2bbb670098c0775",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/actual-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/gt_t1.png",
+      "sha256": "1c24577d9b8b9e6705ebd6b26e2cc2032623dcdb1849b68af13693a8b5c77e68",
+      "crop": [
+        108,
+        113,
+        203,
+        206
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/actual-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/gt_t1.png",
+      "sha256": "1c24577d9b8b9e6705ebd6b26e2cc2032623dcdb1849b68af13693a8b5c77e68",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/actual-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/gt_t2.png",
+      "sha256": "2f62b20f1f19375a23f4a3ec0ed0c42b1631e8444d8347adbcc8ce29546aff84",
+      "crop": [
+        108,
+        113,
+        203,
+        206
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/actual-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/gt_t2.png",
+      "sha256": "2f62b20f1f19375a23f4a3ec0ed0c42b1631e8444d8347adbcc8ce29546aff84",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/actual-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/gt_t3.png",
+      "sha256": "143897995697d77dd3275c1074ff0bc09ed9aa8511500bd422654457ee806d30",
+      "crop": [
+        108,
+        113,
+        203,
+        206
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/actual-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/gt_t3.png",
+      "sha256": "143897995697d77dd3275c1074ff0bc09ed9aa8511500bd422654457ee806d30",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/actual-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/gt_t4.png",
+      "sha256": "192db190b9dd7b9ee265be82b4b5ee718df282f5c6a7db6b570a996d2e90e049",
+      "crop": [
+        108,
+        113,
+        203,
+        206
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/actual-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/gt_t4.png",
+      "sha256": "192db190b9dd7b9ee265be82b4b5ee718df282f5c6a7db6b570a996d2e90e049",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/reference-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/blind_t1.png",
+      "sha256": "1facb825e099851059668e2a63a650eca1d5064fd15fb3d9b3464348074292ee",
+      "crop": [
+        108,
+        113,
+        203,
+        206
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/reference-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/blind_t1.png",
+      "sha256": "1facb825e099851059668e2a63a650eca1d5064fd15fb3d9b3464348074292ee",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/reference-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/blind_t2.png",
+      "sha256": "c0c20e324ec38c8bbb979c47e7bc5fa3b390344e1dd228674b5335504daf6964",
+      "crop": [
+        108,
+        113,
+        203,
+        206
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/reference-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/blind_t2.png",
+      "sha256": "c0c20e324ec38c8bbb979c47e7bc5fa3b390344e1dd228674b5335504daf6964",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/reference-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/blind_t3.png",
+      "sha256": "68b9f3457179881931e3e8eba8977fb4e721049f10f920a23d1d04012afc7bed",
+      "crop": [
+        108,
+        113,
+        203,
+        206
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/reference-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/blind_t3.png",
+      "sha256": "68b9f3457179881931e3e8eba8977fb4e721049f10f920a23d1d04012afc7bed",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/reference-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/blind_t4.png",
+      "sha256": "de3914a3fc4acd124c8e66b18693301a12fade45d1fb960e1f88e51862f303e2",
+      "crop": [
+        108,
+        113,
+        203,
+        206
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/reference-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/blind_t4.png",
+      "sha256": "de3914a3fc4acd124c8e66b18693301a12fade45d1fb960e1f88e51862f303e2",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/history-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/history_t1.png",
+      "sha256": "e5809c9d9514e691fb3c049fde768f1beed9afba74ddbd59ac61a5c66e04e7bc",
+      "crop": [
+        108,
+        113,
+        203,
+        206
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/history-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/history_t1.png",
+      "sha256": "e5809c9d9514e691fb3c049fde768f1beed9afba74ddbd59ac61a5c66e04e7bc",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/history-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/history_t2.png",
+      "sha256": "ff2dc38cb95913e156ac542b129ed4aa456a03a586b2ba47db8d1f1a58b1f403",
+      "crop": [
+        108,
+        113,
+        203,
+        206
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/history-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/history_t2.png",
+      "sha256": "ff2dc38cb95913e156ac542b129ed4aa456a03a586b2ba47db8d1f1a58b1f403",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/history-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/history_t3.png",
+      "sha256": "e8a73c4062a4aea320438b34c5cdfaf6ae5f7b99c72386eb85c180b1b7ab8fc8",
+      "crop": [
+        108,
+        113,
+        203,
+        206
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/history-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/history_t3.png",
+      "sha256": "e8a73c4062a4aea320438b34c5cdfaf6ae5f7b99c72386eb85c180b1b7ab8fc8",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/history-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/history_t4.png",
+      "sha256": "5a0c17e3ba11c3a082fbdd6d9a799f6782f4a451974ca4cceea8c99f8b275762",
+      "crop": [
+        108,
+        113,
+        203,
+        206
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/history-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/history_t4.png",
+      "sha256": "5a0c17e3ba11c3a082fbdd6d9a799f6782f4a451974ca4cceea8c99f8b275762",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/ddm-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/offset_t1.png",
+      "sha256": "d88ede45e9009e0f298b3557aaf1db28e06f319aac89acc9b492c9db62006043",
+      "crop": [
+        108,
+        113,
+        203,
+        206
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/ddm-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/offset_t1.png",
+      "sha256": "d88ede45e9009e0f298b3557aaf1db28e06f319aac89acc9b492c9db62006043",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/ddm-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/offset_t2.png",
+      "sha256": "6a2d34dbadb005d5a1c90cb7715e54e2e74bd009322f5f6270fb70b67d97dde4",
+      "crop": [
+        108,
+        113,
+        203,
+        206
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/ddm-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/offset_t2.png",
+      "sha256": "6a2d34dbadb005d5a1c90cb7715e54e2e74bd009322f5f6270fb70b67d97dde4",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/ddm-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/offset_t3.png",
+      "sha256": "35db76fc7971519e64aa756de48693402452e5bb0fa601b7e7f268962b5b8822",
+      "crop": [
+        108,
+        113,
+        203,
+        206
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/ddm-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/offset_t3.png",
+      "sha256": "35db76fc7971519e64aa756de48693402452e5bb0fa601b7e7f268962b5b8822",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/ddm-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/offset_t4.png",
+      "sha256": "350b416b1a2c27a2ed36853d6a928afce033b932841561ab81bf2353bd201580",
+      "crop": [
+        108,
+        113,
+        203,
+        206
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y+3.50/ddm-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y+3.50/offset_t4.png",
+      "sha256": "350b416b1a2c27a2ed36853d6a928afce033b932841561ab81bf2353bd201580",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/actual-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t1.png",
+      "sha256": "ca723dba6b5503793f1931ecfb6c3faf46e7e7a0bf0e50a160dd658b40899e85",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/actual-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t1.png",
+      "sha256": "ca723dba6b5503793f1931ecfb6c3faf46e7e7a0bf0e50a160dd658b40899e85",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/actual-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t2.png",
+      "sha256": "0048f5df5c603843d604d15f7e4489f771d4e58ec8a64f596edb241fa52801b2",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/actual-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t2.png",
+      "sha256": "0048f5df5c603843d604d15f7e4489f771d4e58ec8a64f596edb241fa52801b2",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/actual-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t3.png",
+      "sha256": "a042ad2c6d47ca2fce4f597d62c1742ad67733f768e13f2e3b45c4e3194447da",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/actual-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t3.png",
+      "sha256": "a042ad2c6d47ca2fce4f597d62c1742ad67733f768e13f2e3b45c4e3194447da",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/actual-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t4.png",
+      "sha256": "82d3697071dd232869de43cd324994e16f3ed5317bf5e21d0010a3bc56faa777",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/actual-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t4.png",
+      "sha256": "82d3697071dd232869de43cd324994e16f3ed5317bf5e21d0010a3bc56faa777",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/reference-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/blind_t1.png",
+      "sha256": "1facb825e099851059668e2a63a650eca1d5064fd15fb3d9b3464348074292ee",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/reference-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/blind_t1.png",
+      "sha256": "1facb825e099851059668e2a63a650eca1d5064fd15fb3d9b3464348074292ee",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/reference-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/blind_t2.png",
+      "sha256": "c0c20e324ec38c8bbb979c47e7bc5fa3b390344e1dd228674b5335504daf6964",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/reference-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/blind_t2.png",
+      "sha256": "c0c20e324ec38c8bbb979c47e7bc5fa3b390344e1dd228674b5335504daf6964",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/reference-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/blind_t3.png",
+      "sha256": "68b9f3457179881931e3e8eba8977fb4e721049f10f920a23d1d04012afc7bed",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/reference-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/blind_t3.png",
+      "sha256": "68b9f3457179881931e3e8eba8977fb4e721049f10f920a23d1d04012afc7bed",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/reference-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/blind_t4.png",
+      "sha256": "de3914a3fc4acd124c8e66b18693301a12fade45d1fb960e1f88e51862f303e2",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/reference-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/blind_t4.png",
+      "sha256": "de3914a3fc4acd124c8e66b18693301a12fade45d1fb960e1f88e51862f303e2",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/history-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/history_t1.png",
+      "sha256": "d619ef349f76240dce4aab4847d29e03fdb6c93e6382c58e43bc59c6056dcccf",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/history-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/history_t1.png",
+      "sha256": "d619ef349f76240dce4aab4847d29e03fdb6c93e6382c58e43bc59c6056dcccf",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/history-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/history_t2.png",
+      "sha256": "184c26e8e9a80f8870f76b8f4042577e31bd8675aa83d242e05ca284b40d19ff",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/history-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/history_t2.png",
+      "sha256": "184c26e8e9a80f8870f76b8f4042577e31bd8675aa83d242e05ca284b40d19ff",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/history-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/history_t3.png",
+      "sha256": "1b20924c823ca7dce818d1eef2c8221e191e26c8aeff99b10332a514d88d5704",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/history-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/history_t3.png",
+      "sha256": "1b20924c823ca7dce818d1eef2c8221e191e26c8aeff99b10332a514d88d5704",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/history-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/history_t4.png",
+      "sha256": "bf85caa2558f31a8606be168b58814b75b45d1f3b251d505ada0cbaed2b69cca",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/history-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/history_t4.png",
+      "sha256": "bf85caa2558f31a8606be168b58814b75b45d1f3b251d505ada0cbaed2b69cca",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/ddm-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/offset_t1.png",
+      "sha256": "ab1549f8907fba13c4e935f48dbf6e07f941b65ab2e526ce00f458ef7c89c5b7",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/ddm-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/offset_t1.png",
+      "sha256": "ab1549f8907fba13c4e935f48dbf6e07f941b65ab2e526ce00f458ef7c89c5b7",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/ddm-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/offset_t2.png",
+      "sha256": "89f9a7e4d90a18c5fc70443675c5ef67083c60124e1ced60aebf73db118dd0db",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/ddm-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/offset_t2.png",
+      "sha256": "89f9a7e4d90a18c5fc70443675c5ef67083c60124e1ced60aebf73db118dd0db",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/ddm-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/offset_t3.png",
+      "sha256": "56a3b28b53cef3f8f1195ed261e46f60144b96baf243a431aab58bae407adab4",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/ddm-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/offset_t3.png",
+      "sha256": "56a3b28b53cef3f8f1195ed261e46f60144b96baf243a431aab58bae407adab4",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/ddm-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/offset_t4.png",
+      "sha256": "f6f2fe0d7dec782ebdfaae40383656cd45148f571c68ab84400184c1b6fc482d",
+      "crop": [
+        108,
+        113,
+        215,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-1.75/ddm-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/offset_t4.png",
+      "sha256": "f6f2fe0d7dec782ebdfaae40383656cd45148f571c68ab84400184c1b6fc482d",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/actual-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/gt_t1.png",
+      "sha256": "b8c768c63d9bda5dba2d9d4a53b5525525dc013b98945bc1fa3ccdd78f0bc36c",
+      "crop": [
+        107,
+        113,
+        214,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/actual-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/gt_t1.png",
+      "sha256": "b8c768c63d9bda5dba2d9d4a53b5525525dc013b98945bc1fa3ccdd78f0bc36c",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/actual-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/gt_t2.png",
+      "sha256": "324b32b32b8b433bf32781f2627193fbe780f78118fc8103834e152e39d63b4a",
+      "crop": [
+        107,
+        113,
+        214,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/actual-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/gt_t2.png",
+      "sha256": "324b32b32b8b433bf32781f2627193fbe780f78118fc8103834e152e39d63b4a",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/actual-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/gt_t3.png",
+      "sha256": "7b50da5c72546627f44e7b5ea3740650d2ad464511cfa89ea1a40e159782a7a4",
+      "crop": [
+        107,
+        113,
+        214,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/actual-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/gt_t3.png",
+      "sha256": "7b50da5c72546627f44e7b5ea3740650d2ad464511cfa89ea1a40e159782a7a4",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/actual-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/gt_t4.png",
+      "sha256": "12c9d1d3a62685fcd21099f460c3cd1037d42b2c43b93ba570b64f1cee3af057",
+      "crop": [
+        107,
+        113,
+        214,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/actual-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/gt_t4.png",
+      "sha256": "12c9d1d3a62685fcd21099f460c3cd1037d42b2c43b93ba570b64f1cee3af057",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/reference-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/blind_t1.png",
+      "sha256": "1facb825e099851059668e2a63a650eca1d5064fd15fb3d9b3464348074292ee",
+      "crop": [
+        107,
+        113,
+        214,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/reference-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/blind_t1.png",
+      "sha256": "1facb825e099851059668e2a63a650eca1d5064fd15fb3d9b3464348074292ee",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/reference-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/blind_t2.png",
+      "sha256": "c0c20e324ec38c8bbb979c47e7bc5fa3b390344e1dd228674b5335504daf6964",
+      "crop": [
+        107,
+        113,
+        214,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/reference-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/blind_t2.png",
+      "sha256": "c0c20e324ec38c8bbb979c47e7bc5fa3b390344e1dd228674b5335504daf6964",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/reference-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/blind_t3.png",
+      "sha256": "68b9f3457179881931e3e8eba8977fb4e721049f10f920a23d1d04012afc7bed",
+      "crop": [
+        107,
+        113,
+        214,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/reference-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/blind_t3.png",
+      "sha256": "68b9f3457179881931e3e8eba8977fb4e721049f10f920a23d1d04012afc7bed",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/reference-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/blind_t4.png",
+      "sha256": "de3914a3fc4acd124c8e66b18693301a12fade45d1fb960e1f88e51862f303e2",
+      "crop": [
+        107,
+        113,
+        214,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/reference-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/blind_t4.png",
+      "sha256": "de3914a3fc4acd124c8e66b18693301a12fade45d1fb960e1f88e51862f303e2",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/history-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/history_t1.png",
+      "sha256": "9112e0da09803fa3fae38cb6fa71073c21355b6ebcc92aa0911513e414c019a6",
+      "crop": [
+        107,
+        113,
+        214,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/history-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/history_t1.png",
+      "sha256": "9112e0da09803fa3fae38cb6fa71073c21355b6ebcc92aa0911513e414c019a6",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/history-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/history_t2.png",
+      "sha256": "9208feaa89919be41e69c8f6038f7b2f2206a19bc08214e97c4d2083e251f927",
+      "crop": [
+        107,
+        113,
+        214,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/history-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/history_t2.png",
+      "sha256": "9208feaa89919be41e69c8f6038f7b2f2206a19bc08214e97c4d2083e251f927",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/history-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/history_t3.png",
+      "sha256": "d2bfd072cc4f676d56b6b352489f8c8cc8f9edba4157e82285b2213070d7df2e",
+      "crop": [
+        107,
+        113,
+        214,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/history-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/history_t3.png",
+      "sha256": "d2bfd072cc4f676d56b6b352489f8c8cc8f9edba4157e82285b2213070d7df2e",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/history-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/history_t4.png",
+      "sha256": "e3685f6546c16c4fd7f1ecc1dd0032f21df2c9ab8585fda68311078d3c1fcfb5",
+      "crop": [
+        107,
+        113,
+        214,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/history-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/history_t4.png",
+      "sha256": "e3685f6546c16c4fd7f1ecc1dd0032f21df2c9ab8585fda68311078d3c1fcfb5",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/ddm-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/offset_t1.png",
+      "sha256": "f2e056e23cfe9acb088773a4943d93d1b93d9773c0af6e5861e3a4556faa85ce",
+      "crop": [
+        107,
+        113,
+        214,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/ddm-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/offset_t1.png",
+      "sha256": "f2e056e23cfe9acb088773a4943d93d1b93d9773c0af6e5861e3a4556faa85ce",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/ddm-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/offset_t2.png",
+      "sha256": "04b01d34512e4e760eca059b09c3777cf9ea86c460cfb4258453405fe634ad52",
+      "crop": [
+        107,
+        113,
+        214,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/ddm-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/offset_t2.png",
+      "sha256": "04b01d34512e4e760eca059b09c3777cf9ea86c460cfb4258453405fe634ad52",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/ddm-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/offset_t3.png",
+      "sha256": "54d50df9a42d9de1698d4447ce1d99cf1c3d6c05b156abe2f0197e225cab72ec",
+      "crop": [
+        107,
+        113,
+        214,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/ddm-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/offset_t3.png",
+      "sha256": "54d50df9a42d9de1698d4447ce1d99cf1c3d6c05b156abe2f0197e225cab72ec",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/ddm-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/offset_t4.png",
+      "sha256": "496140908faea72522302798cb254087c3a1b3c0bd542886788120d50cd2a7da",
+      "crop": [
+        107,
+        113,
+        214,
+        224
+      ]
+    },
+    {
+      "file": "static/gallery/push/q50_y-3.50/ddm-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-3.50/offset_t4.png",
+      "sha256": "496140908faea72522302798cb254087c3a1b3c0bd542886788120d50cd2a7da",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/actual-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/gt_t1.png",
+      "sha256": "a965b608f90f9734f92f3dc6b1809dc1c40391dd372d61e404718f708c52aaae",
+      "crop": [
+        25,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/actual-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/gt_t1.png",
+      "sha256": "a965b608f90f9734f92f3dc6b1809dc1c40391dd372d61e404718f708c52aaae",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/actual-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/gt_t2.png",
+      "sha256": "93c5cd9ad4b1e22fec1a3fdf9d3421c1998693aae7e52e19704e0d8c84b2d68c",
+      "crop": [
+        25,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/actual-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/gt_t2.png",
+      "sha256": "93c5cd9ad4b1e22fec1a3fdf9d3421c1998693aae7e52e19704e0d8c84b2d68c",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/actual-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/gt_t3.png",
+      "sha256": "74994dbacfbd9d25bf94e6d187c9a79ebbb3a1f7b79bc1510f3838f7e1de5246",
+      "crop": [
+        25,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/actual-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/gt_t3.png",
+      "sha256": "74994dbacfbd9d25bf94e6d187c9a79ebbb3a1f7b79bc1510f3838f7e1de5246",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/actual-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/gt_t4.png",
+      "sha256": "1736e8d63f03d6d240af6172dbbca793af1ad51ee8dd5518f44e113f4d118e3d",
+      "crop": [
+        25,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/actual-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/gt_t4.png",
+      "sha256": "1736e8d63f03d6d240af6172dbbca793af1ad51ee8dd5518f44e113f4d118e3d",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/reference-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/blind_t1.png",
+      "sha256": "7e4fdbec5e0781351519b87945dedbe5f92e7e2cc54cd5c14b4d0aa6560057f9",
+      "crop": [
+        25,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/reference-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/blind_t1.png",
+      "sha256": "7e4fdbec5e0781351519b87945dedbe5f92e7e2cc54cd5c14b4d0aa6560057f9",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/reference-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/blind_t2.png",
+      "sha256": "4287149100100c0928ad9e80b940fe9f3ad5068aa0b251aec1cf682b40ae547c",
+      "crop": [
+        25,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/reference-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/blind_t2.png",
+      "sha256": "4287149100100c0928ad9e80b940fe9f3ad5068aa0b251aec1cf682b40ae547c",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/reference-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/blind_t3.png",
+      "sha256": "396b7a34af054dec5caf74c803b647e709cefe8aae410d8de81281c64e79948b",
+      "crop": [
+        25,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/reference-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/blind_t3.png",
+      "sha256": "396b7a34af054dec5caf74c803b647e709cefe8aae410d8de81281c64e79948b",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/reference-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/blind_t4.png",
+      "sha256": "0a94fc21715fb7684b168542cd428c8e39c634668bfbaf956a87ba9215285271",
+      "crop": [
+        25,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/reference-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/blind_t4.png",
+      "sha256": "0a94fc21715fb7684b168542cd428c8e39c634668bfbaf956a87ba9215285271",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/history-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/history_t1.png",
+      "sha256": "bc4be22f80ae4e45652bb760f685a0178b2c1e4105b38da523fb8ad62a45c7ea",
+      "crop": [
+        25,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/history-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/history_t1.png",
+      "sha256": "bc4be22f80ae4e45652bb760f685a0178b2c1e4105b38da523fb8ad62a45c7ea",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/history-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/history_t2.png",
+      "sha256": "101f8077411bb0f55c87c20e8ca40281bb576c6b03471d4d90e00887e3c7041f",
+      "crop": [
+        25,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/history-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/history_t2.png",
+      "sha256": "101f8077411bb0f55c87c20e8ca40281bb576c6b03471d4d90e00887e3c7041f",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/history-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/history_t3.png",
+      "sha256": "f2cdd3682daa5fb96f332cbd00e985fdabfba1be5d8639a7ee2544c329905ac5",
+      "crop": [
+        25,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/history-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/history_t3.png",
+      "sha256": "f2cdd3682daa5fb96f332cbd00e985fdabfba1be5d8639a7ee2544c329905ac5",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/history-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/history_t4.png",
+      "sha256": "cc862aa7b3e48cab41ac6aaaec49e16e53cdd8aaaf6ee8621696985b39d179ce",
+      "crop": [
+        25,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/history-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/history_t4.png",
+      "sha256": "cc862aa7b3e48cab41ac6aaaec49e16e53cdd8aaaf6ee8621696985b39d179ce",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/ddm-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/offset_t1.png",
+      "sha256": "2a2ca7afd6a7f55953bc2034b8d39a1adb8337338d32a6cf624dd965af0c18d5",
+      "crop": [
+        25,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/ddm-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/offset_t1.png",
+      "sha256": "2a2ca7afd6a7f55953bc2034b8d39a1adb8337338d32a6cf624dd965af0c18d5",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/ddm-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/offset_t2.png",
+      "sha256": "0fda6572be5a1bd4ba35828d40ab38d274c6f9814cefc910871eec7c4c6102e6",
+      "crop": [
+        25,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/ddm-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/offset_t2.png",
+      "sha256": "0fda6572be5a1bd4ba35828d40ab38d274c6f9814cefc910871eec7c4c6102e6",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/ddm-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/offset_t3.png",
+      "sha256": "b1f2e411701b08d4bcc14d8cfb0be698b0b0c330476e92e35892fce9a4beeea3",
+      "crop": [
+        25,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/ddm-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/offset_t3.png",
+      "sha256": "b1f2e411701b08d4bcc14d8cfb0be698b0b0c330476e92e35892fce9a4beeea3",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/ddm-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/offset_t4.png",
+      "sha256": "197c8d07cd0290bbd1b71af7573961b96a4f993553a18683db1bde9efee59f1d",
+      "crop": [
+        25,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+0.00/ddm-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+0.00/offset_t4.png",
+      "sha256": "197c8d07cd0290bbd1b71af7573961b96a4f993553a18683db1bde9efee59f1d",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/actual-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/gt_t1.png",
+      "sha256": "4f6b134f48fac7166789a0a6acfd4cc31c732c432fdbcd199c9c8426ae2ba373",
+      "crop": [
+        26,
+        23,
+        128,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/actual-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/gt_t1.png",
+      "sha256": "4f6b134f48fac7166789a0a6acfd4cc31c732c432fdbcd199c9c8426ae2ba373",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/actual-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/gt_t2.png",
+      "sha256": "1d1129f579f2a4b7dd7e56cc1fdc35af257ffbff8751cdcc8a488de5eaf37b58",
+      "crop": [
+        26,
+        23,
+        128,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/actual-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/gt_t2.png",
+      "sha256": "1d1129f579f2a4b7dd7e56cc1fdc35af257ffbff8751cdcc8a488de5eaf37b58",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/actual-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/gt_t3.png",
+      "sha256": "ad5a45685b74e3842a65736b12870ca1351b44e3cbc97048308ecfa8323cfb51",
+      "crop": [
+        26,
+        23,
+        128,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/actual-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/gt_t3.png",
+      "sha256": "ad5a45685b74e3842a65736b12870ca1351b44e3cbc97048308ecfa8323cfb51",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/actual-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/gt_t4.png",
+      "sha256": "cef74584a63b0c6d0795a3f3c1f5d7554f8260aa4a27ea04a78cb9de43b4b421",
+      "crop": [
+        26,
+        23,
+        128,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/actual-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/gt_t4.png",
+      "sha256": "cef74584a63b0c6d0795a3f3c1f5d7554f8260aa4a27ea04a78cb9de43b4b421",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/reference-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/blind_t1.png",
+      "sha256": "7e4fdbec5e0781351519b87945dedbe5f92e7e2cc54cd5c14b4d0aa6560057f9",
+      "crop": [
+        26,
+        23,
+        128,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/reference-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/blind_t1.png",
+      "sha256": "7e4fdbec5e0781351519b87945dedbe5f92e7e2cc54cd5c14b4d0aa6560057f9",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/reference-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/blind_t2.png",
+      "sha256": "4287149100100c0928ad9e80b940fe9f3ad5068aa0b251aec1cf682b40ae547c",
+      "crop": [
+        26,
+        23,
+        128,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/reference-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/blind_t2.png",
+      "sha256": "4287149100100c0928ad9e80b940fe9f3ad5068aa0b251aec1cf682b40ae547c",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/reference-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/blind_t3.png",
+      "sha256": "396b7a34af054dec5caf74c803b647e709cefe8aae410d8de81281c64e79948b",
+      "crop": [
+        26,
+        23,
+        128,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/reference-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/blind_t3.png",
+      "sha256": "396b7a34af054dec5caf74c803b647e709cefe8aae410d8de81281c64e79948b",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/reference-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/blind_t4.png",
+      "sha256": "0a94fc21715fb7684b168542cd428c8e39c634668bfbaf956a87ba9215285271",
+      "crop": [
+        26,
+        23,
+        128,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/reference-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/blind_t4.png",
+      "sha256": "0a94fc21715fb7684b168542cd428c8e39c634668bfbaf956a87ba9215285271",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/history-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/history_t1.png",
+      "sha256": "777ad34cbb2e55c4982efbecae3b5511627fc5bda6f07fdc5617548775f14e3a",
+      "crop": [
+        26,
+        23,
+        128,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/history-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/history_t1.png",
+      "sha256": "777ad34cbb2e55c4982efbecae3b5511627fc5bda6f07fdc5617548775f14e3a",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/history-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/history_t2.png",
+      "sha256": "a82ddfa8717ed0aa6f75eb472a0c8eb0d2bc3b534bd2648973966fcd18dda643",
+      "crop": [
+        26,
+        23,
+        128,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/history-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/history_t2.png",
+      "sha256": "a82ddfa8717ed0aa6f75eb472a0c8eb0d2bc3b534bd2648973966fcd18dda643",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/history-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/history_t3.png",
+      "sha256": "c1bb7a7b10c61f3e1c6856f0dedd8118615c33a7c67ea7e342a013f5a8f60f76",
+      "crop": [
+        26,
+        23,
+        128,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/history-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/history_t3.png",
+      "sha256": "c1bb7a7b10c61f3e1c6856f0dedd8118615c33a7c67ea7e342a013f5a8f60f76",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/history-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/history_t4.png",
+      "sha256": "0d8fd7406f11c78d38893a3ca9519335f970a4fcd223741239073e6e73e6ad5a",
+      "crop": [
+        26,
+        23,
+        128,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/history-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/history_t4.png",
+      "sha256": "0d8fd7406f11c78d38893a3ca9519335f970a4fcd223741239073e6e73e6ad5a",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/ddm-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/offset_t1.png",
+      "sha256": "92d00b1785ab87a9d001af45801f3cd62455be4a785680e3389d0fdf1ca5293e",
+      "crop": [
+        26,
+        23,
+        128,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/ddm-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/offset_t1.png",
+      "sha256": "92d00b1785ab87a9d001af45801f3cd62455be4a785680e3389d0fdf1ca5293e",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/ddm-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/offset_t2.png",
+      "sha256": "e173a0428068e0fdae2e218e5dbcc65a8a845b1b27131f0a25248d3760b86152",
+      "crop": [
+        26,
+        23,
+        128,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/ddm-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/offset_t2.png",
+      "sha256": "e173a0428068e0fdae2e218e5dbcc65a8a845b1b27131f0a25248d3760b86152",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/ddm-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/offset_t3.png",
+      "sha256": "1181b34c6cdecb9426d661f40656794d018612d29373446a2d041b9925d015c8",
+      "crop": [
+        26,
+        23,
+        128,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/ddm-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/offset_t3.png",
+      "sha256": "1181b34c6cdecb9426d661f40656794d018612d29373446a2d041b9925d015c8",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/ddm-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/offset_t4.png",
+      "sha256": "64c5cb5f24c6b38ea17178b2b7fc220222bfdfe2d57b41644a55f91bc8cee075",
+      "crop": [
+        26,
+        23,
+        128,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y+3.50/ddm-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y+3.50/offset_t4.png",
+      "sha256": "64c5cb5f24c6b38ea17178b2b7fc220222bfdfe2d57b41644a55f91bc8cee075",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/actual-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/gt_t1.png",
+      "sha256": "fa407f8871e60dbbfa0e31bee203375679197d203637351bf32638857570df8d",
+      "crop": [
+        26,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/actual-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/gt_t1.png",
+      "sha256": "fa407f8871e60dbbfa0e31bee203375679197d203637351bf32638857570df8d",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/actual-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/gt_t2.png",
+      "sha256": "896ec0deb3f266d9dc4a9907d3c0d96c4d157a6e82b4af6183d0748c76bd68ad",
+      "crop": [
+        26,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/actual-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/gt_t2.png",
+      "sha256": "896ec0deb3f266d9dc4a9907d3c0d96c4d157a6e82b4af6183d0748c76bd68ad",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/actual-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/gt_t3.png",
+      "sha256": "156622dd0f51649e7440a3efaf6312183875535c42fec3476ce6ae1d3468fe64",
+      "crop": [
+        26,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/actual-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/gt_t3.png",
+      "sha256": "156622dd0f51649e7440a3efaf6312183875535c42fec3476ce6ae1d3468fe64",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/actual-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/gt_t4.png",
+      "sha256": "99265913d76af1f474c0c18041c48121f7cbe72486b08ad63d29b0f89a1f787a",
+      "crop": [
+        26,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/actual-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/gt_t4.png",
+      "sha256": "99265913d76af1f474c0c18041c48121f7cbe72486b08ad63d29b0f89a1f787a",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/reference-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/blind_t1.png",
+      "sha256": "7e4fdbec5e0781351519b87945dedbe5f92e7e2cc54cd5c14b4d0aa6560057f9",
+      "crop": [
+        26,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/reference-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/blind_t1.png",
+      "sha256": "7e4fdbec5e0781351519b87945dedbe5f92e7e2cc54cd5c14b4d0aa6560057f9",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/reference-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/blind_t2.png",
+      "sha256": "4287149100100c0928ad9e80b940fe9f3ad5068aa0b251aec1cf682b40ae547c",
+      "crop": [
+        26,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/reference-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/blind_t2.png",
+      "sha256": "4287149100100c0928ad9e80b940fe9f3ad5068aa0b251aec1cf682b40ae547c",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/reference-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/blind_t3.png",
+      "sha256": "396b7a34af054dec5caf74c803b647e709cefe8aae410d8de81281c64e79948b",
+      "crop": [
+        26,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/reference-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/blind_t3.png",
+      "sha256": "396b7a34af054dec5caf74c803b647e709cefe8aae410d8de81281c64e79948b",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/reference-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/blind_t4.png",
+      "sha256": "0a94fc21715fb7684b168542cd428c8e39c634668bfbaf956a87ba9215285271",
+      "crop": [
+        26,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/reference-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/blind_t4.png",
+      "sha256": "0a94fc21715fb7684b168542cd428c8e39c634668bfbaf956a87ba9215285271",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/history-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/history_t1.png",
+      "sha256": "51456a48fe351919e736412e68fb93562df209c41316466ce567240d24205e19",
+      "crop": [
+        26,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/history-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/history_t1.png",
+      "sha256": "51456a48fe351919e736412e68fb93562df209c41316466ce567240d24205e19",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/history-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/history_t2.png",
+      "sha256": "e0456ba4f429b18cace0d8c55b8de2415b9bcd1acf6d7e81387f88733e489586",
+      "crop": [
+        26,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/history-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/history_t2.png",
+      "sha256": "e0456ba4f429b18cace0d8c55b8de2415b9bcd1acf6d7e81387f88733e489586",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/history-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/history_t3.png",
+      "sha256": "f5b529e05a663705bb435414a428e88f7ea3c092929ca09b97e60b21c31a7bc9",
+      "crop": [
+        26,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/history-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/history_t3.png",
+      "sha256": "f5b529e05a663705bb435414a428e88f7ea3c092929ca09b97e60b21c31a7bc9",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/history-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/history_t4.png",
+      "sha256": "d96b2199a8851dc669be9849e5c94f2278bc08a5fab245c0096d63c2c05fcfb0",
+      "crop": [
+        26,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/history-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/history_t4.png",
+      "sha256": "d96b2199a8851dc669be9849e5c94f2278bc08a5fab245c0096d63c2c05fcfb0",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/ddm-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/offset_t1.png",
+      "sha256": "4810be3bd2e0a1238adc90e2a1c199bdf7efcab81d8bf42325cb0ad53ea9c72a",
+      "crop": [
+        26,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/ddm-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/offset_t1.png",
+      "sha256": "4810be3bd2e0a1238adc90e2a1c199bdf7efcab81d8bf42325cb0ad53ea9c72a",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/ddm-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/offset_t2.png",
+      "sha256": "29e5afb036080e55fcb6c536e214f51cd15d48faed77f63686c34ec9957dbb87",
+      "crop": [
+        26,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/ddm-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/offset_t2.png",
+      "sha256": "29e5afb036080e55fcb6c536e214f51cd15d48faed77f63686c34ec9957dbb87",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/ddm-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/offset_t3.png",
+      "sha256": "f6f8fc3739b7ae5d9f0be96fbfc54346a33b05f75040f120dc7a072ba50034b6",
+      "crop": [
+        26,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/ddm-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/offset_t3.png",
+      "sha256": "f6f8fc3739b7ae5d9f0be96fbfc54346a33b05f75040f120dc7a072ba50034b6",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/ddm-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/offset_t4.png",
+      "sha256": "bbb47439bbf9dbe78b24f2089c1a93d49316944415d9e66d99a8ec30776085ad",
+      "crop": [
+        26,
+        39,
+        127,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-1.75/ddm-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-1.75/offset_t4.png",
+      "sha256": "bbb47439bbf9dbe78b24f2089c1a93d49316944415d9e66d99a8ec30776085ad",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/actual-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/gt_t1.png",
+      "sha256": "d688d6475a0e1cb3e5403787451bbfd768f86179f6db9e9c4ecb98f527713f90",
+      "crop": [
+        26,
+        39,
+        129,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/actual-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/gt_t1.png",
+      "sha256": "d688d6475a0e1cb3e5403787451bbfd768f86179f6db9e9c4ecb98f527713f90",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/actual-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/gt_t2.png",
+      "sha256": "81fefc542bc5434bb84d0707703a78da885cffcb31bcea875a748aa9cd88fa7f",
+      "crop": [
+        26,
+        39,
+        129,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/actual-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/gt_t2.png",
+      "sha256": "81fefc542bc5434bb84d0707703a78da885cffcb31bcea875a748aa9cd88fa7f",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/actual-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/gt_t3.png",
+      "sha256": "9c22fe92fcef0b893fd14abb521a9e84bc0c495198d536e96f5ffc3c43828ed8",
+      "crop": [
+        26,
+        39,
+        129,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/actual-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/gt_t3.png",
+      "sha256": "9c22fe92fcef0b893fd14abb521a9e84bc0c495198d536e96f5ffc3c43828ed8",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/actual-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/gt_t4.png",
+      "sha256": "8395db0d4a2a0b289303d2b2484a900c903ab9105e4e32a446b78d04e5bd4c83",
+      "crop": [
+        26,
+        39,
+        129,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/actual-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/gt_t4.png",
+      "sha256": "8395db0d4a2a0b289303d2b2484a900c903ab9105e4e32a446b78d04e5bd4c83",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/reference-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/blind_t1.png",
+      "sha256": "7e4fdbec5e0781351519b87945dedbe5f92e7e2cc54cd5c14b4d0aa6560057f9",
+      "crop": [
+        26,
+        39,
+        129,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/reference-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/blind_t1.png",
+      "sha256": "7e4fdbec5e0781351519b87945dedbe5f92e7e2cc54cd5c14b4d0aa6560057f9",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/reference-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/blind_t2.png",
+      "sha256": "4287149100100c0928ad9e80b940fe9f3ad5068aa0b251aec1cf682b40ae547c",
+      "crop": [
+        26,
+        39,
+        129,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/reference-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/blind_t2.png",
+      "sha256": "4287149100100c0928ad9e80b940fe9f3ad5068aa0b251aec1cf682b40ae547c",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/reference-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/blind_t3.png",
+      "sha256": "396b7a34af054dec5caf74c803b647e709cefe8aae410d8de81281c64e79948b",
+      "crop": [
+        26,
+        39,
+        129,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/reference-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/blind_t3.png",
+      "sha256": "396b7a34af054dec5caf74c803b647e709cefe8aae410d8de81281c64e79948b",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/reference-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/blind_t4.png",
+      "sha256": "0a94fc21715fb7684b168542cd428c8e39c634668bfbaf956a87ba9215285271",
+      "crop": [
+        26,
+        39,
+        129,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/reference-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/blind_t4.png",
+      "sha256": "0a94fc21715fb7684b168542cd428c8e39c634668bfbaf956a87ba9215285271",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/history-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/history_t1.png",
+      "sha256": "57ca44d7904e88bd53af43983199ee265fd1d510b95b2ef5bd9431b10cd0a304",
+      "crop": [
+        26,
+        39,
+        129,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/history-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/history_t1.png",
+      "sha256": "57ca44d7904e88bd53af43983199ee265fd1d510b95b2ef5bd9431b10cd0a304",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/history-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/history_t2.png",
+      "sha256": "00eb94f40e8b10f4715ff0c5a99d64832452ea313a9264c5271575d305028b67",
+      "crop": [
+        26,
+        39,
+        129,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/history-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/history_t2.png",
+      "sha256": "00eb94f40e8b10f4715ff0c5a99d64832452ea313a9264c5271575d305028b67",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/history-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/history_t3.png",
+      "sha256": "a0022a72895e78f908ed92a3123c7a8b337bbefc8ed427111f8d298e123e6541",
+      "crop": [
+        26,
+        39,
+        129,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/history-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/history_t3.png",
+      "sha256": "a0022a72895e78f908ed92a3123c7a8b337bbefc8ed427111f8d298e123e6541",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/history-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/history_t4.png",
+      "sha256": "966665c0731318021ec9df67aeac62c13989be16600fdb43ec1ef8fa1d433009",
+      "crop": [
+        26,
+        39,
+        129,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/history-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/history_t4.png",
+      "sha256": "966665c0731318021ec9df67aeac62c13989be16600fdb43ec1ef8fa1d433009",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/ddm-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/offset_t1.png",
+      "sha256": "d3a5680e672642786a2be935ddc8bc913f72cbc4afad5a537c9fd5dba402bebb",
+      "crop": [
+        26,
+        39,
+        129,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/ddm-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/offset_t1.png",
+      "sha256": "d3a5680e672642786a2be935ddc8bc913f72cbc4afad5a537c9fd5dba402bebb",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/ddm-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/offset_t2.png",
+      "sha256": "cd865ee26d524cee3ebfdf063daff847c8d7030bab3f4f04b8d4d3816ce735fc",
+      "crop": [
+        26,
+        39,
+        129,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/ddm-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/offset_t2.png",
+      "sha256": "cd865ee26d524cee3ebfdf063daff847c8d7030bab3f4f04b8d4d3816ce735fc",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/ddm-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/offset_t3.png",
+      "sha256": "e559b486d3c3abb2c998873781601ef7474858f9ab676c012c0e2e67991e32e2",
+      "crop": [
+        26,
+        39,
+        129,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/ddm-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/offset_t3.png",
+      "sha256": "e559b486d3c3abb2c998873781601ef7474858f9ab676c012c0e2e67991e32e2",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/ddm-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/offset_t4.png",
+      "sha256": "85ed502a8a9375ce90eb609acea9d389b1d83e71933566882d417408c89ab98e",
+      "crop": [
+        26,
+        39,
+        129,
+        117
+      ]
+    },
+    {
+      "file": "static/gallery/push/q75_y-3.50/ddm-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q75_y-3.50/offset_t4.png",
+      "sha256": "85ed502a8a9375ce90eb609acea9d389b1d83e71933566882d417408c89ab98e",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/actual-1.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/raw_future_t1.png",
+      "sha256": "e086fcacc5849fa74ec41ea5b743e345fbdabadae5558823e464de81710b318b",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/actual-1-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/raw_future_t1.png",
+      "sha256": "e086fcacc5849fa74ec41ea5b743e345fbdabadae5558823e464de81710b318b",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/actual-2.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/raw_future_t2.png",
+      "sha256": "9765474dc6b9c13f055e6670f0d9f4f968156e957b699c62471d4758773f7aa5",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/actual-2-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/raw_future_t2.png",
+      "sha256": "9765474dc6b9c13f055e6670f0d9f4f968156e957b699c62471d4758773f7aa5",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/actual-3.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/raw_future_t3.png",
+      "sha256": "fdc32b4c733879b6cdf2d44321056576153ee9c159a0d69a89c78b44ac89f220",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/actual-3-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/raw_future_t3.png",
+      "sha256": "fdc32b4c733879b6cdf2d44321056576153ee9c159a0d69a89c78b44ac89f220",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/actual-4.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/raw_future_t4.png",
+      "sha256": "f82ffabfd44594d00fbf6990483e0efad3042dde728ce065fe9dc22b05021819",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/actual-4-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/raw_future_t4.png",
+      "sha256": "f82ffabfd44594d00fbf6990483e0efad3042dde728ce065fe9dc22b05021819",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/reference-1.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/blind_prediction_t1.png",
+      "sha256": "d1dbf21ee0138f1471624384b277c63acb81dda604b6809ca2c29c4fd36a2467",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/reference-1-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/blind_prediction_t1.png",
+      "sha256": "d1dbf21ee0138f1471624384b277c63acb81dda604b6809ca2c29c4fd36a2467",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/reference-2.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/blind_prediction_t2.png",
+      "sha256": "cd2ed68ef397f89598be7050d767a8f607cfdb19ef311dbae382b06d3f51c7f5",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/reference-2-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/blind_prediction_t2.png",
+      "sha256": "cd2ed68ef397f89598be7050d767a8f607cfdb19ef311dbae382b06d3f51c7f5",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/reference-3.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/blind_prediction_t3.png",
+      "sha256": "887e4ed128466f7e9aebb00ca864eb53afacdb88e2dc236852050775586fc67e",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/reference-3-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/blind_prediction_t3.png",
+      "sha256": "887e4ed128466f7e9aebb00ca864eb53afacdb88e2dc236852050775586fc67e",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/reference-4.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/blind_prediction_t4.png",
+      "sha256": "e49eb3db8e7a428fdec4e37fba837a83a81fe7958f169f6f24d631dee1e9b5b9",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/reference-4-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/blind_prediction_t4.png",
+      "sha256": "e49eb3db8e7a428fdec4e37fba837a83a81fe7958f169f6f24d631dee1e9b5b9",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/history-1.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/history_prediction_t1.png",
+      "sha256": "b52a204ebbc5fbc30f6e5e9b881d03b53410df74054edb2ee2dd02ed495de371",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/history-1-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/history_prediction_t1.png",
+      "sha256": "b52a204ebbc5fbc30f6e5e9b881d03b53410df74054edb2ee2dd02ed495de371",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/history-2.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/history_prediction_t2.png",
+      "sha256": "8987cc5db1fad61e50024ab63dee35b66eaa56ffc7f349e5e53ff58815ad2329",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/history-2-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/history_prediction_t2.png",
+      "sha256": "8987cc5db1fad61e50024ab63dee35b66eaa56ffc7f349e5e53ff58815ad2329",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/history-3.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/history_prediction_t3.png",
+      "sha256": "9789000b2484e040b1c9aac0f4da90730216ecbe8cd10b7055bc42cfb04c70fe",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/history-3-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/history_prediction_t3.png",
+      "sha256": "9789000b2484e040b1c9aac0f4da90730216ecbe8cd10b7055bc42cfb04c70fe",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/history-4.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/history_prediction_t4.png",
+      "sha256": "671b708fee09547f4fe6f65d578339028cb8dac2a87333131e9e519176870957",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/history-4-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/history_prediction_t4.png",
+      "sha256": "671b708fee09547f4fe6f65d578339028cb8dac2a87333131e9e519176870957",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/ddm-1.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/offset_prediction_t1.png",
+      "sha256": "f873b76c4c99e77bdf3e1d67497027257753d8d5dcf8caaa255c58c30fd20cc7",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/ddm-1-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/offset_prediction_t1.png",
+      "sha256": "f873b76c4c99e77bdf3e1d67497027257753d8d5dcf8caaa255c58c30fd20cc7",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/ddm-2.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/offset_prediction_t2.png",
+      "sha256": "c552d52e6f0d55f249e0377605e277b2ca4e832105e437ee08a0624e9334dc47",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/ddm-2-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/offset_prediction_t2.png",
+      "sha256": "c552d52e6f0d55f249e0377605e277b2ca4e832105e437ee08a0624e9334dc47",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/ddm-3.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/offset_prediction_t3.png",
+      "sha256": "227ab30ad9738f0df5b9658bc7118de4d4d013203053d4ff7ac21f533754ee91",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/ddm-3-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/offset_prediction_t3.png",
+      "sha256": "227ab30ad9738f0df5b9658bc7118de4d4d013203053d4ff7ac21f533754ee91",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/ddm-4.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/offset_prediction_t4.png",
+      "sha256": "69cfc838c2bf7d1f8fd7122abb2b4cad412a81dcb3707f88a1642c9f4d62126a",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a083/ddm-4-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a083/offset_prediction_t4.png",
+      "sha256": "69cfc838c2bf7d1f8fd7122abb2b4cad412a81dcb3707f88a1642c9f4d62126a",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/actual-1.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t1.png",
+      "sha256": "9545590486e64e80116b3692965caaa1b084ed81e3f468e846899bd4d6065365",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/actual-1-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t1.png",
+      "sha256": "9545590486e64e80116b3692965caaa1b084ed81e3f468e846899bd4d6065365",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/actual-2.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t2.png",
+      "sha256": "baf1cc0dfd4a469f43c1c8d9dff6c54742c59329f9c1cc70c71b88d17855628c",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/actual-2-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t2.png",
+      "sha256": "baf1cc0dfd4a469f43c1c8d9dff6c54742c59329f9c1cc70c71b88d17855628c",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/actual-3.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t3.png",
+      "sha256": "8c26f618bdab35ebba27f97494a3a2c3adacc178781e733230ac673fcd536315",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/actual-3-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t3.png",
+      "sha256": "8c26f618bdab35ebba27f97494a3a2c3adacc178781e733230ac673fcd536315",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/actual-4.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t4.png",
+      "sha256": "bc1ae6267271206c6c925099f3a30fb000bbb49c793274f2b9c5a8b4abd5e072",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/actual-4-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t4.png",
+      "sha256": "bc1ae6267271206c6c925099f3a30fb000bbb49c793274f2b9c5a8b4abd5e072",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/reference-1.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/blind_prediction_t1.png",
+      "sha256": "1a61073d0d12680def1fe33cd34a1e81610ae7f82ae30e6d6b7b3740b7541f65",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/reference-1-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/blind_prediction_t1.png",
+      "sha256": "1a61073d0d12680def1fe33cd34a1e81610ae7f82ae30e6d6b7b3740b7541f65",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/reference-2.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/blind_prediction_t2.png",
+      "sha256": "4c5cc229f73f26d625409364750e6673ff38f4b3ce923146fbb501c22c23dde9",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/reference-2-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/blind_prediction_t2.png",
+      "sha256": "4c5cc229f73f26d625409364750e6673ff38f4b3ce923146fbb501c22c23dde9",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/reference-3.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/blind_prediction_t3.png",
+      "sha256": "a05f6cf805a0561d18e4cdd6df5b535be85d166c93a07707a2be9bfa5e478f1a",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/reference-3-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/blind_prediction_t3.png",
+      "sha256": "a05f6cf805a0561d18e4cdd6df5b535be85d166c93a07707a2be9bfa5e478f1a",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/reference-4.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/blind_prediction_t4.png",
+      "sha256": "5f895658dc45af3cc91f1b573714fecc4e4e8b2f657cc24d39c18e16b6b129f0",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/reference-4-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/blind_prediction_t4.png",
+      "sha256": "5f895658dc45af3cc91f1b573714fecc4e4e8b2f657cc24d39c18e16b6b129f0",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/history-1.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/history_prediction_t1.png",
+      "sha256": "1c9ebff81ff86932b18ada4c1ea22a0f5c1835534e89993ba646e74d8177501c",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/history-1-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/history_prediction_t1.png",
+      "sha256": "1c9ebff81ff86932b18ada4c1ea22a0f5c1835534e89993ba646e74d8177501c",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/history-2.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/history_prediction_t2.png",
+      "sha256": "22c5c30af464baf2bcf0656858cf6f57b0967e522516c093728fd84d04226194",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/history-2-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/history_prediction_t2.png",
+      "sha256": "22c5c30af464baf2bcf0656858cf6f57b0967e522516c093728fd84d04226194",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/history-3.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/history_prediction_t3.png",
+      "sha256": "3b0a9cf67056ec3deeb5c7d55cdc0d5b6a350287fc499affad0e5da0b2944102",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/history-3-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/history_prediction_t3.png",
+      "sha256": "3b0a9cf67056ec3deeb5c7d55cdc0d5b6a350287fc499affad0e5da0b2944102",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/history-4.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/history_prediction_t4.png",
+      "sha256": "934cbf9d2117ad9aed6a622186105497eae16fb8a0c1eea1a9306e9ee1bb20d9",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/history-4-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/history_prediction_t4.png",
+      "sha256": "934cbf9d2117ad9aed6a622186105497eae16fb8a0c1eea1a9306e9ee1bb20d9",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/ddm-1.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/offset_prediction_t1.png",
+      "sha256": "0c4f11f047dec2e89d28a6c8d0bbc4c825b7cd5ba8c710c1bec2aa611f56b802",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/ddm-1-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/offset_prediction_t1.png",
+      "sha256": "0c4f11f047dec2e89d28a6c8d0bbc4c825b7cd5ba8c710c1bec2aa611f56b802",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/ddm-2.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/offset_prediction_t2.png",
+      "sha256": "272097674bc369b95a8dc3dd9f6282291a04091df52f731381aa303cea657e22",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/ddm-2-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/offset_prediction_t2.png",
+      "sha256": "272097674bc369b95a8dc3dd9f6282291a04091df52f731381aa303cea657e22",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/ddm-3.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/offset_prediction_t3.png",
+      "sha256": "d061913b35505b4cb49f93643b99da0687c895aac66b0103b4b2cdbb18375c5f",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/ddm-3-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/offset_prediction_t3.png",
+      "sha256": "d061913b35505b4cb49f93643b99da0687c895aac66b0103b4b2cdbb18375c5f",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/ddm-4.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/offset_prediction_t4.png",
+      "sha256": "ad609eddd7522245ea07bb935e7d331e2b6c91eff05b532d14f30b3810d61645",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by10_a173/ddm-4-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/offset_prediction_t4.png",
+      "sha256": "ad609eddd7522245ea07bb935e7d331e2b6c91eff05b532d14f30b3810d61645",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/actual-1.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/raw_future_t1.png",
+      "sha256": "2ff3980decc3493625412a995ff137d99bb256baca565148c7afe6c8d1ab5604",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/actual-1-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/raw_future_t1.png",
+      "sha256": "2ff3980decc3493625412a995ff137d99bb256baca565148c7afe6c8d1ab5604",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/actual-2.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/raw_future_t2.png",
+      "sha256": "652162783690e2437334d553e4ef35582c47d5ad04c1a3f7984b15b335262902",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/actual-2-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/raw_future_t2.png",
+      "sha256": "652162783690e2437334d553e4ef35582c47d5ad04c1a3f7984b15b335262902",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/actual-3.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/raw_future_t3.png",
+      "sha256": "77db00a38880b90a9faad50806104f6bb90241f35fcd3c371159ee68cbe08236",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/actual-3-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/raw_future_t3.png",
+      "sha256": "77db00a38880b90a9faad50806104f6bb90241f35fcd3c371159ee68cbe08236",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/actual-4.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/raw_future_t4.png",
+      "sha256": "2fec0bc2ad37c016f8aed550e12cbb3f57d716bed94d8e40665411bc75a4e297",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/actual-4-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/raw_future_t4.png",
+      "sha256": "2fec0bc2ad37c016f8aed550e12cbb3f57d716bed94d8e40665411bc75a4e297",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/reference-1.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/blind_prediction_t1.png",
+      "sha256": "d1dbf21ee0138f1471624384b277c63acb81dda604b6809ca2c29c4fd36a2467",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/reference-1-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/blind_prediction_t1.png",
+      "sha256": "d1dbf21ee0138f1471624384b277c63acb81dda604b6809ca2c29c4fd36a2467",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/reference-2.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/blind_prediction_t2.png",
+      "sha256": "cd2ed68ef397f89598be7050d767a8f607cfdb19ef311dbae382b06d3f51c7f5",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/reference-2-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/blind_prediction_t2.png",
+      "sha256": "cd2ed68ef397f89598be7050d767a8f607cfdb19ef311dbae382b06d3f51c7f5",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/reference-3.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/blind_prediction_t3.png",
+      "sha256": "887e4ed128466f7e9aebb00ca864eb53afacdb88e2dc236852050775586fc67e",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/reference-3-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/blind_prediction_t3.png",
+      "sha256": "887e4ed128466f7e9aebb00ca864eb53afacdb88e2dc236852050775586fc67e",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/reference-4.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/blind_prediction_t4.png",
+      "sha256": "e49eb3db8e7a428fdec4e37fba837a83a81fe7958f169f6f24d631dee1e9b5b9",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/reference-4-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/blind_prediction_t4.png",
+      "sha256": "e49eb3db8e7a428fdec4e37fba837a83a81fe7958f169f6f24d631dee1e9b5b9",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/history-1.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/history_prediction_t1.png",
+      "sha256": "63a99f91b734661fd49b020e211a187255c2b5e66d55b6902c1ad7b91467c600",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/history-1-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/history_prediction_t1.png",
+      "sha256": "63a99f91b734661fd49b020e211a187255c2b5e66d55b6902c1ad7b91467c600",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/history-2.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/history_prediction_t2.png",
+      "sha256": "dc04a1605adecd15c77a50d5baabcac7eb5933c8bbd4945a3c1dc022b90edcc3",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/history-2-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/history_prediction_t2.png",
+      "sha256": "dc04a1605adecd15c77a50d5baabcac7eb5933c8bbd4945a3c1dc022b90edcc3",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/history-3.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/history_prediction_t3.png",
+      "sha256": "39e98552486d3abb1eb91426623d22c9ede6c94e19413f1ab43c63fb5c2b9c7d",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/history-3-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/history_prediction_t3.png",
+      "sha256": "39e98552486d3abb1eb91426623d22c9ede6c94e19413f1ab43c63fb5c2b9c7d",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/history-4.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/history_prediction_t4.png",
+      "sha256": "7632f85fb13f572cccd3b2e52e1e7cfdf09ea4e594c524c4ea204f89b486e09b",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/history-4-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/history_prediction_t4.png",
+      "sha256": "7632f85fb13f572cccd3b2e52e1e7cfdf09ea4e594c524c4ea204f89b486e09b",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/ddm-1.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/offset_prediction_t1.png",
+      "sha256": "7fb84c3f3478ed91454015e0880cf72400f2efeec813824a29229bb27eb442bd",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/ddm-1-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/offset_prediction_t1.png",
+      "sha256": "7fb84c3f3478ed91454015e0880cf72400f2efeec813824a29229bb27eb442bd",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/ddm-2.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/offset_prediction_t2.png",
+      "sha256": "93dc10961b7d574503525858ae25b0a53a160d0baf512dc3a961b1d5a985fa10",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/ddm-2-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/offset_prediction_t2.png",
+      "sha256": "93dc10961b7d574503525858ae25b0a53a160d0baf512dc3a961b1d5a985fa10",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/ddm-3.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/offset_prediction_t3.png",
+      "sha256": "7aab00f936f92cda996a0f6672d85b92c383dff7632811a56ce81b63421be1f8",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/ddm-3-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/offset_prediction_t3.png",
+      "sha256": "7aab00f936f92cda996a0f6672d85b92c383dff7632811a56ce81b63421be1f8",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/ddm-4.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/offset_prediction_t4.png",
+      "sha256": "fa7c0399dae52022d09a11a2596ca95af0fc8b40cb0b6708f5b043c3d667443a",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a083/ddm-4-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a083/offset_prediction_t4.png",
+      "sha256": "fa7c0399dae52022d09a11a2596ca95af0fc8b40cb0b6708f5b043c3d667443a",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/actual-1.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/raw_future_t1.png",
+      "sha256": "bcf8d76bea13e370c8d9444438ba5d7e222f2ff890d450817696957549ca557d",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/actual-1-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/raw_future_t1.png",
+      "sha256": "bcf8d76bea13e370c8d9444438ba5d7e222f2ff890d450817696957549ca557d",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/actual-2.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/raw_future_t2.png",
+      "sha256": "582f9033bc919e5a2866ab47a928f35982d41ea2bd1791666a52c70d1aa3a453",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/actual-2-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/raw_future_t2.png",
+      "sha256": "582f9033bc919e5a2866ab47a928f35982d41ea2bd1791666a52c70d1aa3a453",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/actual-3.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/raw_future_t3.png",
+      "sha256": "e419168f2eba6a68a11f9509719d180af307e7af1e18d1aa346fc29ef1d3dfbb",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/actual-3-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/raw_future_t3.png",
+      "sha256": "e419168f2eba6a68a11f9509719d180af307e7af1e18d1aa346fc29ef1d3dfbb",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/actual-4.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/raw_future_t4.png",
+      "sha256": "d7bb0328cc12ae99a2fda41fda585b3466be1e3acef2270a42b05fe5abacf4c5",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/actual-4-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/raw_future_t4.png",
+      "sha256": "d7bb0328cc12ae99a2fda41fda585b3466be1e3acef2270a42b05fe5abacf4c5",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/reference-1.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/blind_prediction_t1.png",
+      "sha256": "1a61073d0d12680def1fe33cd34a1e81610ae7f82ae30e6d6b7b3740b7541f65",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/reference-1-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/blind_prediction_t1.png",
+      "sha256": "1a61073d0d12680def1fe33cd34a1e81610ae7f82ae30e6d6b7b3740b7541f65",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/reference-2.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/blind_prediction_t2.png",
+      "sha256": "4c5cc229f73f26d625409364750e6673ff38f4b3ce923146fbb501c22c23dde9",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/reference-2-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/blind_prediction_t2.png",
+      "sha256": "4c5cc229f73f26d625409364750e6673ff38f4b3ce923146fbb501c22c23dde9",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/reference-3.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/blind_prediction_t3.png",
+      "sha256": "a05f6cf805a0561d18e4cdd6df5b535be85d166c93a07707a2be9bfa5e478f1a",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/reference-3-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/blind_prediction_t3.png",
+      "sha256": "a05f6cf805a0561d18e4cdd6df5b535be85d166c93a07707a2be9bfa5e478f1a",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/reference-4.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/blind_prediction_t4.png",
+      "sha256": "5f895658dc45af3cc91f1b573714fecc4e4e8b2f657cc24d39c18e16b6b129f0",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/reference-4-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/blind_prediction_t4.png",
+      "sha256": "5f895658dc45af3cc91f1b573714fecc4e4e8b2f657cc24d39c18e16b6b129f0",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/history-1.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/history_prediction_t1.png",
+      "sha256": "530cf6ad003b46d8dd298149501b403919411a9625a85f37900f44db5e7b9411",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/history-1-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/history_prediction_t1.png",
+      "sha256": "530cf6ad003b46d8dd298149501b403919411a9625a85f37900f44db5e7b9411",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/history-2.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/history_prediction_t2.png",
+      "sha256": "7660461cbc81c354a8ae559cbaa64f7c1999357a988ede60825ebb45ed95f9d9",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/history-2-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/history_prediction_t2.png",
+      "sha256": "7660461cbc81c354a8ae559cbaa64f7c1999357a988ede60825ebb45ed95f9d9",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/history-3.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/history_prediction_t3.png",
+      "sha256": "f1b2a78d1d25f32c800435bfe992100e71053d3997138429c159807e2822f9d4",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/history-3-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/history_prediction_t3.png",
+      "sha256": "f1b2a78d1d25f32c800435bfe992100e71053d3997138429c159807e2822f9d4",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/history-4.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/history_prediction_t4.png",
+      "sha256": "c0ec067a46556c4a974d46ae825ce4a42ae36bb5620aa6b4a5272e6878b66e20",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/history-4-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/history_prediction_t4.png",
+      "sha256": "c0ec067a46556c4a974d46ae825ce4a42ae36bb5620aa6b4a5272e6878b66e20",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/ddm-1.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/offset_prediction_t1.png",
+      "sha256": "ae94c6d93859fb3fa033edb736c1155af63d3b04a48ce59db1e5134647bfa359",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/ddm-1-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/offset_prediction_t1.png",
+      "sha256": "ae94c6d93859fb3fa033edb736c1155af63d3b04a48ce59db1e5134647bfa359",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/ddm-2.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/offset_prediction_t2.png",
+      "sha256": "bd60b24d1cc91dde168168bec4c8ba2eba1b05bf7c6a7c045003b7176c15a1ee",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/ddm-2-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/offset_prediction_t2.png",
+      "sha256": "bd60b24d1cc91dde168168bec4c8ba2eba1b05bf7c6a7c045003b7176c15a1ee",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/ddm-3.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/offset_prediction_t3.png",
+      "sha256": "4836ea92330ddb434d8a2d1aacff42c391a863e9aaced191175f5a38a9139320",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/ddm-3-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/offset_prediction_t3.png",
+      "sha256": "4836ea92330ddb434d8a2d1aacff42c391a863e9aaced191175f5a38a9139320",
+      "crop": null
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/ddm-4.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/offset_prediction_t4.png",
+      "sha256": "481290ec1609d1218715ccf3dbb9bc0b76de83cae6d7d20bcb92b91d5ba8db7e",
+      "crop": [
+        35,
+        15,
+        155,
+        175
+      ]
+    },
+    {
+      "file": "static/gallery/toss/bs13_by34_a173/ddm-4-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by34_a173/offset_prediction_t4.png",
+      "sha256": "481290ec1609d1218715ccf3dbb9bc0b76de83cae6d7d20bcb92b91d5ba8db7e",
+      "crop": null
+    }
+  ]
+}

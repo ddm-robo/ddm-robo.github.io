@@ -1,0 +1,9 @@
+'use strict';
+(() => {
+ const root=document.getElementById('toss-videos');if(!root||!window.DDM_TOSS_VIDEOS)return;
+ for(const item of window.DDM_TOSS_VIDEOS){
+  const card=document.createElement('article');card.className='video-card';
+  card.innerHTML=`<video controls playsinline preload="none" poster="${item.poster}" aria-label="Toss cube condition ${item.label}: Cosmos Policy and DDM until first floor contact"><source src="${item.video}" type="video/mp4"><a href="${item.video}">Download replay</a></video><div class="video-caption"><div class="video-playback"><button type="button" class="replay-video" aria-label="Replay toss condition ${item.label}">↻ Replay</button><button type="button" class="slow-video" aria-pressed="false" aria-label="Half-speed playback for toss condition ${item.label}">0.5× speed</button></div><div class="video-badges"><span>Goal ${item.goal_index}</span><span>Damping ${item.property.join(' / ')}</span><span>25 fps · Simulator replay</span></div><h3>Robot dynamics ${item.label}</h3><p>Same cube properties and goal. The two methods execute their selected actions under this damping condition.</p><p class="final-score-label">First-contact goal distance</p><div class="video-final-scores toss-final">${Object.values(item.methods).map(m=>`<span>${m.name}<strong>${m.position_error_cm.toFixed(2)} <small>cm</small></strong><small>Contact at ${m.contact_time_s.toFixed(3)} s</small></span>`).join('')}</div></div>`;
+  root.append(card);const video=card.querySelector('video');card.querySelector('.replay-video').addEventListener('click',()=>{video.currentTime=0;video.play().catch(()=>{});});card.querySelector('.slow-video').addEventListener('click',e=>{const slow=video.playbackRate===1;video.playbackRate=slow?0.5:1;e.currentTarget.setAttribute('aria-pressed',String(slow));});video.addEventListener('play',()=>{document.querySelectorAll('#videos video').forEach(v=>{if(v!==video)v.pause();});});
+ }
+})();

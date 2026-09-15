@@ -1,0 +1,1088 @@
+{
+  "manuscript": "paper/main.tex",
+  "manuscript_sha256": "2e40b8a7a191999d7da2a4dc224fa78d20281794b921de1d81cc606509bc563f",
+  "paper_pdf_sha256": "5f07eabd0afb8603382f2ea2cf5ea7d3290e80594d1d5a9dccf6a7d2c80cc745",
+  "notes": [
+    "Blender images are task/method illustrations, not model outputs.",
+    "WM examples: push q50_y-1.75; toss bs13_by10_a173.",
+    "WAM examples selected for large method gaps, not aggregate performance.",
+    "Full and cropped evaluation frames are lossless; per-time crops shared by all methods.",
+    "All experiments in simulation; WM/WAM separately trained."
+  ],
+  "assets": [
+    {
+      "file": "static/media/hero-initial.webp",
+      "source": "paper/figures/push_digit_teaser/teaser_closeup/assets/initial.png",
+      "sha256": "827356f8989a3a3dd254a4e705eedfb840193d136672708743969b6c3cd29c6b",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/hero-progress.webp",
+      "source": "paper/figures/push_digit_teaser/teaser_closeup/assets/progress.png",
+      "sha256": "01c50d94a9c5a62f5c6d80eb6a0bf057abc71658caa0c9290bc2c89e1d2dbc28",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/hero-ending.webp",
+      "source": "paper/figures/push_digit_teaser/teaser_closeup/assets/ending.png",
+      "sha256": "825fc21daef4dd32dd01308b8397c48ee5535d0650560540ea52255b0f9781a3",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/com-A.webp",
+      "source": "paper/figures/push_digit_teaser/teaser_closeup/assets/a_A_com.png",
+      "sha256": "767fdc0a8fc45e81f5c51e983a649f621210729d3db72a2fb958f06566eec184",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/com-B.webp",
+      "source": "paper/figures/push_digit_teaser/teaser_closeup/assets/a_B_com.png",
+      "sha256": "5a07b1a72111f11d9c0888943ab7c4187c407ec72d0492b765c876e797c890dd",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/framework.webp",
+      "source": "paper/figures/ddm_framework.png",
+      "sha256": "68eec52c13db9f4f79bea6bccb830f3ee9d586b4403574ce3a198b2b87687e58",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-setup.webp",
+      "source": "paper/figures/task_illustrations/toss_cube_tasks.png",
+      "sha256": "12ed8b0205bbdad0d37da94c6e69b801556d9b752ef22dc6e22e23e453e5d1b6",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-setup.webp",
+      "source": "paper/figures/task_illustrations/push_digit_wam.png",
+      "sha256": "4c0121003091a14705335c32dd982a2a75468513841b92b70d6404eb2c5f726c",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-observation.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/observation.png",
+      "sha256": "983d969f59f54903f12e5c34161616c308ad984196333aabd51158494cccf756",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-actual-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t1.png",
+      "sha256": "ca723dba6b5503793f1931ecfb6c3faf46e7e7a0bf0e50a160dd658b40899e85",
+      "crop": [
+        104,
+        120,
+        204,
+        220
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-actual-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t1.png",
+      "sha256": "ca723dba6b5503793f1931ecfb6c3faf46e7e7a0bf0e50a160dd658b40899e85",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-reference-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/blind_t1.png",
+      "sha256": "1facb825e099851059668e2a63a650eca1d5064fd15fb3d9b3464348074292ee",
+      "crop": [
+        104,
+        120,
+        204,
+        220
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-reference-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/blind_t1.png",
+      "sha256": "1facb825e099851059668e2a63a650eca1d5064fd15fb3d9b3464348074292ee",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-reference-diff-1.webp",
+      "source": [
+        "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t1.png",
+        "paper/figures/qualitative/data/samples/q50_y-1.75/blind_t1.png"
+      ],
+      "crop": [
+        104,
+        120,
+        204,
+        220
+      ],
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/push-wm-reference-diff-1-full.webp",
+      "source": [
+        "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t1.png",
+        "paper/figures/qualitative/data/samples/q50_y-1.75/blind_t1.png"
+      ],
+      "crop": null,
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/push-wm-ddm-1.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/offset_t1.png",
+      "sha256": "ab1549f8907fba13c4e935f48dbf6e07f941b65ab2e526ce00f458ef7c89c5b7",
+      "crop": [
+        104,
+        120,
+        204,
+        220
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-ddm-1-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/offset_t1.png",
+      "sha256": "ab1549f8907fba13c4e935f48dbf6e07f941b65ab2e526ce00f458ef7c89c5b7",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-ddm-diff-1.webp",
+      "source": [
+        "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t1.png",
+        "paper/figures/qualitative/data/samples/q50_y-1.75/offset_t1.png"
+      ],
+      "crop": [
+        104,
+        120,
+        204,
+        220
+      ],
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/push-wm-ddm-diff-1-full.webp",
+      "source": [
+        "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t1.png",
+        "paper/figures/qualitative/data/samples/q50_y-1.75/offset_t1.png"
+      ],
+      "crop": null,
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/push-wm-actual-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t2.png",
+      "sha256": "0048f5df5c603843d604d15f7e4489f771d4e58ec8a64f596edb241fa52801b2",
+      "crop": [
+        104,
+        120,
+        204,
+        220
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-actual-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t2.png",
+      "sha256": "0048f5df5c603843d604d15f7e4489f771d4e58ec8a64f596edb241fa52801b2",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-reference-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/blind_t2.png",
+      "sha256": "c0c20e324ec38c8bbb979c47e7bc5fa3b390344e1dd228674b5335504daf6964",
+      "crop": [
+        104,
+        120,
+        204,
+        220
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-reference-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/blind_t2.png",
+      "sha256": "c0c20e324ec38c8bbb979c47e7bc5fa3b390344e1dd228674b5335504daf6964",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-reference-diff-2.webp",
+      "source": [
+        "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t2.png",
+        "paper/figures/qualitative/data/samples/q50_y-1.75/blind_t2.png"
+      ],
+      "crop": [
+        104,
+        120,
+        204,
+        220
+      ],
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/push-wm-reference-diff-2-full.webp",
+      "source": [
+        "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t2.png",
+        "paper/figures/qualitative/data/samples/q50_y-1.75/blind_t2.png"
+      ],
+      "crop": null,
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/push-wm-ddm-2.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/offset_t2.png",
+      "sha256": "89f9a7e4d90a18c5fc70443675c5ef67083c60124e1ced60aebf73db118dd0db",
+      "crop": [
+        104,
+        120,
+        204,
+        220
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-ddm-2-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/offset_t2.png",
+      "sha256": "89f9a7e4d90a18c5fc70443675c5ef67083c60124e1ced60aebf73db118dd0db",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-ddm-diff-2.webp",
+      "source": [
+        "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t2.png",
+        "paper/figures/qualitative/data/samples/q50_y-1.75/offset_t2.png"
+      ],
+      "crop": [
+        104,
+        120,
+        204,
+        220
+      ],
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/push-wm-ddm-diff-2-full.webp",
+      "source": [
+        "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t2.png",
+        "paper/figures/qualitative/data/samples/q50_y-1.75/offset_t2.png"
+      ],
+      "crop": null,
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/push-wm-actual-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t3.png",
+      "sha256": "a042ad2c6d47ca2fce4f597d62c1742ad67733f768e13f2e3b45c4e3194447da",
+      "crop": [
+        104,
+        120,
+        204,
+        220
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-actual-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t3.png",
+      "sha256": "a042ad2c6d47ca2fce4f597d62c1742ad67733f768e13f2e3b45c4e3194447da",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-reference-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/blind_t3.png",
+      "sha256": "68b9f3457179881931e3e8eba8977fb4e721049f10f920a23d1d04012afc7bed",
+      "crop": [
+        104,
+        120,
+        204,
+        220
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-reference-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/blind_t3.png",
+      "sha256": "68b9f3457179881931e3e8eba8977fb4e721049f10f920a23d1d04012afc7bed",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-reference-diff-3.webp",
+      "source": [
+        "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t3.png",
+        "paper/figures/qualitative/data/samples/q50_y-1.75/blind_t3.png"
+      ],
+      "crop": [
+        104,
+        120,
+        204,
+        220
+      ],
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/push-wm-reference-diff-3-full.webp",
+      "source": [
+        "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t3.png",
+        "paper/figures/qualitative/data/samples/q50_y-1.75/blind_t3.png"
+      ],
+      "crop": null,
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/push-wm-ddm-3.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/offset_t3.png",
+      "sha256": "56a3b28b53cef3f8f1195ed261e46f60144b96baf243a431aab58bae407adab4",
+      "crop": [
+        104,
+        120,
+        204,
+        220
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-ddm-3-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/offset_t3.png",
+      "sha256": "56a3b28b53cef3f8f1195ed261e46f60144b96baf243a431aab58bae407adab4",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-ddm-diff-3.webp",
+      "source": [
+        "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t3.png",
+        "paper/figures/qualitative/data/samples/q50_y-1.75/offset_t3.png"
+      ],
+      "crop": [
+        104,
+        120,
+        204,
+        220
+      ],
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/push-wm-ddm-diff-3-full.webp",
+      "source": [
+        "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t3.png",
+        "paper/figures/qualitative/data/samples/q50_y-1.75/offset_t3.png"
+      ],
+      "crop": null,
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/push-wm-actual-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t4.png",
+      "sha256": "82d3697071dd232869de43cd324994e16f3ed5317bf5e21d0010a3bc56faa777",
+      "crop": [
+        104,
+        120,
+        204,
+        220
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-actual-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t4.png",
+      "sha256": "82d3697071dd232869de43cd324994e16f3ed5317bf5e21d0010a3bc56faa777",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-reference-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/blind_t4.png",
+      "sha256": "de3914a3fc4acd124c8e66b18693301a12fade45d1fb960e1f88e51862f303e2",
+      "crop": [
+        104,
+        120,
+        204,
+        220
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-reference-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/blind_t4.png",
+      "sha256": "de3914a3fc4acd124c8e66b18693301a12fade45d1fb960e1f88e51862f303e2",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-reference-diff-4.webp",
+      "source": [
+        "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t4.png",
+        "paper/figures/qualitative/data/samples/q50_y-1.75/blind_t4.png"
+      ],
+      "crop": [
+        104,
+        120,
+        204,
+        220
+      ],
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/push-wm-reference-diff-4-full.webp",
+      "source": [
+        "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t4.png",
+        "paper/figures/qualitative/data/samples/q50_y-1.75/blind_t4.png"
+      ],
+      "crop": null,
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/push-wm-ddm-4.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/offset_t4.png",
+      "sha256": "f6f2fe0d7dec782ebdfaae40383656cd45148f571c68ab84400184c1b6fc482d",
+      "crop": [
+        104,
+        120,
+        204,
+        220
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-ddm-4-full.webp",
+      "source": "paper/figures/qualitative/data/samples/q50_y-1.75/offset_t4.png",
+      "sha256": "f6f2fe0d7dec782ebdfaae40383656cd45148f571c68ab84400184c1b6fc482d",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wm-ddm-diff-4.webp",
+      "source": [
+        "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t4.png",
+        "paper/figures/qualitative/data/samples/q50_y-1.75/offset_t4.png"
+      ],
+      "crop": [
+        104,
+        120,
+        204,
+        220
+      ],
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/push-wm-ddm-diff-4-full.webp",
+      "source": [
+        "paper/figures/qualitative/data/samples/q50_y-1.75/gt_t4.png",
+        "paper/figures/qualitative/data/samples/q50_y-1.75/offset_t4.png"
+      ],
+      "crop": null,
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/toss-wm-observation.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_observation.png",
+      "sha256": "f40aeda7c3b8371b96a8a2b0d56f327479fa880b0b6362bdf153df0dafce35bb",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-actual-1.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t1.png",
+      "sha256": "9545590486e64e80116b3692965caaa1b084ed81e3f468e846899bd4d6065365",
+      "crop": [
+        45,
+        110,
+        135,
+        175
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-actual-1-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t1.png",
+      "sha256": "9545590486e64e80116b3692965caaa1b084ed81e3f468e846899bd4d6065365",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-reference-1.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/blind_prediction_t1.png",
+      "sha256": "1a61073d0d12680def1fe33cd34a1e81610ae7f82ae30e6d6b7b3740b7541f65",
+      "crop": [
+        45,
+        110,
+        135,
+        175
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-reference-1-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/blind_prediction_t1.png",
+      "sha256": "1a61073d0d12680def1fe33cd34a1e81610ae7f82ae30e6d6b7b3740b7541f65",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-reference-diff-1.webp",
+      "source": [
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t1.png",
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/blind_prediction_t1.png"
+      ],
+      "crop": [
+        45,
+        110,
+        135,
+        175
+      ],
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/toss-wm-reference-diff-1-full.webp",
+      "source": [
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t1.png",
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/blind_prediction_t1.png"
+      ],
+      "crop": null,
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/toss-wm-ddm-1.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/offset_prediction_t1.png",
+      "sha256": "0c4f11f047dec2e89d28a6c8d0bbc4c825b7cd5ba8c710c1bec2aa611f56b802",
+      "crop": [
+        45,
+        110,
+        135,
+        175
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-ddm-1-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/offset_prediction_t1.png",
+      "sha256": "0c4f11f047dec2e89d28a6c8d0bbc4c825b7cd5ba8c710c1bec2aa611f56b802",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-ddm-diff-1.webp",
+      "source": [
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t1.png",
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/offset_prediction_t1.png"
+      ],
+      "crop": [
+        45,
+        110,
+        135,
+        175
+      ],
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/toss-wm-ddm-diff-1-full.webp",
+      "source": [
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t1.png",
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/offset_prediction_t1.png"
+      ],
+      "crop": null,
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/toss-wm-actual-2.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t2.png",
+      "sha256": "baf1cc0dfd4a469f43c1c8d9dff6c54742c59329f9c1cc70c71b88d17855628c",
+      "crop": [
+        42,
+        54,
+        134,
+        116
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-actual-2-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t2.png",
+      "sha256": "baf1cc0dfd4a469f43c1c8d9dff6c54742c59329f9c1cc70c71b88d17855628c",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-reference-2.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/blind_prediction_t2.png",
+      "sha256": "4c5cc229f73f26d625409364750e6673ff38f4b3ce923146fbb501c22c23dde9",
+      "crop": [
+        42,
+        54,
+        134,
+        116
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-reference-2-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/blind_prediction_t2.png",
+      "sha256": "4c5cc229f73f26d625409364750e6673ff38f4b3ce923146fbb501c22c23dde9",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-reference-diff-2.webp",
+      "source": [
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t2.png",
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/blind_prediction_t2.png"
+      ],
+      "crop": [
+        42,
+        54,
+        134,
+        116
+      ],
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/toss-wm-reference-diff-2-full.webp",
+      "source": [
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t2.png",
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/blind_prediction_t2.png"
+      ],
+      "crop": null,
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/toss-wm-ddm-2.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/offset_prediction_t2.png",
+      "sha256": "272097674bc369b95a8dc3dd9f6282291a04091df52f731381aa303cea657e22",
+      "crop": [
+        42,
+        54,
+        134,
+        116
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-ddm-2-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/offset_prediction_t2.png",
+      "sha256": "272097674bc369b95a8dc3dd9f6282291a04091df52f731381aa303cea657e22",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-ddm-diff-2.webp",
+      "source": [
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t2.png",
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/offset_prediction_t2.png"
+      ],
+      "crop": [
+        42,
+        54,
+        134,
+        116
+      ],
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/toss-wm-ddm-diff-2-full.webp",
+      "source": [
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t2.png",
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/offset_prediction_t2.png"
+      ],
+      "crop": null,
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/toss-wm-actual-3.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t3.png",
+      "sha256": "8c26f618bdab35ebba27f97494a3a2c3adacc178781e733230ac673fcd536315",
+      "crop": [
+        42,
+        30,
+        134,
+        92
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-actual-3-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t3.png",
+      "sha256": "8c26f618bdab35ebba27f97494a3a2c3adacc178781e733230ac673fcd536315",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-reference-3.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/blind_prediction_t3.png",
+      "sha256": "a05f6cf805a0561d18e4cdd6df5b535be85d166c93a07707a2be9bfa5e478f1a",
+      "crop": [
+        42,
+        30,
+        134,
+        92
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-reference-3-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/blind_prediction_t3.png",
+      "sha256": "a05f6cf805a0561d18e4cdd6df5b535be85d166c93a07707a2be9bfa5e478f1a",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-reference-diff-3.webp",
+      "source": [
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t3.png",
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/blind_prediction_t3.png"
+      ],
+      "crop": [
+        42,
+        30,
+        134,
+        92
+      ],
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/toss-wm-reference-diff-3-full.webp",
+      "source": [
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t3.png",
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/blind_prediction_t3.png"
+      ],
+      "crop": null,
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/toss-wm-ddm-3.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/offset_prediction_t3.png",
+      "sha256": "d061913b35505b4cb49f93643b99da0687c895aac66b0103b4b2cdbb18375c5f",
+      "crop": [
+        42,
+        30,
+        134,
+        92
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-ddm-3-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/offset_prediction_t3.png",
+      "sha256": "d061913b35505b4cb49f93643b99da0687c895aac66b0103b4b2cdbb18375c5f",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-ddm-diff-3.webp",
+      "source": [
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t3.png",
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/offset_prediction_t3.png"
+      ],
+      "crop": [
+        42,
+        30,
+        134,
+        92
+      ],
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/toss-wm-ddm-diff-3-full.webp",
+      "source": [
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t3.png",
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/offset_prediction_t3.png"
+      ],
+      "crop": null,
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/toss-wm-actual-4.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t4.png",
+      "sha256": "bc1ae6267271206c6c925099f3a30fb000bbb49c793274f2b9c5a8b4abd5e072",
+      "crop": [
+        50,
+        29,
+        130,
+        89
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-actual-4-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t4.png",
+      "sha256": "bc1ae6267271206c6c925099f3a30fb000bbb49c793274f2b9c5a8b4abd5e072",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-reference-4.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/blind_prediction_t4.png",
+      "sha256": "5f895658dc45af3cc91f1b573714fecc4e4e8b2f657cc24d39c18e16b6b129f0",
+      "crop": [
+        50,
+        29,
+        130,
+        89
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-reference-4-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/blind_prediction_t4.png",
+      "sha256": "5f895658dc45af3cc91f1b573714fecc4e4e8b2f657cc24d39c18e16b6b129f0",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-reference-diff-4.webp",
+      "source": [
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t4.png",
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/blind_prediction_t4.png"
+      ],
+      "crop": [
+        50,
+        29,
+        130,
+        89
+      ],
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/toss-wm-reference-diff-4-full.webp",
+      "source": [
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t4.png",
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/blind_prediction_t4.png"
+      ],
+      "crop": null,
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/toss-wm-ddm-4.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/offset_prediction_t4.png",
+      "sha256": "ad609eddd7522245ea07bb935e7d331e2b6c91eff05b532d14f30b3810d61645",
+      "crop": [
+        50,
+        29,
+        130,
+        89
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-ddm-4-full.webp",
+      "source": "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/offset_prediction_t4.png",
+      "sha256": "ad609eddd7522245ea07bb935e7d331e2b6c91eff05b532d14f30b3810d61645",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wm-ddm-diff-4.webp",
+      "source": [
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t4.png",
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/offset_prediction_t4.png"
+      ],
+      "crop": [
+        50,
+        29,
+        130,
+        89
+      ],
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/toss-wm-ddm-diff-4-full.webp",
+      "source": [
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/raw_future_t4.png",
+        "paper/figures/qualitative/toss_data/wm/samples/bs13_by10_a173/offset_prediction_t4.png"
+      ],
+      "crop": null,
+      "transform": "mean absolute RGB error in 8-bit units; palette knots 0,16,32,64, saturated at 64; not latent RDD"
+    },
+    {
+      "file": "static/media/push-wam-A-initial.webp",
+      "source": "paper/figures/qualitative/gain_data/push_wam/A/observation.png",
+      "sha256": "e8306500d363548c9df22ba9ed5e080c618cc214d62da1143f344817f344a019",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wam-A-reference.webp",
+      "source": "paper/figures/qualitative/gain_data/push_wam/A/cosmos_policy/final.png",
+      "sha256": "73114f00a2fb3a82eb898c48f0bde343e26d674a6f6d4757654748b0bd2f56fd",
+      "crop": [
+        66,
+        90,
+        198,
+        184
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wam-A-reference-full.webp",
+      "source": "paper/figures/qualitative/gain_data/push_wam/A/cosmos_policy/final.png",
+      "sha256": "73114f00a2fb3a82eb898c48f0bde343e26d674a6f6d4757654748b0bd2f56fd",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wam-A-ddm.webp",
+      "source": "paper/figures/qualitative/gain_data/push_wam/A/ddm/final.png",
+      "sha256": "10fd33dc170e58d5994701bf73737533ff97df7c6ef3de66e00200a6b86f827b",
+      "crop": [
+        66,
+        90,
+        198,
+        184
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wam-A-ddm-full.webp",
+      "source": "paper/figures/qualitative/gain_data/push_wam/A/ddm/final.png",
+      "sha256": "10fd33dc170e58d5994701bf73737533ff97df7c6ef3de66e00200a6b86f827b",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wam-B-initial.webp",
+      "source": "paper/figures/qualitative/gain_data/push_wam/B/observation.png",
+      "sha256": "e8306500d363548c9df22ba9ed5e080c618cc214d62da1143f344817f344a019",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wam-B-reference.webp",
+      "source": "paper/figures/qualitative/gain_data/push_wam/B/cosmos_policy/final.png",
+      "sha256": "5904181741520fad553e4987e1ff8cc852d7ee6d15018a6b5619aa2d6534fa00",
+      "crop": [
+        66,
+        90,
+        198,
+        184
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wam-B-reference-full.webp",
+      "source": "paper/figures/qualitative/gain_data/push_wam/B/cosmos_policy/final.png",
+      "sha256": "5904181741520fad553e4987e1ff8cc852d7ee6d15018a6b5619aa2d6534fa00",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wam-B-ddm.webp",
+      "source": "paper/figures/qualitative/gain_data/push_wam/B/ddm/final.png",
+      "sha256": "0635097d2a948624c3e81cb82002a6cfa1f4551179fcefc25cd1e2f144dd1fb6",
+      "crop": [
+        66,
+        90,
+        198,
+        184
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/push-wam-B-ddm-full.webp",
+      "source": "paper/figures/qualitative/gain_data/push_wam/B/ddm/final.png",
+      "sha256": "0635097d2a948624c3e81cb82002a6cfa1f4551179fcefc25cd1e2f144dd1fb6",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wam-A-initial.webp",
+      "source": "paper/figures/qualitative/gain_data/toss_wam/samples/bs16_by26_g91/start_goal_raw.png",
+      "sha256": "7734994a0e1b60f578a6c3961d941adb76f0c5b2d9a165fd0396f87edca5291d",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wam-A-reference.webp",
+      "source": "paper/figures/qualitative/gain_data/toss_wam/samples/bs16_by26_g91/blind_contact/first_contact_goal.png",
+      "sha256": "552c15b6d9deb6881e7094059e97f2a9a9db3dfe89a664bf117d56e25acc5425",
+      "crop": [
+        66,
+        99,
+        150,
+        159
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wam-A-reference-full.webp",
+      "source": "paper/figures/qualitative/gain_data/toss_wam/samples/bs16_by26_g91/blind_contact/first_contact_goal.png",
+      "sha256": "552c15b6d9deb6881e7094059e97f2a9a9db3dfe89a664bf117d56e25acc5425",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wam-A-ddm.webp",
+      "source": "paper/figures/qualitative/gain_data/toss_wam/samples/bs16_by26_g91/offset_contact/first_contact_goal.png",
+      "sha256": "296c82d687fa4e8ea5aff5090f8c4fd736644ecd9a75d7e3d6b25f852f860af9",
+      "crop": [
+        66,
+        99,
+        150,
+        159
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wam-A-ddm-full.webp",
+      "source": "paper/figures/qualitative/gain_data/toss_wam/samples/bs16_by26_g91/offset_contact/first_contact_goal.png",
+      "sha256": "296c82d687fa4e8ea5aff5090f8c4fd736644ecd9a75d7e3d6b25f852f860af9",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wam-B-initial.webp",
+      "source": "paper/figures/qualitative/gain_data/toss_wam/samples/bs16_by30_g91/start_goal_raw.png",
+      "sha256": "7734994a0e1b60f578a6c3961d941adb76f0c5b2d9a165fd0396f87edca5291d",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wam-B-reference.webp",
+      "source": "paper/figures/qualitative/gain_data/toss_wam/samples/bs16_by30_g91/blind_contact/first_contact_goal.png",
+      "sha256": "f8d54936dac453e46f839ea5a2c86d153d0a960a5ea9878645c6e5638ab060c1",
+      "crop": [
+        66,
+        99,
+        150,
+        159
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wam-B-reference-full.webp",
+      "source": "paper/figures/qualitative/gain_data/toss_wam/samples/bs16_by30_g91/blind_contact/first_contact_goal.png",
+      "sha256": "f8d54936dac453e46f839ea5a2c86d153d0a960a5ea9878645c6e5638ab060c1",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wam-B-ddm.webp",
+      "source": "paper/figures/qualitative/gain_data/toss_wam/samples/bs16_by30_g91/offset_contact/first_contact_goal.png",
+      "sha256": "8d1b563419ef815aa09cb77a422c10ea5a7b0c37eddb44bc38a04d5d08f8c5a7",
+      "crop": [
+        66,
+        99,
+        150,
+        159
+      ],
+      "transform": "lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/toss-wam-B-ddm-full.webp",
+      "source": "paper/figures/qualitative/gain_data/toss_wam/samples/bs16_by30_g91/offset_contact/first_contact_goal.png",
+      "sha256": "8d1b563419ef815aa09cb77a422c10ea5a7b0c37eddb44bc38a04d5d08f8c5a7",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    }
+  ]
+}

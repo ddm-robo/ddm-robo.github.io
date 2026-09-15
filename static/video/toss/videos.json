@@ -1,0 +1,2964 @@
+{
+  "schema_version": 1,
+  "task": "Toss WAM continuous policy replay",
+  "model_order": [
+    "cosmos_policy",
+    "ddm"
+  ],
+  "mujoco_version": "3.11.0",
+  "dependencies": {
+    "mujoco": "3.11.0",
+    "numpy": "2.5.3",
+    "Pillow": "12.3.0",
+    "h5py": "3.16.0"
+  },
+  "gl_backend": "osmesa",
+  "native_resolution": [
+    224,
+    224
+  ],
+  "crop_xyxy": [
+    0,
+    0,
+    224,
+    224
+  ],
+  "spatial_transform": "Full original 224x224 image, 2x nearest-neighbor upscale; labels outside the image.",
+  "timing": "25 fps at every 20 native 0.002 s steps on the common swing-start clock, starting at t=0. Each arm stops being captured at its own exact first floor/object contact. Between-tick contact appears on the next video tick (less than 40 ms later); shorter arm holds. After both contacts, hold 30 additional frames (1.2 s). No temporal interpolation or retiming.",
+  "physics": "Unchanged archived Roller2Dof.throw(prop, snapped_action, seed=411, render=True). Read-only mj_step observer; original function continues unchanged to return its contact and flight. No additional mj_forward, control, geometry, camera or dynamics changes. Goal appended only to mjvScene using exact exporter geometry and color.",
+  "asset_resolution": "Unmodified archived scene tar extracted to isolated temporary storage; only gripper.HERE and MENAGERIE_DIR redirected to its legitimate assets.",
+  "evidence": "Actual native simulator cube and gripper, not reconstructed animation. Archived snapped policy actions; no new inference. Full native raw and goal contact PNGs match saved contact pixels bit-exactly before lossy H.264 encoding.",
+  "path_conventions": {
+    "video_and_poster": "relative to proj_page",
+    "source": "relative to repository",
+    "native_frame": "relative to this videos.json"
+  },
+  "source_sha256": {
+    "proj_page/scripts/render_toss_videos.py": "7836c841fc0c5ad3712201d255b8b29adc4c1d9437eaad1dd5630dece742b202",
+    "paper/figures/qualitative/gain_data/toss_wam/manifest.json": "8293c5c50d2dc45cbab1098ccebb3739840b3ad06da24314aa8d84ce4b595f15",
+    "paper/figures/qualitative/gain_data/toss_wam/provenance/bank_subset.json": "f9fda0dde4836340d3cc343b814c0b35ccb2b9312be66e9e64957ad265f17f87",
+    "paper/figures/qualitative/toss_data/generator_scene_assets.tar.gz": "08b5b3a138325ada5b1cbd8093ec33b90221c14b31e699ad0cebba523a4f5452",
+    "paper/figures/qualitative/pipeline/export_toss_wam_gain.py": "8179236b7e9fedd9561917a722b89f450945d39cf51b82ba6fd059e5631c7a4c",
+    "paper/figures/qualitative/pipeline/export_toss_wam_contact.py": "5d18c4d705550b79494f05657e50deadf56c9a165e2620e5b7010d7b60e02eed",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_obs2dof_verify.py": "353fe0933afcffbb454e7102d1cdbab41f5cd56a00045c1aa5e4fbf2fb052434",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_inv_vae.py": "6ad53771994dfd6b9608cf73a59b6d4fb4913de7606516eba4e2896f4369e8e4",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_refit_obs2dof.py": "4a61aec434a27b4207851fab1f8c482fa928ce11e12e8b963d3400191941e4b0",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_ctx_damping_probe.py": "78f3dd9af8170a529305ae11cdf73fab06dddd4f8dddce9fc7902177df78c209",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_video.py": "c545673f64a02f2284feb7612101f657bee8fb16e131591146a3ccfd1387ebd1",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_2dof_gm_audit.py": "29638161578973e74a50aa14daaefdb62386ea1eecbab26fa65c108a2b9f5205",
+    "paper/figures/qualitative/toss_data/generator_sources/_q5_pose.py": "6f316babb0ab7dd6c9041d176b9a2af6d6d8a61175747f479ea7f283ac8c71ae",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_input_viz.py": "a1b17653cc6e2247981f881576cb438f3f34151f54f68fe166072515996c9a17",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_figs.py": "a9bbb31058f06a2af9236e1156bb3c24274bed97151290b161e31df78e1c08c1",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_verify_fut_grid.py": "1b1246ef362711c36244cd8899453a441e5b16c433de3afb483f5ad2de141dfe",
+    "paper/figures/qualitative/toss_data/generator_sources/make_toss_2dof_gm.py": "9c23e29d2e3f5ebddcb4f95de6b04a3ee4420637528c02ab41d60bb890b4ecda",
+    "paper/figures/qualitative/toss_data/generator_sources/_aud_gm_s4_physics.py": "e7a1d8c842784421c8fc73a572d77be1417bc8c44690239ac9a07d0bae3b2d93",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_2dof_gm_design.py": "412fc75a12557555e1f86ed595c24a9007808b7f7a48255cd9172ff5ba2ee6e2",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_ref_arms.py": "96fb5edab08ae69d63a940b73fd4d37f4d7482d55af776bbd89ec9462697110a",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_ctx_causal_probe.py": "a5cdc76d9df4ac2435d890982d70a263a54621b886b74d9a4882934392a1b332",
+    "paper/figures/qualitative/toss_data/generator_sources/_q19_paramcount.py": "9bf4968bcf3864e7b8d0880b748433f14dff385ff609186f92e2daa90b592d2e",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_inv_table2.py": "f28adaf309d1701098274f7f5de2b2d6297ab69b907ed569070773bde0b718da",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_2dof_view_proxy_score.py": "01b044527021a63eb9be62cc3512fa86186d986cc355391d82d130eae6cfd811",
+    "paper/figures/qualitative/toss_data/generator_sources/make_toss_2dof_transitions.py": "4960af1833fe3fa54e70d384f96487e27e86615cdf7ad70b92910e3ee7bd62cf",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_k_sweep.py": "050f1db25fe1bef41313cc6d84c410869c85541cc4426868322b5b0cc970de3f",
+    "paper/figures/qualitative/toss_data/generator_sources/_q_check.py": "8394d2fd31a4e23e0b3be47c751ec272c0ef55a4565e6d2d8139d434a6ec02d0",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_2dof_latent_xy_table.py": "19399fc23778d77d05bcfb836f02329ed7b69aec266e1cda6fcce641b98ddd9c",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_render224.py": "41df04a45eae89ab2e4c311adf663fcae12573ae911b8c084f3fd8711778ff91",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_2dof_ref_shootout.py": "e42c9fc0e48fa73751fa3be89ac6f0e1aec9e706f97c68808c77687e0194b749",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_dataset_viz.py": "7ff2aa2caabf95b8c799ba69d56923a9871a6c39efb90ef1137bdede1a77c3c1",
+    "paper/figures/qualitative/toss_data/generator_sources/make_toss_2dof_gm_s4.py": "0ca4554cb364cec330bf6f876e782131ec92b1800cffaebb42e1abadccdb7e5a",
+    "paper/figures/qualitative/toss_data/generator_sources/_q10_roundtrip.py": "a7a0867790807ff0572bfa5fae3bcf49af54b88fa447a0b642ec4f4042ed5486",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_fwd_vae.py": "2228f24562392b5aed55d77692f2d2e08a071024782f3c9680a93b841e3be0b1",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_2dof_protocol_sweep.py": "83664b4db2cc86bd99dfe536487fb2decc099bd39c726f5ccff2cc68ae855a1d",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_view_zoom_tradeoff.py": "be4ebc092cb9f073d1612b0983bf4c35e81b9e857edcd30392be5a6843781083",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_strip.py": "095b97f6b1ac1a01705d592b6bd934191bbe2ac7a8ef51d51c8d40726ca28f30",
+    "paper/figures/qualitative/toss_data/generator_sources/_ck_s4.py": "9012d45efbb2b7ee6c205e27edf36e9c7296ffdc3ed749a540f40ab703bb7b91",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_2dof_appearance_k8.py": "75ab5f380249b730b83057ce0463efc48b14b58bf8e21dc19b0ccafeefd4ca4c",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_2dof_probe.py": "72136dabdfaf55f4d9b593aa7fffde1281f65f24aeb4f2c725a76fd7957bb7cd",
+    "paper/figures/qualitative/toss_data/generator_sources/_q11_leak_proper.py": "11b88a3617353f3bf6a637656861d6a5d1933f023f5a629d0df7e3c24544d8fc",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_2dof_gm_sample_viz.py": "d5a9a865d23d0647da2e48beb835c069ecbe0cbe70c9ecf3bf82c930c50b8dd6",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_ident_vae.py": "5c5a48b0eaa1aef0774d470cb9dfb30edb354610eaa4d23525ab0ff66582535e",
+    "paper/figures/qualitative/toss_data/generator_sources/make_toss_2dof_gm_s4_shuffled.py": "56f9432f1836c8b400b934535e56e0b2166d50ee9e0c2b1fdd51ee6b62591662",
+    "paper/figures/qualitative/toss_data/generator_sources/_q15_percam.py": "e5a1ffc7ff213a1e64ad3ed9864e4e5753aedca6ca26ed5407299b8118437ca9",
+    "paper/figures/qualitative/toss_data/generator_sources/render_toss_video.py": "5fb3bfd07626f41b1adafca3a1818c8e4f5535d5c9378040921c60e6a8e03d10",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_fwd_conv.py": "9cd954e0c8bb01a77d97d982e4a2202258dc749887a560df997a4156c125c648",
+    "paper/figures/qualitative/toss_data/generator_sources/_q8_goalleak.py": "4f9d30c0932306c515abeaf24a87552a8b111a2fdbbff2d545c6eefdf1e0d662",
+    "paper/figures/qualitative/toss_data/generator_sources/_q16_foldcheck.py": "c4d2baf6da58f6fc733440a52311dbbcdd20def9f42808b8820f7e4571b60a3a",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_2dof_state_mlp.py": "fe0f31f5563dd7106a01904208557d7243acf46f82e26b32cbccd64253eaa310",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_2dof_settle_obs.py": "9a0a29d2e2dd0d727d742edbd74abb3bc427079fed5b4f03fdd2cbee5ad2a3f0",
+    "paper/figures/qualitative/toss_data/generator_sources/_q14_curr_cam.py": "c174ce667ea376a79db612dd63c35e8555df09a500be74e6c983d1727ca846a1",
+    "paper/figures/qualitative/toss_data/generator_sources/make_toss_transitions.py": "48d32c8bbff3db6daccb0141a9c956cbc59f6a96bfdd235403bd94a4b01528a8",
+    "paper/figures/qualitative/toss_data/generator_sources/_q7_time.py": "8396d99ab3b54175d7536a339948982d74d0b3099b6c0b054a89a2db3e797922",
+    "paper/figures/qualitative/toss_data/generator_sources/_q4_roll.py": "68a5285cee1ec7734d9250d4522c553abd239bb9904e0f669f6f6fd3f8d361a3",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_obs2dof_preview.py": "e320464281ea9f9ce467ff30913099d9c597aaf6c94b8cf50f65054702609377",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_ident_rgb.py": "426811e2499f396385c1400ed660eddcadfc3fa6eedae4ce8b43e637b140b5c1",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_view_sheet.py": "f1e489031a9f72e90689b9e2920c13dbee79f7e7e71c42ad54f92227ccb9750d",
+    "paper/figures/qualitative/toss_data/generator_sources/_q17_yaw.py": "282d12024d4fa64334219b2470a6a93b3ffa5a03280eb1447ab07cb87feea403",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_phase2_trel.py": "124df34aebb59f1916adafdf1c03fada6f683b24330f00acc29cff05051a08f8",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_2dof_appearance_proxy.py": "f85873c914c7493d60de053ec22ea4ea3662283726a6c83ec94ac44b62958eb9",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_gripper.py": "eba8f85311d9c7aa5019f6bc452315e81fec04cf7b320e90f90c6503e4681f50",
+    "paper/figures/qualitative/toss_data/generator_sources/_reset_2dof_splits.py": "ad9e2d150718dbaeb54e824dc0932731016f663698e4ccaece8e386ec1dd8277",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_view_shrink_frontier.py": "227d3a9f5a408a04b4a81574854401923018004b6afaee0c8b4d58a7c579b5f8",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_view_optimise.py": "ef723709a597fafed869dcbd5f73ac147bf20bba5e1e6a9aa7a5069a6f31d5f8",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_regret_figs.py": "5d16e4b2b80b760613b9668071d90496f816963f9f5c5c65098a1433487bff36",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_2dof_view_proxy.py": "371c7bf0612e61dafdfb453e96a6c43fe72ec13ed5c321eec352e2ede9923893",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_fwd_rgb.py": "245481cc5a25a4d296500eaf2ea73172036ce6ad07071d4c8bbaf450979f7c29",
+    "paper/figures/qualitative/toss_data/generator_sources/_q13_currobs.py": "69d3e49edc1bebf1bece131cf04398339ac2712ffae82679a630bcfc89a25826",
+    "paper/figures/qualitative/toss_data/generator_sources/gen_toss_transitions_parallel.py": "2cec2f2039537459df0ec7ab01accfb553340d9dc918ea0ebbe36c1869f04f83",
+    "paper/figures/qualitative/toss_data/generator_sources/inspect_toss_transitions.py": "842f47078b921d6fd8e8bfcb0910112f3058198e8f18cd0448192435276c81d5",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_slot_info.py": "3d6f14d68c11ec9498f1b1787237e96e964f6272510601a76c3aabd14d246c5f",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_2dof_forward_floor.py": "c41234217b598f285c7ebd9feb81cc885692be655d56fc199ce2d9f5d9f8de51",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_trel_probe.py": "8e8495e9786db0a226bdaa0d7f3d87042ef664940ee17a14eb1a39fe3175f9d1",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_samegoal_video.py": "229932c7f086eacbdeab9c54cc5c88d93c9e3b04d608c3b8783192f11c86be0c",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_action_regress.py": "e65b5c728716a1c4e465e5ecaa22eedc99465215713f51a5018ff91cdfbf3105",
+    "paper/figures/qualitative/toss_data/generator_sources/_q12_grid.py": "aea80e789e910f601d3fae815e20a7119dc0cf7977cb5cda1f3005846f2fec85",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_explore.py": "e17028bcd5f4e7140f98b6ef238d57444f42f0262b7009b301950a262fc9c60f",
+    "paper/figures/qualitative/toss_data/generator_sources/_q4b_roll_fix.py": "ee7f00c51f8a3fdbe08c30bf743553e9aa9c0cf845fb3a5582b76bc218af5073",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_regress_damping.py": "d6501e6ddd5da75a30c313ebdb114afa9eebf826712bd9df4df310e534978f21",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_check_fut_store.py": "2d80e0d8ac9d3089042afaf750b00310476f0985280fa5dd35cdd13df688e3bb",
+    "paper/figures/qualitative/toss_data/generator_sources/_q18_quant.py": "cad36c74cb27f5d8056e9634d8df0db1321aaafaca1108e955916449d682c141",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_vae_encode.py": "46da9ff6605f9e29c76ec89ba265b771ed70537c198e18579330a13dbeef17fb",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_2dof_audit.py": "4b32eb9a194aec8ba02669b04dd6895c363c6f65d6218e0981eef7381f4f3d44",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_view_compare.py": "e408805f2090aeb5733f39fc23ac2b03e3b6a69ceac219aa0d9cc3fbba667e3f",
+    "paper/figures/qualitative/toss_data/generator_sources/_q15_fixedpose.py": "d460433270c8d9ba818f9c8cfb2ffad63701dc7451a9ff4068c354e9abf103c5",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_diff_stores.py": "a09359850e6b9ffeec0b9c46ac87b10fdd8159984e47cd8c45c91e7f5d015fa1",
+    "paper/figures/qualitative/toss_data/generator_sources/_q4c_sweep.py": "ced38b369b660ee87138567f32d8b62cdad12dc9878a2a0876871f581efe3e4b",
+    "paper/figures/qualitative/toss_data/generator_sources/_q9_bruteforce.py": "917bd57920a74a577baf69682017c78e6da582e659fdd1cf90792a49618bb2d2",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_inv_vae2.py": "e071a7168e7ebf00bbea63a58c665fd328a9dca21eaaeadc1eb2928bc7d1df24",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_aliasing_probe.py": "3098b9f27b35946db47db68b42ccb751d7aa2170ae56c2821f4ba591ac48ea0e",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_inv_table.py": "bd12373bdc92e5f6b5f3254a58c2d8f155d0b051eed32f61090e5ec39f456a8c",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_2dof_marker_preview.py": "29d088a8a4755f3d8c7c24d5035b6843a11dabe8e4d4e0744debdc5ee6f55fc5",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_2dof_marker_color_look.py": "01a19748b9835479131823f4f8ada1ae2b0e53ff078d77aec55f608d35297c3a",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_inverse_gripper.py": "b8d06ee95b650064f003b35fa0d84cbb5bfacfef6b5c9be1946950a58d05d97d",
+    "paper/figures/qualitative/toss_data/generator_sources/_q6_cap.py": "1ae4f286fd30cdf1a515e7717737ee2263ba7a9ea46f58bab90847f3fa824d42",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_spread_vs_trel.py": "a4890871c113fc91196af4371c2d73bb49fc651b8cbaafd9bbffaf90ef9530e7",
+    "paper/figures/qualitative/toss_data/generator_sources/_toss_ident_gripper.py": "0a1c06ebfef043f6206bc3f80dda233c1ffe42463bca3d5ed378a707015cb442"
+  },
+  "videos": [
+    {
+      "id": "toss-wam-bs16_by26_g91",
+      "label": "A",
+      "sample_id": "bs16_by26_g91",
+      "video": "static/video/toss/toss-wam-bs16_by26_g91.mp4",
+      "poster": "static/video/toss/toss-wam-bs16_by26_g91.png",
+      "source_manifest": "paper/figures/qualitative/gain_data/toss_wam/manifest.json",
+      "source_manifest_sha256": "8293c5c50d2dc45cbab1098ccebb3739840b3ad06da24314aa8d84ce4b595f15",
+      "property": [
+        16.0,
+        26.0
+      ],
+      "property_names": [
+        "b_swing",
+        "b_yaw"
+      ],
+      "goal_index": 91,
+      "goal_xy_m": [
+        1.4198061227798462,
+        -0.49693816900253296
+      ],
+      "fps": 25,
+      "width": 944,
+      "height": 720,
+      "playback_speed": 1,
+      "frame_count": 49,
+      "final_hold_frames": 30,
+      "final_hold_duration_s": 1.2,
+      "all_contacts_displayed_at_s": 0.72,
+      "selection": "Outcome-selected same-goal pair maximizing the smaller CP-minus-DDM first-contact improvement, with both DDM misses <=3 cm. These examples do not estimate aggregate performance.",
+      "methods": {
+        "cosmos_policy": {
+          "name": "Cosmos Policy",
+          "source_arm": "blind",
+          "executed_action_t_rel_s_yaw_rad": [
+            0.11778523772954941,
+            0.43632999062538147
+          ],
+          "snapped_action_index": 45,
+          "predicted_continuous_action_t_rel_s_yaw_rad": [
+            0.11893428862094879,
+            0.4561207592487335
+          ],
+          "eval_row_index": 199,
+          "position_error_cm": 25.684134661460195,
+          "flight_time_s": 0.4660000000000004,
+          "captured_frame_count": 16,
+          "distinct_native_frames": 16,
+          "dt_s": 0.002,
+          "frame_stride_steps": 20,
+          "contact_step": 292,
+          "contact_time_s": 0.5840000000000014,
+          "first_contact_xy_m": [
+            1.1670260429382324,
+            -0.4514441192150116
+          ],
+          "first_contact_xy_float32_hex": "1c61953faf23e7be",
+          "qpos": [
+            0.3896188240654119,
+            -0.8623615029663988,
+            0.00767173339981591,
+            -0.651736092721328,
+            0.0009405531922891838,
+            1.8369216053651116,
+            0.7850798736486687,
+            0.040006514535021666,
+            0.03999306361268559,
+            1.1670259846240456,
+            -0.4514441155715681,
+            0.044114954874888666,
+            0.48018644927313603,
+            -0.4788323893185895,
+            -0.5676874386431198,
+            0.4667670606209517
+          ],
+          "qvel": [
+            0.4162235914072211,
+            -3.658177687480461,
+            -0.052285826761330506,
+            3.5595120814315533,
+            0.02156622606969119,
+            -0.19747110332083018,
+            0.001263215871027636,
+            -1.3621889243957318e-05,
+            3.402663896572203e-05,
+            1.2584554692714138,
+            -0.47675228522422974,
+            -0.26584632825074905,
+            0.0717020803326629,
+            11.298640169396835,
+            3.1405758822749346
+          ],
+          "raw_pixel_sha256": "216be59b4cc6a1977252c0d6ea8d18674885f8fe2bf8e08aabfd8996f809dc5d",
+          "goal_pixel_sha256": "628f875aaa3d14b8ea7602b63f1222a509c2e6f289de44b8f7af068233131a44",
+          "validation": {
+            "first_contact_float32_bit_exact": true,
+            "full_qpos_qvel_exact": true,
+            "contact_time_exact": true,
+            "flight_matches_bank": true,
+            "full_224_raw_contact_pixels_exact": true,
+            "full_224_goal_contact_pixels_exact": true,
+            "camera_exact": true,
+            "render_integration_state_unchanged": true,
+            "all_25fps_samples_present": true
+          },
+          "frame_samples": [
+            {
+              "step": 0,
+              "swing_time_s": 0.0,
+              "actual_data_time_s": 1.2000000000000008,
+              "first_video_frame_index": 0,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "cb019d27a17e18d79d81bfcb9048b6660a02ba9cfffacdcbc1ab5d9f4ddfb6e4",
+              "goal_pixel_sha256": "beb46985b09a33562702e685d88bab7b3ea8efa286bbae79f535a7dd86549f64",
+              "qpos_sha256": "bb028b91dd66a18180ae2b9644e65e378cd7d42b57d1014acd709541c8cec3d6",
+              "qvel_sha256": "281616b4fb4e1cf1e09ea95b16047c679842fe3cf3edb8ea4d9560ad5c6eba89",
+              "native_frame": "native/bs16_by26_g91/cosmos_policy/step_0000.png"
+            },
+            {
+              "step": 20,
+              "swing_time_s": 0.04,
+              "actual_data_time_s": 1.2400000000000009,
+              "first_video_frame_index": 1,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "5de507be8031729c3000b6aad2e5920444df1c839c4cf613822801d149fb748b",
+              "goal_pixel_sha256": "75e0bfbccfd689781df7635e6fe9ef89d57891405ef8b50ee2d83ea4672357f5",
+              "qpos_sha256": "ae2969cbc9a3cc759e1a52552bde5a849f735c96b1a112ef362c9fb7c00ef233",
+              "qvel_sha256": "17dcf83690c50ab2063b4b4d5027e9f2043bb5bc5d772a604d9e9943c930342a",
+              "native_frame": "native/bs16_by26_g91/cosmos_policy/step_0020.png"
+            },
+            {
+              "step": 40,
+              "swing_time_s": 0.08,
+              "actual_data_time_s": 1.280000000000001,
+              "first_video_frame_index": 2,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "03d519f864e530d3868c57baf0e0c31463a9b4f5943b3a9ad26dbefa934d04ee",
+              "goal_pixel_sha256": "aea62ecc21902d662ac49da2f7ca8d77b23aede1754d4e11e7f1ea7587d8e71e",
+              "qpos_sha256": "6b7271aba01aec4f5ceb3727aaa87b559d7148a2af5bb8539965e544858e2b44",
+              "qvel_sha256": "f36cc5e5d0d5678171b0187e8ae67c8dafb5bc9b2584592b3b3348d1f16645f8",
+              "native_frame": "native/bs16_by26_g91/cosmos_policy/step_0040.png"
+            },
+            {
+              "step": 60,
+              "swing_time_s": 0.12,
+              "actual_data_time_s": 1.320000000000001,
+              "first_video_frame_index": 3,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "72933aaf8fdf7c07820a385bb1bf2f4213b7e124e0cfc9ac6184549cc7809ab0",
+              "goal_pixel_sha256": "1c24f99a31dc943582c825d92c6db57eb3ed350da97baf40e4bd233c02b72877",
+              "qpos_sha256": "c87f2806329105995a159b45e26e0ddbbb6aba72e101165d1e62489f38fe5f3a",
+              "qvel_sha256": "3a1f37b456ff80d75d6870dadb56ea308c55c68adda40be066b320ef4b15f868",
+              "native_frame": "native/bs16_by26_g91/cosmos_policy/step_0060.png"
+            },
+            {
+              "step": 80,
+              "swing_time_s": 0.16,
+              "actual_data_time_s": 1.360000000000001,
+              "first_video_frame_index": 4,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "6a6b1979ddf3a1873e47be28ad57e82249cf870ff3012068377bf324c8e1a237",
+              "goal_pixel_sha256": "5a7a4c79ce11fb4c8ae1ec382ee97ede60db9a5a851823c19a7a40ae10eabd7d",
+              "qpos_sha256": "022db2f3e6bfa318f9185c47bf51d6d63724aa3baa2d794d5ee8c2bc9221e77b",
+              "qvel_sha256": "733dd4a71fb02df293b454b3a4c246a53a3b75982de79d136402a5a006154923",
+              "native_frame": "native/bs16_by26_g91/cosmos_policy/step_0080.png"
+            },
+            {
+              "step": 100,
+              "swing_time_s": 0.2,
+              "actual_data_time_s": 1.400000000000001,
+              "first_video_frame_index": 5,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "a87c36fa657b1cea6dd7c1454ee73b303c5e4dd28ba99319cd3e472254a77d51",
+              "goal_pixel_sha256": "4018bda26df1c2ae122a0be530f6106c67b4af5b804fb9fa72b6be073b69d6bd",
+              "qpos_sha256": "9186ab2ca5761a3a7a43d8d4b6edaeede892952a4c80932074ed9ed8c069246e",
+              "qvel_sha256": "44f0ecf23d7393a6dacdaf0e414bf6ec46d475ffbcf452e6d94ce95b1fc42606",
+              "native_frame": "native/bs16_by26_g91/cosmos_policy/step_0100.png"
+            },
+            {
+              "step": 120,
+              "swing_time_s": 0.24,
+              "actual_data_time_s": 1.440000000000001,
+              "first_video_frame_index": 6,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "02ef1a28a4228febb8c1ecd6a1a476150c1e39885db2dd016181f7fb7d3d53d7",
+              "goal_pixel_sha256": "9517421c76cab04ceae50a99db9fa2420e67631e83cf4010b555a4ef7bb9642e",
+              "qpos_sha256": "0afb26a0dda2bf82015e269d87e992bcae08d4381bc7e1d6d05fe6a6008c8e79",
+              "qvel_sha256": "94133117f02fa5edb7eb3444854194673347a2cf97ec1b720dd9eb0a9b1bcb03",
+              "native_frame": "native/bs16_by26_g91/cosmos_policy/step_0120.png"
+            },
+            {
+              "step": 140,
+              "swing_time_s": 0.28,
+              "actual_data_time_s": 1.480000000000001,
+              "first_video_frame_index": 7,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "82c1133ecc0911d111435ea036b730fc4043651c6f6e261b022581c88f2e996d",
+              "goal_pixel_sha256": "6ee2dbef689b0d24dff47b783c429d24794a8ca0c20959f4a06091ba105d4b96",
+              "qpos_sha256": "655df626727d03f55c0d3a2220973c43eb42b17b666649b5a88874f6055a9c0b",
+              "qvel_sha256": "450f8b12a0f741ddf331c37f2c11bea161c002fe05ec71528c541319adbdf23f",
+              "native_frame": "native/bs16_by26_g91/cosmos_policy/step_0140.png"
+            },
+            {
+              "step": 160,
+              "swing_time_s": 0.32,
+              "actual_data_time_s": 1.5200000000000011,
+              "first_video_frame_index": 8,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "9e88db8be049ab33160c0eec1d16166fb7c928d8115032bbd6dbb323d5e38c91",
+              "goal_pixel_sha256": "e667133e8e2adc34f745e0b567589673ed776ebccc74703206786ed36a9d6595",
+              "qpos_sha256": "4435f66c82064dc8351ebb5500f147aa22457b77c3e509794ba2f5822c415daa",
+              "qvel_sha256": "bc3c18082cdcaaf14344daecbf2152d1f9ba369afe750801c3305d222e97df16",
+              "native_frame": "native/bs16_by26_g91/cosmos_policy/step_0160.png"
+            },
+            {
+              "step": 180,
+              "swing_time_s": 0.36,
+              "actual_data_time_s": 1.5600000000000012,
+              "first_video_frame_index": 9,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "54322f59f4fa3fa62a636731cf5fbbaaaed65ea02b8d4ff4e59392d9e19c7f2c",
+              "goal_pixel_sha256": "befd926dd5154a8e10aff779b09f596ee40702b72673696401637b31fc75e58c",
+              "qpos_sha256": "6e2aed754d4e147bd56f70aec5798bacc502733770e025424d1db75c33cc79b4",
+              "qvel_sha256": "4d0312b4a19141975fe8ce7123e7ffb65433c0a7c12b60ad9dc6f09a8054b68e",
+              "native_frame": "native/bs16_by26_g91/cosmos_policy/step_0180.png"
+            },
+            {
+              "step": 200,
+              "swing_time_s": 0.4,
+              "actual_data_time_s": 1.6000000000000012,
+              "first_video_frame_index": 10,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "f18da73685289ada2741a5386648495b77d4b1d274e4b4321b1d332415374014",
+              "goal_pixel_sha256": "9bd3d5d841448a0fb2c1f16d7122588619ffe2d610427247952b1e897626b233",
+              "qpos_sha256": "dba56ffef51037c1398fc544a0055c6ee3be0eb8ca4f467e4acd35e2f96f1b34",
+              "qvel_sha256": "9d5ff0423d031930a8c7402514909581c8479e4a7680ab0497d66d99b9833c8d",
+              "native_frame": "native/bs16_by26_g91/cosmos_policy/step_0200.png"
+            },
+            {
+              "step": 220,
+              "swing_time_s": 0.44,
+              "actual_data_time_s": 1.6400000000000012,
+              "first_video_frame_index": 11,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "47eba12db3305e4fa052ca79ca40301228685eae5b2edd6f44258d1f21a3902a",
+              "goal_pixel_sha256": "14cdd2885884e90fa0ceacbcf77e67e69593a8ec102029fa02af4534188be822",
+              "qpos_sha256": "5a99ce4ab1af334f5906b6c58faa814a58f5bad6dd78728097f4058fd7e3ce45",
+              "qvel_sha256": "2051fba2383d563496f022b84f0b32fa1f7629fb8d03e5701717fa874ce36b0a",
+              "native_frame": "native/bs16_by26_g91/cosmos_policy/step_0220.png"
+            },
+            {
+              "step": 240,
+              "swing_time_s": 0.48,
+              "actual_data_time_s": 1.6800000000000013,
+              "first_video_frame_index": 12,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "35804c1738d6c1f77b3091a6609cd966b44bd93feb28a8ca37178c7bda98079e",
+              "goal_pixel_sha256": "9228ddf80fa41d187bd771766fdcb14b82b92a5973d1b96f9391d75d08f35b35",
+              "qpos_sha256": "f2e675086dc37f1cb34f912973be0d31a6cc46370bb7ee512c49d832a5e1958f",
+              "qvel_sha256": "dc50eb2d3e15deb7ec8438ebcc27099b42c20d6e373ad6eb75b17014c11c9a3e",
+              "native_frame": "native/bs16_by26_g91/cosmos_policy/step_0240.png"
+            },
+            {
+              "step": 260,
+              "swing_time_s": 0.52,
+              "actual_data_time_s": 1.7200000000000013,
+              "first_video_frame_index": 13,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "17483b663a2e237da98f55a8b3e9e5f545d90edbcc040e3626dc60e23407e994",
+              "goal_pixel_sha256": "fea04a0a1571da199fedd5d6e7b41411648813edb5240872690edf49a8575d16",
+              "qpos_sha256": "799172c0b57ab3125bcb197fcf5b9f2d9575ddd7249bf3d3eea207cbbd48f080",
+              "qvel_sha256": "c550e1dd5a090551d33e515f7bd22dfe70ac8d3ffcc1c2e095330bb952e94a7f",
+              "native_frame": "native/bs16_by26_g91/cosmos_policy/step_0260.png"
+            },
+            {
+              "step": 280,
+              "swing_time_s": 0.56,
+              "actual_data_time_s": 1.7600000000000013,
+              "first_video_frame_index": 14,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "fba6036e18c9a7102ea84d8332af931bc814cd433d783cbd5f7eb587068b93f5",
+              "goal_pixel_sha256": "614e56292d57c3a37ad0c56d53be74107b751cf008559051bae05768d90c53ff",
+              "qpos_sha256": "65001ba235511aec41c8ed773fc8ad51df56e363036fe58f8ee096e91e33d73f",
+              "qvel_sha256": "5e8adae9d8b9c4cef10f615e29109e017fe672ef2a5b7109ebcad58c614d36b8",
+              "native_frame": "native/bs16_by26_g91/cosmos_policy/step_0280.png"
+            },
+            {
+              "step": 292,
+              "swing_time_s": 0.584,
+              "actual_data_time_s": 1.7840000000000014,
+              "first_video_frame_index": 15,
+              "is_first_contact": true,
+              "raw_pixel_sha256": "216be59b4cc6a1977252c0d6ea8d18674885f8fe2bf8e08aabfd8996f809dc5d",
+              "goal_pixel_sha256": "628f875aaa3d14b8ea7602b63f1222a509c2e6f289de44b8f7af068233131a44",
+              "qpos_sha256": "f91897a38276e6fda5432bd2ff33ac170a7bd8b18a9375469ed924ca0bd25ddf",
+              "qvel_sha256": "186cef45b529877f139d063834a0b6c7ff8d4807a25a58942ece6a59bfdd335b",
+              "native_frame": "native/bs16_by26_g91/cosmos_policy/contact_goal.png"
+            }
+          ]
+        },
+        "ddm": {
+          "name": "DDM",
+          "source_arm": "offset",
+          "executed_action_t_rel_s_yaw_rad": [
+            0.14798657596111298,
+            0.0
+          ],
+          "snapped_action_index": 100,
+          "predicted_continuous_action_t_rel_s_yaw_rad": [
+            0.14757920801639557,
+            0.0017626213375478983
+          ],
+          "eval_row_index": 199,
+          "position_error_cm": 1.0760987625649567,
+          "flight_time_s": 0.5440000000000005,
+          "captured_frame_count": 19,
+          "distinct_native_frames": 19,
+          "dt_s": 0.002,
+          "frame_stride_steps": 20,
+          "contact_step": 346,
+          "contact_time_s": 0.6920000000000015,
+          "first_contact_xy_m": [
+            1.4094247817993164,
+            -0.4941050410270691
+          ],
+          "first_contact_xy_float32_hex": "0868b43f56fbfcbe",
+          "qpos": [
+            -0.006289721051177935,
+            -1.1946498042961486,
+            0.0018620023520504875,
+            -0.40421651823557797,
+            0.002070827208797373,
+            1.827589444435558,
+            0.7852668340898981,
+            0.04000198731429596,
+            0.039997989363895405,
+            1.4094247930303385,
+            -0.4941050357433906,
+            0.057796778493111545,
+            0.1333628077887429,
+            -0.5388034339127543,
+            -0.7103336419216276,
+            0.43281790427024186
+          ],
+          "qvel": [
+            0.06501899821809355,
+            -1.874594442221373,
+            -0.01051583980813679,
+            1.241717451886575,
+            0.005122306673998415,
+            -0.2983711894798061,
+            0.0004907962164650233,
+            -1.8811356772037616e-05,
+            2.0537993494016293e-05,
+            0.8847520018068686,
+            -0.27651804022238785,
+            0.00910624972261953,
+            -2.3583719386231112,
+            -6.557277612681729,
+            -6.1181225093265095
+          ],
+          "raw_pixel_sha256": "2be8f5faeb10fb1937a56c358e3ac14b6cd6e1d8fe29053cc4e7149095506fd7",
+          "goal_pixel_sha256": "1d9762fc10be2b708b564b02aa4cbac10c0e387128f6b6eb670b27e6216d6d4f",
+          "validation": {
+            "first_contact_float32_bit_exact": true,
+            "full_qpos_qvel_exact": true,
+            "contact_time_exact": true,
+            "flight_matches_bank": true,
+            "full_224_raw_contact_pixels_exact": true,
+            "full_224_goal_contact_pixels_exact": true,
+            "camera_exact": true,
+            "render_integration_state_unchanged": true,
+            "all_25fps_samples_present": true
+          },
+          "frame_samples": [
+            {
+              "step": 0,
+              "swing_time_s": 0.0,
+              "actual_data_time_s": 1.2000000000000008,
+              "first_video_frame_index": 0,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "32d239cca208e2ff60606e3bc5defa174fa032c8bb1d1255ceb3050aeeaa7a0f",
+              "goal_pixel_sha256": "76750f26415cac42444c39f391d8afa2e086ea043087f656103fd7faaef1e330",
+              "qpos_sha256": "bb028b91dd66a18180ae2b9644e65e378cd7d42b57d1014acd709541c8cec3d6",
+              "qvel_sha256": "281616b4fb4e1cf1e09ea95b16047c679842fe3cf3edb8ea4d9560ad5c6eba89",
+              "native_frame": "native/bs16_by26_g91/ddm/step_0000.png"
+            },
+            {
+              "step": 20,
+              "swing_time_s": 0.04,
+              "actual_data_time_s": 1.2400000000000009,
+              "first_video_frame_index": 1,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "d18622e1d6ff8223e9071c8e596c4e97cab3e8eebbc3197ff2df70131d402baa",
+              "goal_pixel_sha256": "3a0a96b73e24fbce17a944e1373e7c79f08f05acf855452e085ca43053f7af54",
+              "qpos_sha256": "3ff6cf967bbc5c964e24a180e9219ea4c3122af1eab4a369771d73c8e2aed167",
+              "qvel_sha256": "499923f6b88a1c525c675949b238eb6178e96274077213f079ba332fea1b5afb",
+              "native_frame": "native/bs16_by26_g91/ddm/step_0020.png"
+            },
+            {
+              "step": 40,
+              "swing_time_s": 0.08,
+              "actual_data_time_s": 1.280000000000001,
+              "first_video_frame_index": 2,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "747712d419769484278785e1bd5c03f88bdda461230803c72d9678f44de6c7f9",
+              "goal_pixel_sha256": "6fe107ad9f22286d062570d4deb4f00700554e8b41c433c7393cef2ddcf4e852",
+              "qpos_sha256": "4adf271f9c95cc50a02685bf4784887e030f20913d8b35ed2204598c2ebbaef1",
+              "qvel_sha256": "3f9325ccc7391de689f1205af17e1ccc44121c1bdf21fcd48a80cd4bb02fbe0b",
+              "native_frame": "native/bs16_by26_g91/ddm/step_0040.png"
+            },
+            {
+              "step": 60,
+              "swing_time_s": 0.12,
+              "actual_data_time_s": 1.320000000000001,
+              "first_video_frame_index": 3,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "0de2ea69a9eeb6156bcf3bb36b63bc39902088ce36cea6c6e092d58f9586489e",
+              "goal_pixel_sha256": "9a789d68521769cf754437eed59db7a6862c18b531b2c0e77c8b781810561bd9",
+              "qpos_sha256": "c436f9ce539215e36c09489924e4ce73f67d33263119c784fa2c57e1f2d384cd",
+              "qvel_sha256": "f7b4fbf7b8c40aabe6308ce0ea6565b39c2f2551e5854c7fd4af1b5b35db6646",
+              "native_frame": "native/bs16_by26_g91/ddm/step_0060.png"
+            },
+            {
+              "step": 80,
+              "swing_time_s": 0.16,
+              "actual_data_time_s": 1.360000000000001,
+              "first_video_frame_index": 4,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "136eee887418d762ac8ea0743a3b05be7aec9e28d6968008f5bc7f9c9c258628",
+              "goal_pixel_sha256": "056934f1a6530de25492eef86cd7de4f6d91a8a28b6a2531da4cad9660e7a03a",
+              "qpos_sha256": "ea0591d86f88faebe1e85495151934f2f48120babfef5bd21c66e68de07212c9",
+              "qvel_sha256": "2a73dd5db8695935fdb24529b54dfdfce796ecad33b2d004dc9021265d8a78dc",
+              "native_frame": "native/bs16_by26_g91/ddm/step_0080.png"
+            },
+            {
+              "step": 100,
+              "swing_time_s": 0.2,
+              "actual_data_time_s": 1.400000000000001,
+              "first_video_frame_index": 5,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "817078358a78e0d2738c4ac468cfe9a9763eef27ce870bbceb32fff0c5449c82",
+              "goal_pixel_sha256": "19bf8f93c84a47714ae6cb8924c32793bbce2b20492b1f349997759c946600be",
+              "qpos_sha256": "7ac4251b1ada9d2436314a99ee368894efa6a61d0fb4930a8a5e53ce9c6ff32a",
+              "qvel_sha256": "5ba733beadc64620296cd8600395bc8968fab533c19170b2b281680f34e3e3b1",
+              "native_frame": "native/bs16_by26_g91/ddm/step_0100.png"
+            },
+            {
+              "step": 120,
+              "swing_time_s": 0.24,
+              "actual_data_time_s": 1.440000000000001,
+              "first_video_frame_index": 6,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "756790b3645fde880faadc25cf6c31b71170342e7414aaecf484d7764ec9e743",
+              "goal_pixel_sha256": "5c585e9cab4f95b6e5a4bbd0e7f42c9c23d64d3e41c00868a7fb24af1cf58e78",
+              "qpos_sha256": "4df8d11c09a30420179c50d51b3257cfad6d59c99dc960dba0793f2391634c1c",
+              "qvel_sha256": "9ff98404f71346e02ce6f8c457843fbb27deaa9d9e01a37d7d8793e135efe2e3",
+              "native_frame": "native/bs16_by26_g91/ddm/step_0120.png"
+            },
+            {
+              "step": 140,
+              "swing_time_s": 0.28,
+              "actual_data_time_s": 1.480000000000001,
+              "first_video_frame_index": 7,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "ecd08ffe58256da8994949aee64a9da2b44bdcd76ebb26c28fb9807ce0743f2c",
+              "goal_pixel_sha256": "158af1740236feb4810842180bf6880d88975cd43ce4501dbe6130bead550f04",
+              "qpos_sha256": "0d5f3558f815986f156beda9d2ed9994e42f1c1fe090dc93de2ba148df61ab90",
+              "qvel_sha256": "cd8553845e08ea8f0274a3865156680c233fb1f0ddbfd802e4d1e165dc1265c8",
+              "native_frame": "native/bs16_by26_g91/ddm/step_0140.png"
+            },
+            {
+              "step": 160,
+              "swing_time_s": 0.32,
+              "actual_data_time_s": 1.5200000000000011,
+              "first_video_frame_index": 8,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "efe7386c775ee592a9f934b17f2634a5cd28efeb4ed715ea06abc34b4fb9480e",
+              "goal_pixel_sha256": "be36799a8bd0c0209242da40c58acb0ee7f6257f69501a861311b9585586c6c5",
+              "qpos_sha256": "8fda2b090ec950d3ed74063956f38d28b4fc06103b94c8db2f8add5550300292",
+              "qvel_sha256": "4a42519718a91e85f5abce263bcf482e0d8137212a83e49a4189c1e1f1fba448",
+              "native_frame": "native/bs16_by26_g91/ddm/step_0160.png"
+            },
+            {
+              "step": 180,
+              "swing_time_s": 0.36,
+              "actual_data_time_s": 1.5600000000000012,
+              "first_video_frame_index": 9,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "f4d0d5aa0527ee21d3a47ffdebdcfae49e091c6aa367c3859e1435247993491d",
+              "goal_pixel_sha256": "5e71157a0c8daa0b2ef58c10eda12eba068c346afd00ea89b9f2f43d341703f7",
+              "qpos_sha256": "81f31ab11f1e7bc54793a8a38a00f47dee2b003b0e10201e639a12f053628ffa",
+              "qvel_sha256": "3fd7c61821af5b5d56ea74102dbd28ddfdab2b22f0095742329958e03325f808",
+              "native_frame": "native/bs16_by26_g91/ddm/step_0180.png"
+            },
+            {
+              "step": 200,
+              "swing_time_s": 0.4,
+              "actual_data_time_s": 1.6000000000000012,
+              "first_video_frame_index": 10,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "99efdcf740e3986514bee34414edce630c892d1752dc5464095e36eb52fcc28b",
+              "goal_pixel_sha256": "a65662cabf59473594da27e9ed32b3f94efc50861d3950fcabd5384ba4cd44dd",
+              "qpos_sha256": "d399101cf524b9dc5ed0fba25005263b41d0e3c3ce89946c7e40daaa42e4e33b",
+              "qvel_sha256": "8c67ab9357f1c0af8308df2e3167759cd48e8a479dc4b81cfc1d1caa77bf297d",
+              "native_frame": "native/bs16_by26_g91/ddm/step_0200.png"
+            },
+            {
+              "step": 220,
+              "swing_time_s": 0.44,
+              "actual_data_time_s": 1.6400000000000012,
+              "first_video_frame_index": 11,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "4e3833b3253e37b59920e09787b5a9cccfd5c21db6bfb0562f4f33f8aedd0f61",
+              "goal_pixel_sha256": "9382e6f59e65d82ba1611d46d224bab3720403b05ff70507aea8a1e5733b21bc",
+              "qpos_sha256": "c87d83d7ef8b90d4a13dfcfc151c7357fb472b823fbbe31beb63a8a5664b7ef3",
+              "qvel_sha256": "09c0d1cc5adaa7237ffc1747ff1c949e274baa7ae9ed0bef835358affd7c052b",
+              "native_frame": "native/bs16_by26_g91/ddm/step_0220.png"
+            },
+            {
+              "step": 240,
+              "swing_time_s": 0.48,
+              "actual_data_time_s": 1.6800000000000013,
+              "first_video_frame_index": 12,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "653fa32bc271ffd5059e3feb36f9e70eeb33c57dd8a956476d929bd56b66e5bf",
+              "goal_pixel_sha256": "9538e6636616361eb5881165a15c009fb4e7c6e8f579a50b3ca5c020f2d73031",
+              "qpos_sha256": "80bb559b6ded8f0d50ab416b70311be93bcc5a57a5485e0281fec6cc179842cc",
+              "qvel_sha256": "1964ceb596e24b2950db14b3aa7ed668f282b60af8f6fc09f3ba907e704914b9",
+              "native_frame": "native/bs16_by26_g91/ddm/step_0240.png"
+            },
+            {
+              "step": 260,
+              "swing_time_s": 0.52,
+              "actual_data_time_s": 1.7200000000000013,
+              "first_video_frame_index": 13,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "a8afc5956c3574b7b40ecfdede0fca314ef365800d6e41b92123514aaf666f96",
+              "goal_pixel_sha256": "bc3b51e4f19b3d42f67b016afe37eabfddd523a3c2cc70615cae681681013fc1",
+              "qpos_sha256": "51316dccd2b959f5b3846e9e7ca237e09c964f274c0434dd280913c1bbfd4adb",
+              "qvel_sha256": "bf61a85c46e277518cbb8d39410e1f394d63afd10a8db15edd6f9db120b131bf",
+              "native_frame": "native/bs16_by26_g91/ddm/step_0260.png"
+            },
+            {
+              "step": 280,
+              "swing_time_s": 0.56,
+              "actual_data_time_s": 1.7600000000000013,
+              "first_video_frame_index": 14,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "52fc5693f872ed8b1663411608c0f8e32f078ac685cab32a5a0cc16a6d759f2f",
+              "goal_pixel_sha256": "edda70fcceb1cb7c0688e80e9cc18d80d9088d5a690dedc9c7a561a0201ad5e8",
+              "qpos_sha256": "d78bda4180dc3b90f023a7acb9519eaeb953a2e70a292d6b7e7cfe379af3ac27",
+              "qvel_sha256": "6264c0eeec7001f498f5adbe675fd2a83c1d1372ff3f294c3997b2db2d107dcf",
+              "native_frame": "native/bs16_by26_g91/ddm/step_0280.png"
+            },
+            {
+              "step": 300,
+              "swing_time_s": 0.6,
+              "actual_data_time_s": 1.8000000000000014,
+              "first_video_frame_index": 15,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "928a4994749894eef50b8861da7df48efda0b2784038eb1d29621465c8b0a879",
+              "goal_pixel_sha256": "e29910e002fcbbfcf824dff342b01f87082252ba038868852cb2fff8638a96f5",
+              "qpos_sha256": "0ad05d7e9ba345930c8a1e2a5eb02199b3a8ee4052e49bce1dcec2f37934189a",
+              "qvel_sha256": "98a8d43dfdeda511fe230657c80885ff9204183ae2ff58418ebb855e67b82a61",
+              "native_frame": "native/bs16_by26_g91/ddm/step_0300.png"
+            },
+            {
+              "step": 320,
+              "swing_time_s": 0.64,
+              "actual_data_time_s": 1.8400000000000014,
+              "first_video_frame_index": 16,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "49db1e48f4b48c5caff72956a46c948e647b3b6e6705c5159130f993d28c0aac",
+              "goal_pixel_sha256": "008df0612e76235a8dc758f98992d74c35db82505847f7e54baeeb55ddd0aa1d",
+              "qpos_sha256": "5f891eed888a97f06c496e4da314fb552afdb7c33b4d8f5a32b93dc6116f7fb9",
+              "qvel_sha256": "7a6110c0c3e6048ddf1e634828f2a9cd2923aaabf9a319840a60da60f29de0d5",
+              "native_frame": "native/bs16_by26_g91/ddm/step_0320.png"
+            },
+            {
+              "step": 340,
+              "swing_time_s": 0.68,
+              "actual_data_time_s": 1.8800000000000014,
+              "first_video_frame_index": 17,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "c43c7b92f85b63e582cb645ff9d2e8720568eee50789632c4afbf213e08c3886",
+              "goal_pixel_sha256": "32217f82c8cad42e4cecb849a00a7bdf2d6c5f8431ea13c13fcd80ab9ab93af1",
+              "qpos_sha256": "65d2f02a67577caa1c0ef30e2eb6837ed877c6098203b94150206d61effdd9d1",
+              "qvel_sha256": "7800bd403863339671016abd7148455fb0637073701fb1f779988097e3853b09",
+              "native_frame": "native/bs16_by26_g91/ddm/step_0340.png"
+            },
+            {
+              "step": 346,
+              "swing_time_s": 0.6920000000000001,
+              "actual_data_time_s": 1.8920000000000015,
+              "first_video_frame_index": 18,
+              "is_first_contact": true,
+              "raw_pixel_sha256": "2be8f5faeb10fb1937a56c358e3ac14b6cd6e1d8fe29053cc4e7149095506fd7",
+              "goal_pixel_sha256": "1d9762fc10be2b708b564b02aa4cbac10c0e387128f6b6eb670b27e6216d6d4f",
+              "qpos_sha256": "bd81a05bca9e657cb1ddcc017ccbed310d06f7ba8f496664e9484d578b552984",
+              "qvel_sha256": "45d4576eada543f7637e94494b1fa3fa3b144eb3a008d2daff60afa7de03ef5f",
+              "native_frame": "native/bs16_by26_g91/ddm/contact_goal.png"
+            }
+          ]
+        }
+      },
+      "encoding": {
+        "codec": "h264",
+        "pixel_format": "yuv420p",
+        "faststart": true,
+        "decode_check_passed": true,
+        "decoded_frame_count": 49,
+        "duration_s": 1.96,
+        "bytes": 94793,
+        "sha256": "4239b582fff6a0c567124d8c8b46b586a3cbe6779db0e88f57dd3b1279a359a6"
+      },
+      "poster_validation": {
+        "format": "PNG",
+        "lossless": true,
+        "full_native_contact_pixels_preserved": true,
+        "sha256": "43c2607c51cf530f3f84ffe65f8b96e53650272055ca492cd054c86c0b4177ae"
+      },
+      "frame_timeline": [
+        {
+          "frame_index": 0,
+          "presentation_time_s": 0.0,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 0,
+              "source_time_s": 0.0,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 0,
+              "source_time_s": 0.0,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 1,
+          "presentation_time_s": 0.04,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 20,
+              "source_time_s": 0.04,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 20,
+              "source_time_s": 0.04,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 2,
+          "presentation_time_s": 0.08,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 40,
+              "source_time_s": 0.08,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 40,
+              "source_time_s": 0.08,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 3,
+          "presentation_time_s": 0.12,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 60,
+              "source_time_s": 0.12,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 60,
+              "source_time_s": 0.12,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 4,
+          "presentation_time_s": 0.16,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 80,
+              "source_time_s": 0.16,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 80,
+              "source_time_s": 0.16,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 5,
+          "presentation_time_s": 0.2,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 100,
+              "source_time_s": 0.2,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 100,
+              "source_time_s": 0.2,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 6,
+          "presentation_time_s": 0.24,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 120,
+              "source_time_s": 0.24,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 120,
+              "source_time_s": 0.24,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 7,
+          "presentation_time_s": 0.28,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 140,
+              "source_time_s": 0.28,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 140,
+              "source_time_s": 0.28,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 8,
+          "presentation_time_s": 0.32,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 160,
+              "source_time_s": 0.32,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 160,
+              "source_time_s": 0.32,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 9,
+          "presentation_time_s": 0.36,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 180,
+              "source_time_s": 0.36,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 180,
+              "source_time_s": 0.36,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 10,
+          "presentation_time_s": 0.4,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 200,
+              "source_time_s": 0.4,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 200,
+              "source_time_s": 0.4,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 11,
+          "presentation_time_s": 0.44,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 220,
+              "source_time_s": 0.44,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 220,
+              "source_time_s": 0.44,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 12,
+          "presentation_time_s": 0.48,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 240,
+              "source_time_s": 0.48,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 240,
+              "source_time_s": 0.48,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 13,
+          "presentation_time_s": 0.52,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 260,
+              "source_time_s": 0.52,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 260,
+              "source_time_s": 0.52,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 14,
+          "presentation_time_s": 0.56,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 280,
+              "source_time_s": 0.56,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 280,
+              "source_time_s": 0.56,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 15,
+          "presentation_time_s": 0.6,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 300,
+              "source_time_s": 0.6,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 16,
+          "presentation_time_s": 0.64,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 320,
+              "source_time_s": 0.64,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 17,
+          "presentation_time_s": 0.68,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 340,
+              "source_time_s": 0.68,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 18,
+          "presentation_time_s": 0.72,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 19,
+          "presentation_time_s": 0.76,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 20,
+          "presentation_time_s": 0.8,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 21,
+          "presentation_time_s": 0.84,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 22,
+          "presentation_time_s": 0.88,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 23,
+          "presentation_time_s": 0.92,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 24,
+          "presentation_time_s": 0.96,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 25,
+          "presentation_time_s": 1.0,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 26,
+          "presentation_time_s": 1.04,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 27,
+          "presentation_time_s": 1.08,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 28,
+          "presentation_time_s": 1.12,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 29,
+          "presentation_time_s": 1.16,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 30,
+          "presentation_time_s": 1.2,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 31,
+          "presentation_time_s": 1.24,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 32,
+          "presentation_time_s": 1.28,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 33,
+          "presentation_time_s": 1.32,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 34,
+          "presentation_time_s": 1.36,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 35,
+          "presentation_time_s": 1.4,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 36,
+          "presentation_time_s": 1.44,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 37,
+          "presentation_time_s": 1.48,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 38,
+          "presentation_time_s": 1.52,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 39,
+          "presentation_time_s": 1.56,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 40,
+          "presentation_time_s": 1.6,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 41,
+          "presentation_time_s": 1.64,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 42,
+          "presentation_time_s": 1.68,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 43,
+          "presentation_time_s": 1.72,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 44,
+          "presentation_time_s": 1.76,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 45,
+          "presentation_time_s": 1.8,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 46,
+          "presentation_time_s": 1.84,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 47,
+          "presentation_time_s": 1.88,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 48,
+          "presentation_time_s": 1.92,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "toss-wam-bs16_by30_g91",
+      "label": "B",
+      "sample_id": "bs16_by30_g91",
+      "video": "static/video/toss/toss-wam-bs16_by30_g91.mp4",
+      "poster": "static/video/toss/toss-wam-bs16_by30_g91.png",
+      "source_manifest": "paper/figures/qualitative/gain_data/toss_wam/manifest.json",
+      "source_manifest_sha256": "8293c5c50d2dc45cbab1098ccebb3739840b3ad06da24314aa8d84ce4b595f15",
+      "property": [
+        16.0,
+        30.0
+      ],
+      "property_names": [
+        "b_swing",
+        "b_yaw"
+      ],
+      "goal_index": 91,
+      "goal_xy_m": [
+        1.4198061227798462,
+        -0.49693816900253296
+      ],
+      "fps": 25,
+      "width": 944,
+      "height": 720,
+      "playback_speed": 1,
+      "frame_count": 49,
+      "final_hold_frames": 30,
+      "final_hold_duration_s": 1.2,
+      "all_contacts_displayed_at_s": 0.72,
+      "selection": "Outcome-selected same-goal pair maximizing the smaller CP-minus-DDM first-contact improvement, with both DDM misses <=3 cm. These examples do not estimate aggregate performance.",
+      "methods": {
+        "cosmos_policy": {
+          "name": "Cosmos Policy",
+          "source_arm": "blind",
+          "executed_action_t_rel_s_yaw_rad": [
+            0.11778523772954941,
+            0.43632999062538147
+          ],
+          "snapped_action_index": 45,
+          "predicted_continuous_action_t_rel_s_yaw_rad": [
+            0.11893428862094879,
+            0.4561207592487335
+          ],
+          "eval_row_index": 219,
+          "position_error_cm": 27.059082972151714,
+          "flight_time_s": 0.4660000000000004,
+          "captured_frame_count": 16,
+          "distinct_native_frames": 16,
+          "dt_s": 0.002,
+          "frame_stride_steps": 20,
+          "contact_step": 292,
+          "contact_time_s": 0.5840000000000014,
+          "first_contact_xy_m": [
+            1.1505111455917358,
+            -0.4704879820346832
+          ],
+          "first_contact_xy_float32_hex": "f343933fcde3f0be",
+          "qpos": [
+            0.37519828174908487,
+            -0.8790135351938778,
+            0.008747073789758182,
+            -0.6538741469196372,
+            0.0012527289682244614,
+            1.8371368481148134,
+            0.7850407118302947,
+            0.04000676791278226,
+            0.039993188688975174,
+            1.1505111532252863,
+            -0.47048798851816026,
+            0.044309937238963655,
+            0.4942718837061858,
+            -0.48333251814763034,
+            -0.5696354238826365,
+            0.4445227392796213
+          ],
+          "qvel": [
+            0.5333523514527416,
+            -3.560734198899423,
+            -0.05698629706841341,
+            3.610296192741669,
+            0.023219843175344045,
+            -0.13803351144102277,
+            0.0011860669939185958,
+            -2.816288280630556e-06,
+            5.768160518981269e-05,
+            1.175524577827395,
+            -0.5162127903009848,
+            -0.12722902361040278,
+            -0.41332350576119836,
+            10.681061155202388,
+            3.1953290373259495
+          ],
+          "raw_pixel_sha256": "947b5bf1e524f6c8f5c23d16bb0ac2f35be0976ba7d6b6da41f05a9f65ab807b",
+          "goal_pixel_sha256": "50372ea9f2c5728df3f71d7ca02b1916458f97b1d4c5caecd6d9e2cb16bbd7fa",
+          "validation": {
+            "first_contact_float32_bit_exact": true,
+            "full_qpos_qvel_exact": true,
+            "contact_time_exact": true,
+            "flight_matches_bank": true,
+            "full_224_raw_contact_pixels_exact": true,
+            "full_224_goal_contact_pixels_exact": true,
+            "camera_exact": true,
+            "render_integration_state_unchanged": true,
+            "all_25fps_samples_present": true
+          },
+          "frame_samples": [
+            {
+              "step": 0,
+              "swing_time_s": 0.0,
+              "actual_data_time_s": 1.2000000000000008,
+              "first_video_frame_index": 0,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "32d239cca208e2ff60606e3bc5defa174fa032c8bb1d1255ceb3050aeeaa7a0f",
+              "goal_pixel_sha256": "76750f26415cac42444c39f391d8afa2e086ea043087f656103fd7faaef1e330",
+              "qpos_sha256": "fde35353f6f56f683fe067c89e574e4e53d60b9a7976eea97f858e07ef2d9914",
+              "qvel_sha256": "a4268f751acc10950d2ce446361feadb3e73023453c112b8b5996d9764136774",
+              "native_frame": "native/bs16_by30_g91/cosmos_policy/step_0000.png"
+            },
+            {
+              "step": 20,
+              "swing_time_s": 0.04,
+              "actual_data_time_s": 1.2400000000000009,
+              "first_video_frame_index": 1,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "3abae12ff55fce83e61ac5343bca62bfc46cf8d461438e238a962a5087f7df1c",
+              "goal_pixel_sha256": "018d8e7d2381dbb30afa4a6eb048ea3ddc3f867f1dffa82bb74a82056841825a",
+              "qpos_sha256": "64c52bac7c6fb07f9c7d012dfcdd2bf7c54be65f7f4df5d7f9b26e8010fe3544",
+              "qvel_sha256": "c6dc3bfe089c66462c6d90e1aca2fe0a08a169baceaad60648c59824aaad7f2d",
+              "native_frame": "native/bs16_by30_g91/cosmos_policy/step_0020.png"
+            },
+            {
+              "step": 40,
+              "swing_time_s": 0.08,
+              "actual_data_time_s": 1.280000000000001,
+              "first_video_frame_index": 2,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "927ad6b3e8b8eccef38f1e85c7e188db93ad0d134a129e644b81f122629ed9a3",
+              "goal_pixel_sha256": "f4175ac68f09a1863f905d608869bb25ea70572bce19f7a641c0c637b5a308c5",
+              "qpos_sha256": "536557d404fdf36228611ec6d951e8f9784293155a03e2548ca0753878120d86",
+              "qvel_sha256": "ac2202f2d2f0ed7a3b0181fab61c38651f36767ae244d9ff4c9e2435527d7bd4",
+              "native_frame": "native/bs16_by30_g91/cosmos_policy/step_0040.png"
+            },
+            {
+              "step": 60,
+              "swing_time_s": 0.12,
+              "actual_data_time_s": 1.320000000000001,
+              "first_video_frame_index": 3,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "2914e876e68c879a1a1530a28d33f8ec575c7a6cff6dbb5d318ce6420fd3da5b",
+              "goal_pixel_sha256": "300bae5584bd1399d9725bc6ea71f78f4661a1594b45493519e393cc95ac2a69",
+              "qpos_sha256": "9dfed60940bccc9aad075be9115cb17760c336b254e77d5b3d2610e6c2f77c38",
+              "qvel_sha256": "2065a1cc1eb1bdd6fa8884c60a19b0f6c8f7aa6059f2514120969d2c5547498b",
+              "native_frame": "native/bs16_by30_g91/cosmos_policy/step_0060.png"
+            },
+            {
+              "step": 80,
+              "swing_time_s": 0.16,
+              "actual_data_time_s": 1.360000000000001,
+              "first_video_frame_index": 4,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "6d94f428be9956fe729784df6069b61c4906f61b0106fcf489329f38a7955975",
+              "goal_pixel_sha256": "80f2446543ab3ffa3dfe3590d98aaa86e189b21a67ccb84f86395c2c98d5dd5c",
+              "qpos_sha256": "db259fd319247fc3f30107fcb77364674156b42f29b877747369d967bec38f6e",
+              "qvel_sha256": "bc063768d971060d897cb6a483aa6f339aca101e796826b2ba5667e28a866687",
+              "native_frame": "native/bs16_by30_g91/cosmos_policy/step_0080.png"
+            },
+            {
+              "step": 100,
+              "swing_time_s": 0.2,
+              "actual_data_time_s": 1.400000000000001,
+              "first_video_frame_index": 5,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "9db8e8e5b218c4a484de102c88b32048416ec0ea20206c15e5f94d825986b199",
+              "goal_pixel_sha256": "7697857e2a9afebe1b4c4e7d4d39b90e54c492fcebeb0518d87bee2716cda6ab",
+              "qpos_sha256": "fb771145295f28b88a663d4a56d2d61ef9277e2e159bf492b56599695c4a8cb7",
+              "qvel_sha256": "cf1cfd5e05b526f14896333c87e4fca4cb08a5f01773d9729d0ff68097368a05",
+              "native_frame": "native/bs16_by30_g91/cosmos_policy/step_0100.png"
+            },
+            {
+              "step": 120,
+              "swing_time_s": 0.24,
+              "actual_data_time_s": 1.440000000000001,
+              "first_video_frame_index": 6,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "bb3e021df1b499758da008d0dade61fd94c42740c7337843fec5b32f00bf78df",
+              "goal_pixel_sha256": "545aaeacabcccc47d500754df3657ef6d7e0ddd342e6112d8cb067c46a0b5fc9",
+              "qpos_sha256": "b1d3c784b01e075109fdc50a54d00568b3e8422359df2da3b7f291a8d096abad",
+              "qvel_sha256": "69c523dc8eaec5687a696ea3c1d09bd94fc697bb64ec3e4652050c1b114dbba3",
+              "native_frame": "native/bs16_by30_g91/cosmos_policy/step_0120.png"
+            },
+            {
+              "step": 140,
+              "swing_time_s": 0.28,
+              "actual_data_time_s": 1.480000000000001,
+              "first_video_frame_index": 7,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "3fb72cc44cf49a44e367dedfea1a39d44e39ae46c7cfca4514d58a57a9c4fd1f",
+              "goal_pixel_sha256": "f4b66ec13d4a2d56fe7bec2e91e583746a469547ce53b1aed3fc400728bfdc4a",
+              "qpos_sha256": "6eb5d4197d9ce41d467705f9a116730a0b537ab5d5cb189e02fbe88e12213ffe",
+              "qvel_sha256": "99d1406b5281e4b32118c917b0a8d046da635e233ba40f11687b95fc48b84723",
+              "native_frame": "native/bs16_by30_g91/cosmos_policy/step_0140.png"
+            },
+            {
+              "step": 160,
+              "swing_time_s": 0.32,
+              "actual_data_time_s": 1.5200000000000011,
+              "first_video_frame_index": 8,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "a66a3b80b8809c6842b371f0b019c7ecc008ec5f14fe288fef9e3a4dca538863",
+              "goal_pixel_sha256": "12c3ee19be1c97ed56775239cebdb4fd893b9fbe2381b002c8ba8b3ee70522c8",
+              "qpos_sha256": "30613cf325e432e220d4d533f6f7251647aff3fee0f891c90e5766dc8152840e",
+              "qvel_sha256": "efb9dec73733c95f4c401f9c32207ea7fb80f9f16bdaeb48969f72ae920fd3ce",
+              "native_frame": "native/bs16_by30_g91/cosmos_policy/step_0160.png"
+            },
+            {
+              "step": 180,
+              "swing_time_s": 0.36,
+              "actual_data_time_s": 1.5600000000000012,
+              "first_video_frame_index": 9,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "4dbedb36842000d2a64f25d7f92e646f5f6c6da6a2ceeb4f7582ffc9169ef460",
+              "goal_pixel_sha256": "509e870a36b81249640609e0539008c507bcdf01cadcd66bb97b58435ee3d8d1",
+              "qpos_sha256": "108e0c16c23f97408c2f1a94d9880cb4afc6029a74c34ad2bc82d5a8039058a5",
+              "qvel_sha256": "8fffba5cb5cfa57190ed0851db02f6582ebdf5914d2584f692f4efffcbfc4cb4",
+              "native_frame": "native/bs16_by30_g91/cosmos_policy/step_0180.png"
+            },
+            {
+              "step": 200,
+              "swing_time_s": 0.4,
+              "actual_data_time_s": 1.6000000000000012,
+              "first_video_frame_index": 10,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "fe8151138867733b1b7d1c8baaee0282506e47cd0d6c3d40c8b0c04b7af7f467",
+              "goal_pixel_sha256": "9c9d3e1954250ada966856ca25fb9cb5c18e3889ebb5c2c7910c668cc47ef053",
+              "qpos_sha256": "d46eb286549cc7a846da4541c225a06de9b75d0e67d9d8a5641dac99c94e65f1",
+              "qvel_sha256": "2845287cb935698864fe7e9694753c9dfc05f62de1aee324cb5ea5fb5889dc15",
+              "native_frame": "native/bs16_by30_g91/cosmos_policy/step_0200.png"
+            },
+            {
+              "step": 220,
+              "swing_time_s": 0.44,
+              "actual_data_time_s": 1.6400000000000012,
+              "first_video_frame_index": 11,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "29566002c547bf1ddd3ce703cf7aac0dda25cda7f3dcdf16b1667340b7e10a38",
+              "goal_pixel_sha256": "6665f2e6ef3c9afcd3ba46da4c81a7e8e51bab4219d9df52344b9f6efec45452",
+              "qpos_sha256": "e4a3f359d3ea6162910e6cc1fc70a1da61f2570a095c2b8b10e840618f0b9ae5",
+              "qvel_sha256": "b8ff32de78baed9e508dd3ae6e6b7c1b38fba02036b3f77f50e80f57eb92bb71",
+              "native_frame": "native/bs16_by30_g91/cosmos_policy/step_0220.png"
+            },
+            {
+              "step": 240,
+              "swing_time_s": 0.48,
+              "actual_data_time_s": 1.6800000000000013,
+              "first_video_frame_index": 12,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "5310e7e43ec4886727c3e0d96cca99a553bbf106db8ca613fc8fdacd91b42297",
+              "goal_pixel_sha256": "f9460381eaf43a6396f23cc277a4f12d186b2724b00e156edc89b10994bd5202",
+              "qpos_sha256": "064e6533021db318f573a57390260cd9b2286b18ff106bf59eeeac4bf32f0943",
+              "qvel_sha256": "6dfea5fc439a3dbfe7377648d4620fa8ea75f687cabde5ffe5a0064ac8b5719b",
+              "native_frame": "native/bs16_by30_g91/cosmos_policy/step_0240.png"
+            },
+            {
+              "step": 260,
+              "swing_time_s": 0.52,
+              "actual_data_time_s": 1.7200000000000013,
+              "first_video_frame_index": 13,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "2c11d94055908157277b5921d30586467f87ffd421afa5fc9fdf07e7bb39a58e",
+              "goal_pixel_sha256": "81931f68ea4409cb64470a021c49f5d2d4545fac8c3fa070b2721c843098d6e9",
+              "qpos_sha256": "2bbadbda0f57e13cdb74f1a49acf0519c3915a09df6077710fae66754d1136cb",
+              "qvel_sha256": "91abaa1a5598c6e29dc1418c429613f71e640ebb7a563c5b68e4f58627ac7bf4",
+              "native_frame": "native/bs16_by30_g91/cosmos_policy/step_0260.png"
+            },
+            {
+              "step": 280,
+              "swing_time_s": 0.56,
+              "actual_data_time_s": 1.7600000000000013,
+              "first_video_frame_index": 14,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "1c32d0ae14880317dfd358ff90f112983584a2e525cfe82728feec3409cb7075",
+              "goal_pixel_sha256": "f36ffff9f1d36fd6c6aaa379fb297ecd3fde6608305f25434a7e335e7548afb5",
+              "qpos_sha256": "cd09f86b3c61feb53ce16eda07eec954acd30d20d56246bdcc8db95374e39259",
+              "qvel_sha256": "4f7a05667de206315cbf763a6e090c6bfad39c8cf1cc50a06150aac14cd41bc4",
+              "native_frame": "native/bs16_by30_g91/cosmos_policy/step_0280.png"
+            },
+            {
+              "step": 292,
+              "swing_time_s": 0.584,
+              "actual_data_time_s": 1.7840000000000014,
+              "first_video_frame_index": 15,
+              "is_first_contact": true,
+              "raw_pixel_sha256": "947b5bf1e524f6c8f5c23d16bb0ac2f35be0976ba7d6b6da41f05a9f65ab807b",
+              "goal_pixel_sha256": "50372ea9f2c5728df3f71d7ca02b1916458f97b1d4c5caecd6d9e2cb16bbd7fa",
+              "qpos_sha256": "d50875e0f030daffd4505dc8b68de177db03600ea327ad4197f3f830b043a8fc",
+              "qvel_sha256": "90be0e7bd104543716869db030e2a8153919538f517769fe59a2e08ba2517fd1",
+              "native_frame": "native/bs16_by30_g91/cosmos_policy/contact_goal.png"
+            }
+          ]
+        },
+        "ddm": {
+          "name": "DDM",
+          "source_arm": "offset",
+          "executed_action_t_rel_s_yaw_rad": [
+            0.14798657596111298,
+            0.0
+          ],
+          "snapped_action_index": 100,
+          "predicted_continuous_action_t_rel_s_yaw_rad": [
+            0.14811505377292633,
+            0.003062725532799959
+          ],
+          "eval_row_index": 219,
+          "position_error_cm": 1.920114193241323,
+          "flight_time_s": 0.5440000000000005,
+          "captured_frame_count": 19,
+          "distinct_native_frames": 19,
+          "dt_s": 0.002,
+          "frame_stride_steps": 20,
+          "contact_step": 346,
+          "contact_time_s": 0.6920000000000015,
+          "first_contact_xy_m": [
+            1.401897668838501,
+            -0.5038642883300781
+          ],
+          "first_contact_xy_float32_hex": "6271b33f40fd00bf",
+          "qpos": [
+            -0.007453821386771513,
+            -1.1960876673717515,
+            0.0019591214773545845,
+            -0.4049269162167998,
+            0.002099757079432208,
+            1.8271073001965075,
+            0.7852625550007656,
+            0.04000201825669873,
+            0.03999797071632852,
+            1.4018976137782768,
+            -0.5038642747686933,
+            0.057675120646070686,
+            0.1388982026187565,
+            -0.5420184581756091,
+            -0.711134424115414,
+            0.425688984053207
+          ],
+          "qvel": [
+            0.07464759052636408,
+            -1.8666948356605715,
+            -0.01155281958582636,
+            1.2481470128139607,
+            0.004874677989417472,
+            -0.29902779969186744,
+            0.0005336643780072298,
+            -1.885409456089294e-05,
+            2.089074672589905e-05,
+            0.9028804614399379,
+            -0.28748250265773545,
+            -0.001087807187536427,
+            -2.260996906686339,
+            -6.648678168355927,
+            -6.333128360652102
+          ],
+          "raw_pixel_sha256": "9d15ab9686959f0d79dcc0f8f08f063a231e53760d743666b0a34f06538b9464",
+          "goal_pixel_sha256": "a30edde27dacbffb3a30c50c6bae20f89a3df5cabf35e71fc62ffafd8b7c4cbe",
+          "validation": {
+            "first_contact_float32_bit_exact": true,
+            "full_qpos_qvel_exact": true,
+            "contact_time_exact": true,
+            "flight_matches_bank": true,
+            "full_224_raw_contact_pixels_exact": true,
+            "full_224_goal_contact_pixels_exact": true,
+            "camera_exact": true,
+            "render_integration_state_unchanged": true,
+            "all_25fps_samples_present": true
+          },
+          "frame_samples": [
+            {
+              "step": 0,
+              "swing_time_s": 0.0,
+              "actual_data_time_s": 1.2000000000000008,
+              "first_video_frame_index": 0,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "32d239cca208e2ff60606e3bc5defa174fa032c8bb1d1255ceb3050aeeaa7a0f",
+              "goal_pixel_sha256": "76750f26415cac42444c39f391d8afa2e086ea043087f656103fd7faaef1e330",
+              "qpos_sha256": "fde35353f6f56f683fe067c89e574e4e53d60b9a7976eea97f858e07ef2d9914",
+              "qvel_sha256": "a4268f751acc10950d2ce446361feadb3e73023453c112b8b5996d9764136774",
+              "native_frame": "native/bs16_by30_g91/ddm/step_0000.png"
+            },
+            {
+              "step": 20,
+              "swing_time_s": 0.04,
+              "actual_data_time_s": 1.2400000000000009,
+              "first_video_frame_index": 1,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "4a414e3ef27446afdae307b00f7a7ee83765ff49a273da17423d77c645147a42",
+              "goal_pixel_sha256": "d9a3f41880d0e5061a9d6e9f16a3171ea861ae385c6533fe9097d6144a6be7fb",
+              "qpos_sha256": "a62aba09f06e2980f4df7c8ce0fa4f3dab88719519baea2a1aac03b448377f8b",
+              "qvel_sha256": "3ddf23fc080d79c3e15756a73fd35e4717ea10158559f3ff1fd59833bd71f182",
+              "native_frame": "native/bs16_by30_g91/ddm/step_0020.png"
+            },
+            {
+              "step": 40,
+              "swing_time_s": 0.08,
+              "actual_data_time_s": 1.280000000000001,
+              "first_video_frame_index": 2,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "4195c492db1b81faeaa00292602257f3eab10130cc8b99b2cfde16d5eafb8cb2",
+              "goal_pixel_sha256": "a7dcf2e21e02c2374156ddbc25ca150ac456d68bf83e48a754117f3118c1c94a",
+              "qpos_sha256": "9e4884c66089081aac72477f62712129134fd0c057b7c4d161da2e3c4eda08be",
+              "qvel_sha256": "83a02bf3bdc0afcaaa4ae3d38fc67a31f17f99d0adfc1d614b5dbb212e748428",
+              "native_frame": "native/bs16_by30_g91/ddm/step_0040.png"
+            },
+            {
+              "step": 60,
+              "swing_time_s": 0.12,
+              "actual_data_time_s": 1.320000000000001,
+              "first_video_frame_index": 3,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "b70c5beae22fe235b7e3126f44de23e7198726d38690b0832906715edd156739",
+              "goal_pixel_sha256": "38710bedd34160ff932bb4308dfe2a3f68c417f9f2b3a091a290ec3c362737ec",
+              "qpos_sha256": "5ec85dc5b372fe4ad9c60f4525f473f54e33d5b4cb54c747bbaab6c2a04ad2e1",
+              "qvel_sha256": "945fc3fa3e1b5e6194297a7adc6813c720aaf5bccdaff9689f7adeb63d82ee9a",
+              "native_frame": "native/bs16_by30_g91/ddm/step_0060.png"
+            },
+            {
+              "step": 80,
+              "swing_time_s": 0.16,
+              "actual_data_time_s": 1.360000000000001,
+              "first_video_frame_index": 4,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "70b0a49dbf8a3ffdb7d5a07a3e4252771c49a8ffa26e1c7058aef6ae60f605c5",
+              "goal_pixel_sha256": "9cda0e8326acf1dd49cd73f60bc93c0fdca58821ac07d131256da94d17f3a768",
+              "qpos_sha256": "d8a1fa827fbbcfc4b073e14ebc3cd03028fa375eb8000da533b87f75693bb9c9",
+              "qvel_sha256": "95c09626dcd7a6aab92cf28cc4c6750f9b9c9cca92ee496fdc3315d5d6d835df",
+              "native_frame": "native/bs16_by30_g91/ddm/step_0080.png"
+            },
+            {
+              "step": 100,
+              "swing_time_s": 0.2,
+              "actual_data_time_s": 1.400000000000001,
+              "first_video_frame_index": 5,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "518b8d13f203c71939da4a3234dc4dbd4dd7c9bfd68e3bc43b6900fbac5928c9",
+              "goal_pixel_sha256": "7086c15c073aa12af894ffab9161939bf21abffc5c7c917d225f6a4e98e6f6c2",
+              "qpos_sha256": "6613588d7fba70e19588801cf38b62f67cee44e35eb4e3f80f5f79eb78b7ad46",
+              "qvel_sha256": "9a04ae441e9cf9fd490105156c509ea473917421f46c7197d279b23d3f2c3a64",
+              "native_frame": "native/bs16_by30_g91/ddm/step_0100.png"
+            },
+            {
+              "step": 120,
+              "swing_time_s": 0.24,
+              "actual_data_time_s": 1.440000000000001,
+              "first_video_frame_index": 6,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "87c1bff8fd5cf41dc9703ed4714c7911c80dc4450dfb81a35ae1fdaa78b926e4",
+              "goal_pixel_sha256": "8c41518dbc0f2a21796f538ecd76b6aee4d6afedcc220a5c0ee65a96b11adef0",
+              "qpos_sha256": "dc22d1b6a678d6a3cd95ba238c5c0fdd71a62a9cd856ecba6fdd734d768bc46c",
+              "qvel_sha256": "6b3798fad7ba7655471d01ef85f095405f7d5c7eaf5f8340ddb9a445e08e3741",
+              "native_frame": "native/bs16_by30_g91/ddm/step_0120.png"
+            },
+            {
+              "step": 140,
+              "swing_time_s": 0.28,
+              "actual_data_time_s": 1.480000000000001,
+              "first_video_frame_index": 7,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "72094c3dcb5d80494abde558681c6f8dcdb51f4f2edb0373110588f76d45cf57",
+              "goal_pixel_sha256": "df514d0ec9e42863291f1f21761d10e5f87f3890ec8ac8adf867acf615c1591b",
+              "qpos_sha256": "e40e5fcd513a6d76f2493081a8460e9ec86f1c8250d2281aaa3e3d1f91937391",
+              "qvel_sha256": "47cb7e841d26c06bfd5ccec5116ed42387bbb01224c70947e1a81460341feb42",
+              "native_frame": "native/bs16_by30_g91/ddm/step_0140.png"
+            },
+            {
+              "step": 160,
+              "swing_time_s": 0.32,
+              "actual_data_time_s": 1.5200000000000011,
+              "first_video_frame_index": 8,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "737c5f2e678c694a8a30abd1ea76d81540e02d1111e4f4d1c20282cb7b3df31b",
+              "goal_pixel_sha256": "0204ce18e1d55287aca887a9f13bba1a12d54bbd23d583be93a69b0a9bdae651",
+              "qpos_sha256": "c9b6ce4a1ce4e5ff36cc29f6146b5e898da5f5abd76b9b32077ed89dec38b7d8",
+              "qvel_sha256": "16dc75af3d8a5f57ac73fcea333822426e271b69053364c7123be682031973b1",
+              "native_frame": "native/bs16_by30_g91/ddm/step_0160.png"
+            },
+            {
+              "step": 180,
+              "swing_time_s": 0.36,
+              "actual_data_time_s": 1.5600000000000012,
+              "first_video_frame_index": 9,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "1bf172886000251627428dc5da9bf61c9895e4db21b9230dd9b61a2a6609f2e7",
+              "goal_pixel_sha256": "c7bf91c2554e81ab5a4e6cc720052ef67d1e2fcbb814fe94b6d5c0699c7e2181",
+              "qpos_sha256": "a8a526b908bef9be5bf0cfdf09312f880e0a2ba94a38feaf45371ab07d130269",
+              "qvel_sha256": "7435f0791209681fa91df0df4da70234a471dfc75a9388addb386ebee151a9ca",
+              "native_frame": "native/bs16_by30_g91/ddm/step_0180.png"
+            },
+            {
+              "step": 200,
+              "swing_time_s": 0.4,
+              "actual_data_time_s": 1.6000000000000012,
+              "first_video_frame_index": 10,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "43efda5cd30649ad66d9addba67a5519becbd54d809ea3344c0efc8801080b6f",
+              "goal_pixel_sha256": "e13bccdffb3522d575648fefec009317830a728ab7df0c40445da8baee24000b",
+              "qpos_sha256": "ec879f35ebbb74780f1fe024b181760bd41348425bbaaaafcf4064d458482c6c",
+              "qvel_sha256": "1e05d5f1c780a180726589bec7f4c0b9880ac8d3c7dcf3ccbc38256c917b4372",
+              "native_frame": "native/bs16_by30_g91/ddm/step_0200.png"
+            },
+            {
+              "step": 220,
+              "swing_time_s": 0.44,
+              "actual_data_time_s": 1.6400000000000012,
+              "first_video_frame_index": 11,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "ab37c4abe6556301edecb99a79831b199045168d8a2db70da1f04ba8ff56ab5b",
+              "goal_pixel_sha256": "8e371f4152338aedc21ee13abcf4a4369e46f5d771c62c1883f9da4507bd271b",
+              "qpos_sha256": "6b312c7f008a37f3ed34f3e63503cd4898c73c36cf0cfe7c9d6f48500ddb0a04",
+              "qvel_sha256": "3c89ea9d376c87a86c60d8f70c8b99f304d970000a5f0f26081e7953e574c842",
+              "native_frame": "native/bs16_by30_g91/ddm/step_0220.png"
+            },
+            {
+              "step": 240,
+              "swing_time_s": 0.48,
+              "actual_data_time_s": 1.6800000000000013,
+              "first_video_frame_index": 12,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "b5010fe22fc1c747466509a05b5e87c2ebbaea10dcc2c2a4b82353625771d725",
+              "goal_pixel_sha256": "320c7ff91b49420f57dc43221d3ba061ec58e5698e197e79be9adf5e49088352",
+              "qpos_sha256": "e128b9cb2920a8edcf6eea4ae9aec7787545ab4ec156581bd464e605ef5d4be2",
+              "qvel_sha256": "e7b4e640261e1848c20ce277fd411e8891fbf9a5bc0cdbaf094c0b8813bfe8fb",
+              "native_frame": "native/bs16_by30_g91/ddm/step_0240.png"
+            },
+            {
+              "step": 260,
+              "swing_time_s": 0.52,
+              "actual_data_time_s": 1.7200000000000013,
+              "first_video_frame_index": 13,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "d83d5cdf91f87a897d070f3d2d733fe485b5468a92073e313e0bfcb80a5935e1",
+              "goal_pixel_sha256": "2515320690f81e9129e27ab794dfca69d7807048a0dc7df93cb18012aa8e2f76",
+              "qpos_sha256": "64a6491203550c0075f6c44f9f89068aedce60b176c778bec7dcfc54b2bd1f2d",
+              "qvel_sha256": "be472cbcbc112200d00fc44d9cba271b1f1e15b8ee24bb15c423fb77596cc6ac",
+              "native_frame": "native/bs16_by30_g91/ddm/step_0260.png"
+            },
+            {
+              "step": 280,
+              "swing_time_s": 0.56,
+              "actual_data_time_s": 1.7600000000000013,
+              "first_video_frame_index": 14,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "7f434b5bfb22574f24d8e9711571cb1f3fff1c81953475fcf937d2c511d52e9e",
+              "goal_pixel_sha256": "17438093f92300e9609fede81e85a467e70f8e412eee471f0cfd5997fccfcb96",
+              "qpos_sha256": "897134557fa3d22f5a50f1cf38aed8c2acad428bba1c90a04664867f6675139a",
+              "qvel_sha256": "821ed1bcb2863a6b9546c6c364b204f8865b367482c02306a007ff663f3bd656",
+              "native_frame": "native/bs16_by30_g91/ddm/step_0280.png"
+            },
+            {
+              "step": 300,
+              "swing_time_s": 0.6,
+              "actual_data_time_s": 1.8000000000000014,
+              "first_video_frame_index": 15,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "ff6475fd0280ccd5fe2e1d6d773dc7414e4e41532aa774d78493281ef3432262",
+              "goal_pixel_sha256": "0102b2792069c4770368b7f7bd95e1a6bd46645e9f22c253ec78821e44ba8b6d",
+              "qpos_sha256": "6166fb1b368e85a35d33d0c3fce939d910ea0be161eba518d2cb873a0e3814ca",
+              "qvel_sha256": "37b57b5b012e5ca2272700dd94188ad50a1a9ab2724292ddcf94b24f25cbe3b0",
+              "native_frame": "native/bs16_by30_g91/ddm/step_0300.png"
+            },
+            {
+              "step": 320,
+              "swing_time_s": 0.64,
+              "actual_data_time_s": 1.8400000000000014,
+              "first_video_frame_index": 16,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "20e562a21ab3ec942bf1b99020a2c321e9a2a1aece8eae33e5998dd4a8233da1",
+              "goal_pixel_sha256": "644139f3f18c1989c931cf1b204fb664b69115bac8fa41a7dfb887e7b44c8e55",
+              "qpos_sha256": "5dc582375516a2b2b9fd3e6ee75332f1f3db2d05e9dafefda84a350738618a78",
+              "qvel_sha256": "a253fd5a8cf1811b448b644cedf1cae3122705485cd28bbb740bc7c26b2e79d1",
+              "native_frame": "native/bs16_by30_g91/ddm/step_0320.png"
+            },
+            {
+              "step": 340,
+              "swing_time_s": 0.68,
+              "actual_data_time_s": 1.8800000000000014,
+              "first_video_frame_index": 17,
+              "is_first_contact": false,
+              "raw_pixel_sha256": "5816b766b3a999979c297594213b82e9b81259de4841489e6dd6d2ed90de5f2b",
+              "goal_pixel_sha256": "85aaa434a1c90b11f728a0f113d173e766112edf18a003a9cb2b6681e0200ed4",
+              "qpos_sha256": "5dfd9cc1991390f933004c386da81835f5de14e7338764a591a78571473a92f5",
+              "qvel_sha256": "c89719e9909497e25447df981eba65317104f2107c934a1dc94ff73752b856f4",
+              "native_frame": "native/bs16_by30_g91/ddm/step_0340.png"
+            },
+            {
+              "step": 346,
+              "swing_time_s": 0.6920000000000001,
+              "actual_data_time_s": 1.8920000000000015,
+              "first_video_frame_index": 18,
+              "is_first_contact": true,
+              "raw_pixel_sha256": "9d15ab9686959f0d79dcc0f8f08f063a231e53760d743666b0a34f06538b9464",
+              "goal_pixel_sha256": "a30edde27dacbffb3a30c50c6bae20f89a3df5cabf35e71fc62ffafd8b7c4cbe",
+              "qpos_sha256": "980120c1d9ccaca33424ea202a1c9abbd319cf15e844e6165ef5025ad03440bb",
+              "qvel_sha256": "351db1264128ae8f834fffc3e7cc758307faeb3852d5eab87f5ed2a7842fe0f2",
+              "native_frame": "native/bs16_by30_g91/ddm/contact_goal.png"
+            }
+          ]
+        }
+      },
+      "encoding": {
+        "codec": "h264",
+        "pixel_format": "yuv420p",
+        "faststart": true,
+        "decode_check_passed": true,
+        "decoded_frame_count": 49,
+        "duration_s": 1.96,
+        "bytes": 90858,
+        "sha256": "742dadf42acf0e1cc9c97fde0452c6f4e91e5e5479f59c2a140a865028e9eb6e"
+      },
+      "poster_validation": {
+        "format": "PNG",
+        "lossless": true,
+        "full_native_contact_pixels_preserved": true,
+        "sha256": "e65c3b29c2e6bfbf45bc8a41d47b583a7d90468d97e6dee228cb0816662b8060"
+      },
+      "frame_timeline": [
+        {
+          "frame_index": 0,
+          "presentation_time_s": 0.0,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 0,
+              "source_time_s": 0.0,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 0,
+              "source_time_s": 0.0,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 1,
+          "presentation_time_s": 0.04,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 20,
+              "source_time_s": 0.04,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 20,
+              "source_time_s": 0.04,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 2,
+          "presentation_time_s": 0.08,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 40,
+              "source_time_s": 0.08,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 40,
+              "source_time_s": 0.08,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 3,
+          "presentation_time_s": 0.12,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 60,
+              "source_time_s": 0.12,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 60,
+              "source_time_s": 0.12,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 4,
+          "presentation_time_s": 0.16,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 80,
+              "source_time_s": 0.16,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 80,
+              "source_time_s": 0.16,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 5,
+          "presentation_time_s": 0.2,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 100,
+              "source_time_s": 0.2,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 100,
+              "source_time_s": 0.2,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 6,
+          "presentation_time_s": 0.24,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 120,
+              "source_time_s": 0.24,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 120,
+              "source_time_s": 0.24,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 7,
+          "presentation_time_s": 0.28,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 140,
+              "source_time_s": 0.28,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 140,
+              "source_time_s": 0.28,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 8,
+          "presentation_time_s": 0.32,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 160,
+              "source_time_s": 0.32,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 160,
+              "source_time_s": 0.32,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 9,
+          "presentation_time_s": 0.36,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 180,
+              "source_time_s": 0.36,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 180,
+              "source_time_s": 0.36,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 10,
+          "presentation_time_s": 0.4,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 200,
+              "source_time_s": 0.4,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 200,
+              "source_time_s": 0.4,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 11,
+          "presentation_time_s": 0.44,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 220,
+              "source_time_s": 0.44,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 220,
+              "source_time_s": 0.44,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 12,
+          "presentation_time_s": 0.48,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 240,
+              "source_time_s": 0.48,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 240,
+              "source_time_s": 0.48,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 13,
+          "presentation_time_s": 0.52,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 260,
+              "source_time_s": 0.52,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 260,
+              "source_time_s": 0.52,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 14,
+          "presentation_time_s": 0.56,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 280,
+              "source_time_s": 0.56,
+              "contact_held": false
+            },
+            "ddm": {
+              "source_step": 280,
+              "source_time_s": 0.56,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 15,
+          "presentation_time_s": 0.6,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 300,
+              "source_time_s": 0.6,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 16,
+          "presentation_time_s": 0.64,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 320,
+              "source_time_s": 0.64,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 17,
+          "presentation_time_s": 0.68,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 340,
+              "source_time_s": 0.68,
+              "contact_held": false
+            }
+          }
+        },
+        {
+          "frame_index": 18,
+          "presentation_time_s": 0.72,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 19,
+          "presentation_time_s": 0.76,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 20,
+          "presentation_time_s": 0.8,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 21,
+          "presentation_time_s": 0.84,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 22,
+          "presentation_time_s": 0.88,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 23,
+          "presentation_time_s": 0.92,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 24,
+          "presentation_time_s": 0.96,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 25,
+          "presentation_time_s": 1.0,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 26,
+          "presentation_time_s": 1.04,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 27,
+          "presentation_time_s": 1.08,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 28,
+          "presentation_time_s": 1.12,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 29,
+          "presentation_time_s": 1.16,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 30,
+          "presentation_time_s": 1.2,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 31,
+          "presentation_time_s": 1.24,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 32,
+          "presentation_time_s": 1.28,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 33,
+          "presentation_time_s": 1.32,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 34,
+          "presentation_time_s": 1.36,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 35,
+          "presentation_time_s": 1.4,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 36,
+          "presentation_time_s": 1.44,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 37,
+          "presentation_time_s": 1.48,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 38,
+          "presentation_time_s": 1.52,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 39,
+          "presentation_time_s": 1.56,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 40,
+          "presentation_time_s": 1.6,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 41,
+          "presentation_time_s": 1.64,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 42,
+          "presentation_time_s": 1.68,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 43,
+          "presentation_time_s": 1.72,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 44,
+          "presentation_time_s": 1.76,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 45,
+          "presentation_time_s": 1.8,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 46,
+          "presentation_time_s": 1.84,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 47,
+          "presentation_time_s": 1.88,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        },
+        {
+          "frame_index": 48,
+          "presentation_time_s": 1.92,
+          "methods": {
+            "cosmos_policy": {
+              "source_step": 292,
+              "source_time_s": 0.584,
+              "contact_held": true
+            },
+            "ddm": {
+              "source_step": 346,
+              "source_time_s": 0.6920000000000001,
+              "contact_held": true
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "all_four_contacts_float32_bit_exact": true,
+    "all_four_full_native_raw_and_goal_contact_images_bit_exact": true,
+    "all_four_contact_qpos_qvel_exact": true,
+    "all_sources_unchanged": true,
+    "all_videos_decode": true,
+    "all_videos_h264_yuv420p_faststart": true
+  }
+}

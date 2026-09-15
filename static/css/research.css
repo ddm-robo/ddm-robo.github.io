@@ -1,0 +1,115 @@
+/* Research-page presentation: white canvas, compact prose, open media figures.
+   The base sheet supplies the existing interactive components and responsive states. */
+:root{--ink:#363636;--muted:#626262;--bg:#fff;--pale:#f6f6f6;--line:#e5e5e5}
+html{scroll-padding-top:28px}
+body{font-family:"Segoe UI",Arial,sans-serif;line-height:1.6;background:#fff}
+h1,h2,h3{letter-spacing:-.025em;color:#363636}
+.wrap{width:min(960px,calc(100% - 48px))}
+.hero{padding-top:48px;text-align:center}
+.hero h1{display:block;max-width:960px;margin:0 auto;font-size:46px;font-weight:650;line-height:1.15;letter-spacing:-.04em;color:#496c9a;background:linear-gradient(110deg,#426baf 4%,#7970b5 40%,#bd7daf 65%,#ce8266 96%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.publication-authors{margin:28px 0 0;font-size:19px;color:#555}
+.hero-actions{justify-content:center;margin:20px 0 48px;gap:12px}
+.button{font-size:15px;font-weight:500;border-radius:999px;padding:8px 18px;gap:8px;line-height:1.5}
+.primary{background:#363636;border-color:#363636;color:#fff}
+.primary:hover{background:#505050;transform:none}
+.button svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linejoin:round;stroke-linecap:round}
+.hero-story{gap:14px;text-align:left}
+.hero-story img{max-height:none;width:100%;aspect-ratio:700/408;object-fit:contain;border-radius:4px}
+.scene-label{justify-content:center;font-size:14px;font-weight:600;margin-bottom:8px}
+.scene-label span{display:none}
+.story-caption{justify-content:center;flex-wrap:wrap;gap:8px 22px;font-size:11px}
+.question{display:block;border:0;padding:0;margin:24px 0 12px}
+.question p{font-size:23px;font-weight:600;letter-spacing:-.025em}
+.hero-summary{font-size:19px;line-height:1.55;max-width:840px;margin:0 auto;color:#4a4a4a}
+.hero-summary strong{color:var(--teal)}
+.section-index{display:flex;justify-content:center;gap:12px 24px;flex-wrap:wrap;margin:25px 0 0;font-size:13px}
+.section-index a{color:#487c9b;text-decoration:none}
+.section-index a:hover{text-decoration:underline}
+.section{padding-block:44px}
+.section-heading{max-width:none;margin-bottom:28px}
+h2{font-size:32px;font-weight:650;line-height:1.2}
+.section-heading>p:last-child:not(.eyebrow){max-width:none;font-size:16px;line-height:1.6;margin-top:16px}
+.publication-abstract{max-width:780px;padding-top:56px;padding-bottom:38px}
+.publication-abstract h2{text-align:center;margin-bottom:24px}
+.publication-abstract p{font-size:16px;text-align:justify;margin-top:18px;color:#555}
+.publication-abstract strong{font-weight:600;color:#444}
+.tinted{background:#fff;border:0}
+.idea-grid{gap:34px;grid-template-columns:1fr 1.8fr;border-block:1px solid var(--line);padding-block:24px}
+.history-card,.residual-card{padding:0;border:0;border-radius:0;background:transparent}
+.history-card{padding-right:30px;border-right:1px solid var(--line)}
+.idea-grid h3{font-size:20px;letter-spacing:-.02em}
+.mini-label{font-size:11px;letter-spacing:.03em;text-transform:none}
+.residual-equation{font-size:16px}
+.note{font-size:12px;line-height:1.6}
+.method-intro{gap:38px;margin-bottom:28px}
+.method-intro h3{font-size:21px}
+.pill{background:transparent;padding:0;font-size:14px;color:var(--teal)}
+.orange-pill{color:#b87151;background:transparent}
+.framework,.task-figure{padding:0;border:0;border-radius:0}
+.framework figcaption,.task-figure figcaption{font-size:13px;text-align:center;line-height:1.5;margin-top:15px}
+.protocol{font-size:12px;margin-top:20px;padding-top:14px}
+#policy-videos{grid-template-columns:1fr;gap:42px}
+.video-card{border:0;border-radius:0;background:transparent;overflow:visible}
+.video-card video{border-radius:5px;background:#fafafa}
+#policy-videos .video-caption{padding:18px 0 0;display:grid;grid-template-columns:1fr 1.35fr;gap:32px}
+.video-caption h3{font-size:20px;letter-spacing:-.02em}
+.video-caption p{font-size:13px}
+.video-card .video-playback{margin-bottom:12px}
+.video-playback button{border-radius:20px;background:#fff;padding:5px 12px}
+.video-badges{gap:5px 10px;margin-bottom:12px}
+.video-badges span{border:0;padding:0;font-size:11px}
+.video-badges span+span:before{content:"·";margin-right:10px;color:#aaa}
+.curve-heading{margin:0;font-size:12px}
+.curve{margin-top:4px}
+.curve-legend{margin-bottom:10px}
+.video-final-scores{padding-top:6px}
+.video-final-scores strong{font-size:21px}
+.video-caption p.final-score-label{margin-top:12px}
+.toss-video-heading{margin:46px 0 25px;max-width:none}
+.toss-video-heading h3{font-size:28px}
+#toss-videos{gap:26px}
+#toss-videos .video-caption{padding:16px 0 0}
+.explorer{border:0;border-radius:0;box-shadow:none;overflow:visible}
+.explorer-toolbar{background:#fafafa;border-block:1px solid var(--line);padding:14px 12px;border-radius:4px;gap:10px}
+.explorer-body{padding:26px 0 0}
+.segmented{background:#efefef}
+.task-selector button[aria-pressed=true]{box-shadow:none;background:#eaf3f5}
+.example-heading h3{font-size:24px}
+.output-image,.error-image{border:0;background:#fafafa}
+.prediction-gallery{padding:0;border:0;border-radius:0}
+.gallery-toolbar{background:#fafafa;padding:14px 12px;border-block:1px solid var(--line);border-radius:4px}
+.gallery-controls{margin-top:20px}
+.gallery-frame figcaption{font-size:14px}
+.gallery-frame small{font-size:11px}
+.gallery-thumbs button{background:#fff}
+.stat-grid{gap:28px;border-block:1px solid var(--line);padding:24px 0}
+.stat-card{padding:0;background:transparent;border:0;border-radius:0}
+.stat-card+.stat-card{border-left:1px solid var(--line);padding-left:28px}
+.stat-value{font-size:43px;margin:15px 0 12px}
+.stat-card h3{font-size:17px;margin-bottom:18px}
+.stat-card .mini-label{font-size:11px}
+.stat-card>p:last-child{font-size:11px}
+.table-section-heading h3{font-size:26px}
+.result-tabs{gap:0;border-bottom:1px solid #d9d9d9;margin-bottom:20px}
+.result-tabs button{border:0;border-bottom:2px solid transparent;background:transparent;border-radius:0;padding:11px 15px;font-size:13px}
+.result-tabs button[aria-selected=true]{background:transparent;color:var(--teal);border-color:var(--teal);font-weight:650}
+.result-table-panel{padding:0;border:0;border-radius:0}
+.result-table-panel h3,.result-table-panel h4{font-size:20px}
+.result-table-panel th,.result-table-panel td{padding:12px 10px}
+.table-scroll{overscroll-behavior-x:contain}
+.task-descriptions{gap:35px}
+.footer{margin-top:28px;padding-block:30px;border-top:1px solid var(--line);font-size:12px}
+@media(min-width:1440px){.wrap{width:min(960px,calc(100% - 48px))}.publication-abstract{max-width:780px}}
+@media(max-width:900px){.hero h1{font-size:40px}.section{padding-block:38px}.publication-abstract{padding-top:48px}.residual-equation{font-size:13px}.stat-grid{gap:20px}.stat-card+.stat-card{padding-left:20px}.stat-value{font-size:38px}}
+@media(max-width:700px){#policy-videos .video-caption{grid-template-columns:1fr;gap:20px}#toss-videos{gap:32px}.video-analysis{max-width:100%}.curve svg{max-height:180px}.result-tabs button{padding:10px 11px;font-size:12px}.stat-grid{gap:16px}.stat-card+.stat-card{padding-left:16px}.stat-value{font-size:34px}.stat-card h3{font-size:16px}}
+@media(max-width:600px){
+ .wrap{width:calc(100% - 36px)}.hero{padding-top:32px}.hero h1{font-size:32px;line-height:1.18;letter-spacing:-.035em}.publication-authors{font-size:16px;margin-top:22px}.hero-actions{margin:18px 0 32px;gap:9px}.button{font-size:14px;padding:7px 14px}.button svg{width:15px}
+ .swipe-hint{font-size:11px;text-align:left}.hero-story{gap:12px}.hero-story figure{flex-basis:90%}.scene-label{justify-content:flex-start;font-size:13px}.story-caption{font-size:10px}.story-caption>span:first-child{justify-content:center}.question{margin-top:23px}.question p{font-size:22px;line-height:1.3}.hero-summary{font-size:17px}.section-index{font-size:12px;gap:10px 18px;margin-top:22px}
+ .section{padding-block:34px}.publication-abstract{padding-top:42px}.publication-abstract p{text-align:left;font-size:15px}.publication-abstract h2{margin-bottom:20px}h2{font-size:28px}.section-heading>p:last-child:not(.eyebrow){font-size:15px}.section-heading{margin-bottom:24px}
+ .idea-grid{grid-template-columns:1fr;gap:24px}.history-card{padding:0 0 22px;border-right:0;border-bottom:1px solid var(--line)}.idea-grid h3{font-size:20px}.residual-equation{font-size:13px}.mini-label{font-size:11px}.method-intro{gap:26px}
+ .framework figcaption,.task-figure figcaption{font-size:12px}.explorer-body{padding:20px 0 0}.explorer-toolbar{padding:12px 8px}.example-heading h3{font-size:21px}.gallery-toolbar{padding:12px 8px}.gallery-controls{font-size:12px}.gallery-frame figcaption{font-size:12px}.gallery-frame small{font-size:10px}
+ .stat-grid{grid-template-columns:1fr;gap:24px}.stat-card+.stat-card{padding:24px 0 0;border-left:0;border-top:1px solid var(--line)}.stat-value{font-size:44px}.stat-card h3{font-size:19px}.bar-row{font-size:12px}.table-section-heading h3{font-size:24px}.result-tabs button{font-size:12px;padding:10px}.result-table-panel table{font-size:11px}
+ .toss-video-heading h3{font-size:26px}.video-caption p{font-size:13px}.video-playback button{font-size:12px}.curve-heading{font-size:12px}.footer{font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media(forced-colors:active){.hero h1{background:none;color:CanvasText;-webkit-text-fill-color:CanvasText}}

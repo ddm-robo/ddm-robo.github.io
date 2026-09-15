@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DDM · Dense Dynamics World Action Modeling</title>
+  <meta name="description" content="DDM adapts video world and world-action models to hidden dynamics using model-relative interaction residuals and dense future supervision.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="static/css/research.css">
+  <script src="static/js/main.js" defer></script>
+  <script src="static/js/gallery-data.js" defer></script>
+  <script src="static/js/video-data.js" defer></script>
+  <script src="static/js/video-gallery.js" defer></script>
+  <script src="static/js/toss-video-data.js" defer></script>
+  <script src="static/js/toss-videos.js" defer></script>
+  <script src="static/js/gallery.js" defer></script>
+  <script src="static/js/result-tables.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<main id="main">
+<section class="hero wrap" aria-labelledby="title">
+  <h1 id="title">DDM: Dense Dynamics World Action Modeling for Physics-Sensitive Robotic Manipulation</h1>
+  <p class="publication-authors">Anonymous submission</p>
+  <div class="hero-actions"><a class="button primary" href="static/paper/ddm.pdf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z M14 3v5h4 M9 12h6 M9 16h6"/></svg>Paper</a><a class="button primary" href="#videos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7z"/></svg>Videos</a><a class="button primary" href="#tables"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z M4 10h16 M10 4v16"/></svg>Results</a></div>
+  <p class="swipe-hint">Three states · Swipe to compare →</p>
+  <div class="hero-story" tabindex="0" aria-label="Three states showing the same action under different hidden dynamics">
+    <figure><div class="scene-label"><span>01</span> Same starting state</div><img src="static/media/hero-initial.webp" width="700" height="408" fetchpriority="high" alt="A robot pusher beside a digit-shaped object in the shared initial state."></figure>
+    <figure><div class="scene-label"><span>02</span> Same action</div><img src="static/media/hero-progress.webp" width="700" height="408" alt="Blue and orange dynamics conditions begin to diverge under one shared push command."></figure>
+    <figure><div class="scene-label"><span>03</span> Different futures</div><img src="static/media/hero-ending.webp" width="700" height="408" alt="The two overlaid digit objects finish at distinct positions and orientations."></figure>
+  </div>
+  <div class="story-caption"><span><i class="dot teal"></i> Dynamics A <i class="dot orange"></i> Dynamics B</span><span>Hidden center-of-mass variation · Blender task illustration</span></div>
+  <div class="question"><p>Which future should the world model predict?</p></div>
+  <p class="hero-summary">The same scene can hide different dynamics. <strong>DDM</strong> conditions prediction and action generation on the offset between an actual future and the future a frozen reference model expected.</p>
+  <nav class="section-index" aria-label="Page sections"><a href="#idea">Key insight</a><a href="#method">Method</a><a href="#videos">Policy videos</a><a href="#gallery">Prediction gallery</a><a href="#tables">Result tables</a></nav>
+</section>
+<section id="abstract" class="section wrap publication-abstract" aria-labelledby="abstract-title">
+  <h2 id="abstract-title">Abstract</h2>
+  <p>Video generative models serve robotics as action-conditioned world models and goal-conditioned world-action models. When dynamics change without altering appearance, identical actions can yield different futures and identical goals can require different actions. Raw interaction history records what happened, but does not express how that outcome differs from what the model expected.</p>
+  <p>We introduce <strong>DDM</strong>, a video-diffusion framework that converts model-relative prediction error into context. <strong>DDM-cond</strong> compares realized futures with a frozen dynamics-blind reference and aggregates latent offsets into a residual dynamics descriptor, without dynamics labels. <strong>DDM-pred</strong> complements this context by packing transient observations into the existing future latent budget.</p>
+  <p>We evaluate separately trained world models and world-action models in simulation on pushing with hidden center-of-mass shifts and tossing with hidden robot actuation variations. On pushing with eight context interactions, residual conditioning improves dynamics identification from <strong>31.96% to 44.25%</strong> over matched history, while DDM improves open-loop action success by <strong>12.38 percentage points</strong> over matched Cosmos Policy.</p>
+</section>
+<section id="idea" class="section wrap" aria-labelledby="idea-title">
+  <div class="section-heading"><h2 id="idea-title">The key insight</h2><p>Past interactions reveal dynamics. DDM makes that evidence specific to the model: compare what actually happened with what a frozen reference expected.</p></div>
+  <div class="idea-grid">
+    <div class="history-card"><span class="mini-label">Raw interaction history</span><h3>“What happened?”</h3><div class="history-glyph" aria-hidden="true"><span>o</span><span>a</span><span>o′</span></div><p>Observations and actions describe past behavior.</p></div>
+    <div class="residual-card"><span class="mini-label">DDM · Model-relative context</span><h3>“How did reality differ from expectation?”</h3><div class="residual-equation"><span>Actual future<small>latent</small></span><b aria-hidden="true">−</b><span>Reference future<small>latent</small></span><b aria-hidden="true">→</b><span class="rdd">RDD<small>dynamics descriptor</small></span></div><p>Aggregate latent offsets with recorded states and actions, then condition the next prediction or action.</p></div>
+  </div>
+  <p class="quiet note">No numeric dynamics labels are supplied. Context comes from a few earlier interactions under the same dynamics regime.</p>
+</section>
+<section id="method" class="section tinted" aria-labelledby="method-title"><div class="wrap">
+  <div class="section-heading"><h2 id="method-title">Introducing DDM</h2></div>
+  <div class="method-intro"><article><span class="pill">DDM-cond</span><h3>A residual dynamics descriptor</h3><p>Encode actual-minus-reference future latents into an RDD that modulates the diffusion transformer through its timestep and AdaLN interfaces.</p></article><article><span class="pill orange-pill">DDM-pred</span><h3>Four moments, one latent budget</h3><p>Replace the WAM’s repeated terminal target with four future observations. Preserve motion across the horizon within the existing future latent component.</p></article></div>
+  <figure class="framework"><a href="static/media/framework.webp" target="_blank" rel="noopener" aria-label="Open full-resolution DDM framework"><img src="static/media/framework.webp" width="2048" height="1011" loading="lazy" alt="Completed interaction history feeds a frozen reference. Actual-minus-reference future latent residuals, states and recorded actions are encoded into an RDD, conditioning a diffusion transformer. Four future observations are encoded into one future latent frame for supervision."><span class="expand-hint">View full size ↗</span></a><figcaption>WM predicts a future from observation and action. WAM jointly generates action and future from observation and goal.</figcaption></figure>
+  <details class="protocol"><summary>What is shared between WM and WAM?</summary><p>WM uses standard dense supervision; DDM-pred names the WAM target change. Controlled-task WAM comparisons share dense targets; RoboCasa isolates dense versus repeated-terminal supervision.</p><p>The architecture family and latent interface are shared; weights, frozen references, and residual stores are separate. The WM reference is conditioned on the recorded action. The WAM reference is goal-conditioned and generates its own action and future, so its residual also reflects reference action choice and sampling variation.</p></details>
+</div></section>
+<section id="videos" class="section wrap" aria-labelledby="videos-title">
+  <div class="section-heading"><h2 id="videos-title">Pushing: generated actions in motion</h2><p>Continuous replays of generated actions, synchronized across Cosmos Policy, two-stage history, and DDM. Watch the motion, then inspect how position and orientation errors evolve.</p></div>
+  <div id="policy-videos" class="video-grid"></div>
+  <p class="note">One open-loop action per model. Same initial state and visual goal within each comparison. Success requires both &lt;1.5 cm position error and &lt;2° yaw error. Curves use recorded simulator states; the dashed horizontal line marks the selected metric’s threshold. Shorter rollouts hold their evaluated final state. <a href="static/video/videos.json">Replay verification ↗</a></p>
+  <div class="toss-video-heading"><h3>Tossing: from command to first contact</h3><p>Hidden robot damping changes command execution. Inspect the full flight with the original simulator camera.</p></div>
+  <div id="toss-videos" class="video-grid"></div>
+  <details class="protocol"><summary>Toss action selection &amp; contact timing</summary><p>These are selected goal-91 examples under damping (16,26) and (16,30), using the original nearest-of-180 action rule. Cosmos Policy selects candidate 45 and DDM selects candidate 100 in both clips; the displayed pair does not establish a change of action across conditions. Each method is held at its own first floor contact. Distances are raw goal errors, not oracle-relative regret. Both native contact states and full source images reproduce exactly. <a href="static/video/toss/videos.json">View replay verification ↗</a></p></details>
+</section>
+<section id="results" class="section wrap" aria-labelledby="results-title">
+  <div class="section-heading"><h2 id="results-title">Prediction and action comparisons</h2><p>Explore recorded simulation outputs across two tasks and two model settings.</p></div>
+  <div class="explorer">
+    <div class="explorer-toolbar"><div class="segmented" role="group" aria-label="Model setting"><button type="button" data-model="wm" aria-pressed="true">World model <span>WM</span></button><button type="button" data-model="wam" aria-pressed="false">World-action model <span>WAM</span></button></div><div class="task-selector" role="group" aria-label="Manipulation task"><button type="button" data-task="push" aria-pressed="true">Push digit</button><button type="button" data-task="toss" aria-pressed="false">Toss cube</button></div></div>
+    <div class="explorer-body">
+      <div class="example-heading"><div><p class="mini-label" id="example-kicker">Hidden center of mass</p><h3 id="example-title">Same action. Which future?</h3><p id="task-context" class="task-context">Hidden center of mass varies; appearance stays the same.</p></div><label class="frame-toggle"><input type="checkbox" id="full-frame"> Full frame</label></div>
+      <div id="wm-controls" class="time-controls"><span>Future time</span><div id="time-buttons" role="group" aria-label="Future timestamp"></div><span class="time-note">Four recorded frames</span></div>
+      <div id="wam-controls" class="condition-controls" hidden><span>Dynamics condition</span><div role="group" aria-label="Dynamics condition"><button type="button" data-condition="A" aria-pressed="true">A</button><button type="button" data-condition="B" aria-pressed="false">B</button></div><span id="condition-detail"></span></div>
+      <div class="observation-strip"><img id="observation" src="static/media/push-wm-observation.webp" width="224" height="224" alt="Current observation for this example"><span id="observation-caption">Current observation</span><span class="observation-arrow" aria-hidden="true">→</span><span id="query-caption">One recorded action, shared by both predictors</span></div>
+      <div id="comparison" class="comparison" aria-live="polite"></div>
+      <div id="error-legend" class="error-legend"><span>RGB error</span><span>0</span><i aria-hidden="true"></i><span>64+</span><span>Same scale for both models</span></div>
+      <p id="example-note" class="example-note"></p>
+      <details class="protocol"><summary>Example selection &amp; measurement</summary><div id="example-protocol"></div></details>
+    </div>
+  </div>
+  <noscript><p>Enable JavaScript for the interactive comparisons. All four tasks and their static figures are available in the <a href="static/paper/ddm.pdf">paper</a>.</p></noscript>
+</section>
+<section id="gallery" class="section tinted" aria-labelledby="gallery-title"><div class="wrap">
+  <div class="section-heading"><h2 id="gallery-title">More world-model predictions</h2><p>Inspect every locally decoded example, including cases where the improvement is small or the prediction misses. Compare the blind reference, raw-history conditioning, and DDM against the realized future.</p></div>
+  <div id="prediction-gallery" class="prediction-gallery"></div>
+  <p class="note">12 push cases × 4 times × 4 views; 4 toss cases × 4 times × 4 views. These available examples form a convenience sample, not an aggregate evaluation. <a href="static/data/gallery-provenance.json">Sources and shared crops ↗</a></p>
+</div></section>
+<section id="evidence" class="section tinted" aria-labelledby="evidence-title"><div class="wrap">
+  <div class="section-heading"><h2 id="evidence-title">Quantitative results</h2><p>Matched comparisons from the current manuscript. Gains below are percentage points.</p></div>
+  <div class="stat-grid">
+    <article class="stat-card"><p class="mini-label">Push digit · World model</p><div class="stat-value">+12.29<span>pp</span></div><h3>Dynamics identification</h3><div class="bar-row"><span>Two-stage history</span><b>31.96%</b><i style="--value:53.267%"></i></div><div class="bar-row ddm-bar"><span>DDM</span><b>44.25%</b><i style="--value:73.75%"></i></div><p>8 context interactions · Four regimes<br>Chance: 25%</p></article>
+    <article class="stat-card"><p class="mini-label">Push digit · World-action model</p><div class="stat-value">+12.38<span>pp</span></div><h3>Open-loop task success</h3><div class="bar-row"><span>Cosmos Policy</span><b>45.25%</b><i style="--value:75.417%"></i></div><div class="bar-row ddm-bar"><span>DDM</span><b>57.63%</b><i style="--value:96.05%"></i></div><p>8 context interactions · 800 evaluations<br>Matched dense-target reference<br>Success: &lt;1.5 cm and &lt;2°</p></article>
+    <article class="stat-card"><p class="mini-label">RoboCasa · DDM-pred only</p><div class="stat-value">+2.8<span>pp</span></div><h3>24-task macro success</h3><div class="bar-row"><span>Cosmos Policy</span><b>37.9%</b><i style="--value:63.167%"></i></div><div class="bar-row ddm-bar"><span>Dense future target</span><b>40.7%</b><i style="--value:67.833%"></i></div><p>18 tasks improve · 1 ties · 5 decline<br>Descriptive single-checkpoint check</p></article>
+  </div>
+  <div id="tables" class="complete-results"><div class="table-section-heading"><h3>Complete results</h3><p>All methods, context sizes, and reported task results.</p></div><div id="result-tables"></div></div>
+</div></section>
+<section class="section wrap tasks" aria-labelledby="tasks-title"><div class="section-heading"><h2 id="tasks-title">Two sources of hidden dynamics</h2></div>
+  <div class="task-descriptions"><article><h3><i class="dot teal"></i> Push digit</h3><p>Hidden center-of-mass offsets change translation and rotation under a push. A single image leaves those dynamics ambiguous.</p></article><article><h3><i class="dot orange"></i> Toss cube</h3><p>Robot damping changes how a command executes and where an identical cube lands. Release time and yaw form the two-dimensional action.</p></article></div>
+  <figure class="task-figure"><a href="static/media/toss-setup.webp" target="_blank" rel="noopener" aria-label="Open full-size toss cube task illustrations"><img src="static/media/toss-setup.webp" loading="lazy" alt="Toss cube task illustrations: under different robot damping, the same action has different outcomes, while different actions reach a shared goal."><span class="expand-hint">View full size ↗</span></a><figcaption>Blender task illustrations. Colors distinguish robot damping; the cube’s properties stay fixed. Toss flight is reconstructed for illustration.</figcaption></figure>
+</section>
+</main>
+<footer class="wrap footer"><span>DDM · Anonymous submission</span><div><a href="static/data/provenance.json">Figure provenance</a><a href="#main">Back to top ↑</a></div></footer>
+</body>
+</html>
