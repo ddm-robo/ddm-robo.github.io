@@ -1,15 +1,76 @@
 {
-  "manuscript": "paper/main.tex",
-  "manuscript_sha256": "2e40b8a7a191999d7da2a4dc224fa78d20281794b921de1d81cc606509bc563f",
-  "paper_pdf_sha256": "5f07eabd0afb8603382f2ea2cf5ea7d3290e80594d1d5a9dccf6a7d2c80cc745",
+  "manuscript": "paper/main_clean.tex",
+  "manuscript_sha256": "d9f0b587c81d07a8b4637a9faa67b972dfdd23ed6ce517967451d653d30361e1",
+  "paper_pdf_sha256": "f88ab779316047fd770db84e837fe28d0f5ea2ef9c8ccc48b8acabd546c7e3af",
   "notes": [
     "Blender images are task/method illustrations, not model outputs.",
     "WM examples: push q50_y-1.75; toss bs13_by10_a173.",
     "WAM examples selected for large method gaps, not aggregate performance.",
     "Full and cropped evaluation frames are lossless; per-time crops shared by all methods.",
-    "All experiments in simulation; WM/WAM separately trained."
+    "Controlled WM/WAM evaluations are in simulation; separately trained. Real chair check evaluates DDM-pred only."
   ],
   "assets": [
+    {
+      "file": "static/media/teaser-current.webp",
+      "source": "paper/figures/teaser_motion_with_com.pdf",
+      "sha256": "33cada368ddf6290db851a03673531f7246f51035874e0a6ed1d8ce0b89d08ed",
+      "crop": null,
+      "render": {
+        "page": 1,
+        "scale_to": 1600
+      },
+      "transform": "Poppler PDF rasterization; lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/hero-motion.webp",
+      "source": "paper/figures/teaser_motion_with_com.pdf",
+      "sha256": "33cada368ddf6290db851a03673531f7246f51035874e0a6ed1d8ce0b89d08ed",
+      "crop": [
+        0,
+        0,
+        1592,
+        1036
+      ],
+      "render": {
+        "page": 1,
+        "scale_to": 1600
+      },
+      "transform": "Poppler PDF rasterization; lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/teaser-conditioning.webp",
+      "source": "paper/figures/teaser_motion_with_com.pdf",
+      "sha256": "33cada368ddf6290db851a03673531f7246f51035874e0a6ed1d8ce0b89d08ed",
+      "crop": [
+        0,
+        1036,
+        1592,
+        1600
+      ],
+      "render": {
+        "page": 1,
+        "scale_to": 1600
+      },
+      "transform": "Poppler PDF rasterization; lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/framework.webp",
+      "source": "paper/figures/ddm_framework_single_column.pdf",
+      "sha256": "aa2be69f3363e93a9e208d173fc928080eea71eed12b4b6a7897a582fc2bbe2c",
+      "crop": null,
+      "render": {
+        "page": 1,
+        "scale_to": 1400
+      },
+      "transform": "Poppler PDF rasterization; lossless RGB WebP; optional crop only"
+    },
+    {
+      "file": "static/media/real-chair-gallery.webp",
+      "source": "paper/figures/realworld/fauna_chair_gallery.png",
+      "sha256": "5e2f37e26de93385435143b64aa503b4895c2a344295b3227486fe06f9edbbb7",
+      "crop": null,
+      "transform": "lossless RGB WebP; optional crop only"
+    },
     {
       "file": "static/media/hero-initial.webp",
       "source": "paper/figures/push_digit_teaser/teaser_closeup/assets/initial.png",
@@ -42,13 +103,6 @@
       "file": "static/media/com-B.webp",
       "source": "paper/figures/push_digit_teaser/teaser_closeup/assets/a_B_com.png",
       "sha256": "5a07b1a72111f11d9c0888943ab7c4187c407ec72d0492b765c876e797c890dd",
-      "crop": null,
-      "transform": "lossless RGB WebP; optional crop only"
-    },
-    {
-      "file": "static/media/framework.webp",
-      "source": "paper/figures/ddm_framework.png",
-      "sha256": "68eec52c13db9f4f79bea6bccb830f3ee9d586b4403574ce3a198b2b87687e58",
       "crop": null,
       "transform": "lossless RGB WebP; optional crop only"
     },

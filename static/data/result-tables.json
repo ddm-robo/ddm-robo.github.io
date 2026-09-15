@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "source": {
-    "path": "paper/main.tex",
-    "sha256": "2e40b8a7a191999d7da2a4dc224fa78d20281794b921de1d81cc606509bc563f",
+    "path": "paper/main_clean.tex",
+    "sha256": "d9f0b587c81d07a8b4637a9faa67b972dfdd23ed6ce517967451d653d30361e1",
     "generator": "proj_page/scripts/export_result_tables.py"
   },
   "value_format": "Strings preserve exact manuscript precision; — denotes unreported values. Raw TeX cells provide row-level provenance.",
@@ -13,6 +13,7 @@
       "title": "Push-digit · World model",
       "columns": [
         "Method / context interactions k",
+        "Latent MSE ↓",
         "Training regimes (%) ↑",
         "All five regimes (%) ↑",
         "Held-out regime, k=8 (%) ↑"
@@ -21,12 +22,14 @@
         {
           "cells": [
             "Cosmos-Predict2",
+            "—",
             "25.00",
             "—",
             "—"
           ],
           "source_cells": [
             "Cosmos-Predict2",
+            "---",
             "~\\num{25.00}",
             "---",
             "---"
@@ -34,13 +37,15 @@
         },
         {
           "cells": [
-            "Two-stage history, k=2",
+            "IIDA+, k=2",
+            "0.0184",
             "28.00",
             "21.67",
             "—"
           ],
           "source_cells": [
-            "Two-stage hist., $k=2$",
+            "\\iidap{}, $k=2$",
+            "~\\num{0.0184}",
             "~\\num{28.00}",
             "~\\num{21.67}",
             "---"
@@ -48,13 +53,15 @@
         },
         {
           "cells": [
-            "Two-stage history, k=4",
+            "IIDA+, k=4",
+            "0.0181",
             "29.96",
             "21.87",
             "—"
           ],
           "source_cells": [
-            "Two-stage hist., $k=4$",
+            "\\iidap{}, $k=4$",
+            "~\\num{0.0181}",
             "~\\num{29.96}",
             "~\\num{21.87}",
             "---"
@@ -62,13 +69,15 @@
         },
         {
           "cells": [
-            "Two-stage history, k=8",
+            "IIDA+, k=8",
+            "0.0171",
             "31.96",
             "23.83",
             "16.83"
           ],
           "source_cells": [
-            "Two-stage hist., $k=8$",
+            "\\iidap{}, $k=8$",
+            "~\\num{0.0171}",
             "~\\num{31.96}",
             "~\\num{23.83}",
             "~\\num{16.83}"
@@ -77,12 +86,14 @@
         {
           "cells": [
             "DDM, k=2",
+            "0.0158",
             "37.58",
             "29.00",
             "—"
           ],
           "source_cells": [
             "\\method{}, $k=2$",
+            "~\\num{0.0158}",
             "~\\num{37.58}",
             "~\\num{29.00}",
             "---"
@@ -91,12 +102,14 @@
         {
           "cells": [
             "DDM, k=4",
+            "0.0133",
             "41.46",
             "32.20",
             "—"
           ],
           "source_cells": [
             "\\method{}, $k=4$",
+            "~\\num{0.0133}",
             "~\\num{41.46}",
             "~\\num{32.20}",
             "---"
@@ -105,12 +118,14 @@
         {
           "cells": [
             "DDM, k=8",
+            "0.0125",
             "44.25",
             "34.90",
             "24.33"
           ],
           "source_cells": [
             "\\textbf{\\method{}, $k=8$}",
+            "\\textbf{\\num{0.0125}}",
             "\\textbf{\\num{44.25}}",
             "\\textbf{\\num{34.90}}",
             "\\textbf{\\num{24.33}}"
@@ -118,15 +133,16 @@
         }
       ],
       "notes": [
-        "Dynamics identification chooses the counterfactual future closest to the predicted future in latent space. It tests dynamics sensitivity, not recovery of a named parameter. Higher is better.",
-        "600 matched windows: four training regimes (2,400 trials; chance 25%) or all five regimes (3,000 trials; chance 20%). Held-out is the y+1.75 cm slice of the five-regime evaluation, with same-regime context at k=8; this dynamics value is excluded from training.",
-        "k is the number of complete, same-regime context interactions; the query is excluded. Two-stage history and DDM share the reference warm start, context budget, encoder path, store, and optimization. WM uses standard dense future supervision.",
-        "All experiments are in simulation. Each model is trained once; reported intervals describe evaluation-unit variation, not variation across training runs. Values retain the manuscript's printed precision. — means not reported, not zero."
+        "Per-element latent MSE measures future-prediction error; lower is better. Dynamics identification accuracy is reported separately; higher is better.",
+        "Identification tests four training regimes (chance 25%) or all five regimes (chance 20%). Held-out is the y+1.75 cm slice of the five-regime evaluation, with same-regime context at k=8; this dynamics value is excluded from training.",
+        "Dynamics identification selects the counterfactual future closest to the prediction in latent space. It measures dynamics sensitivity, not named-parameter recovery. Matched variants use identical query inputs, batch position, and sampler noise, so a dynamics-blind prediction is identical across variants and identification is structurally at chance (1 / number of tested regimes). Future-prediction MSE measures latent error against the realized future; it is distinct from identification accuracy and from the qualitative figures' RGB error.",
+        "k counts distinct, preceding same-regime context interactions, excluding the query. IIDA+ (WM) and IPA Policy+ (WAM) encode realized futures; DDM encodes residuals. These enhanced history baselines match DDM's context budget, reference warm start, context encoder, optimization, evaluation, and iteration-matched checkpoints.",
+        "These five tables report simulation results. The manuscript's real-world chair-pushing check is separate and is not included here. Values retain the manuscript's printed precision. — means not reported, not zero."
       ],
       "provenance": {
         "label": "tab:wm",
-        "line": 481,
-        "sha256": "65d94919d68ea503315dd766f4fe0b910c1ca1e89bc3486ed2ea5db8e1732f04"
+        "line": 351,
+        "sha256": "d350b9cf06696a73297720a9ed5cce0370361880ab7ea3f52fb274a6f836c46e"
       }
     },
     {
@@ -135,7 +151,6 @@
       "title": "Toss-cube · World model",
       "columns": [
         "Method / context interactions k",
-        "Warm start",
         "Windowed latent MSE ↓",
         "Yaw identification (%) ↑"
       ],
@@ -143,69 +158,47 @@
         {
           "cells": [
             "Cosmos-Predict2",
-            "pretrained",
             "0.0437",
             "14.29"
           ],
           "source_cells": [
             "Cosmos-Predict2",
-            "pretrained",
             "~\\num{0.0437}",
             "~\\num{14.29}"
           ]
         },
         {
           "cells": [
-            "IIDA+, k=8",
-            "pretrained",
-            "0.0297",
-            "56.55"
-          ],
-          "source_cells": [
-            "\\iidap{}, $k=8$",
-            "pretrained",
-            "~\\num{0.0297}",
-            "~\\num{56.55}"
-          ]
-        },
-        {
-          "cells": [
-            "Two-stage history, k=2",
-            "reference",
+            "IIDA+, k=2",
             "0.0268",
             "63.69"
           ],
           "source_cells": [
-            "Two-stage hist., $k=2$",
-            "reference",
+            "\\iidap{}, $k=2$",
             "~\\num{0.0268}",
             "~\\num{63.69}"
           ]
         },
         {
           "cells": [
-            "Two-stage history, k=4",
-            "reference",
+            "IIDA+, k=4",
             "0.0269",
             "60.71"
           ],
           "source_cells": [
-            "Two-stage hist., $k=4$",
-            "reference",
+            "\\iidap{}, $k=4$",
             "~\\num{0.0269}",
             "~\\num{60.71}"
           ]
         },
         {
           "cells": [
-            "Two-stage history, k=8",
-            "reference",
+            "IIDA+, k=8",
             "0.0269",
             "62.50"
           ],
           "source_cells": [
-            "Two-stage hist., $k=8$",
-            "reference",
+            "\\iidap{}, $k=8$",
             "~\\num{0.0269}",
             "~\\num{62.50}"
           ]
@@ -213,13 +206,11 @@
         {
           "cells": [
             "DDM, k=2",
-            "reference",
             "0.0257",
             "63.69"
           ],
           "source_cells": [
             "\\method{}, $k=2$",
-            "reference",
             "~\\num{0.0257}",
             "~\\num{63.69}"
           ]
@@ -227,13 +218,11 @@
         {
           "cells": [
             "DDM, k=4",
-            "reference",
             "0.0255",
             "63.69"
           ],
           "source_cells": [
             "\\method{}, $k=4$",
-            "reference",
             "~\\num{0.0255}",
             "~\\num{63.69}"
           ]
@@ -241,28 +230,27 @@
         {
           "cells": [
             "DDM, k=8",
-            "reference",
             "0.0250",
             "66.67"
           ],
           "source_cells": [
             "\\textbf{\\method{}, $k=8$}",
-            "reference",
             "\\textbf{\\num{0.0250}}",
             "\\textbf{\\num{66.67}}"
           ]
         }
       ],
       "notes": [
-        "168 evaluation rows. Windowed latent MSE (WMSE) is measured in a 14 × 14 region centered on the true cube, with identical windows for all methods; lower is better. This is not full-frame pixel error.",
+        "Windowed latent MSE (WMSE) measures future-prediction error in a 14 × 14 region centered on the true cube, with identical windows for all methods; lower is better. This prevents the static background from dominating the score.",
         "Yaw identification distinguishes seven yaw-damping values within the held-out swing-damping row; chance is 14.29%. Higher is better. k counts complete same-regime context interactions.",
-        "Warm start is reproduced from the table: pretrained versus the trained dynamics-blind reference. IIDA+ is a scaled pretrained history baseline, not an exact reproduction of IIDA. Cosmos-Predict2, IIDA+, and reference-warm-started rows are evaluated at 3,000, 7,500, and 10,000 iterations, respectively.",
-        "All experiments are in simulation. Each model is trained once; reported intervals describe evaluation-unit variation, not variation across training runs. Values retain the manuscript's printed precision. — means not reported, not zero."
+        "Dynamics identification selects the counterfactual future closest to the prediction in latent space. It measures dynamics sensitivity, not named-parameter recovery. Matched variants use identical query inputs, batch position, and sampler noise, so a dynamics-blind prediction is identical across variants and identification is structurally at chance (1 / number of tested regimes). Future-prediction MSE measures latent error against the realized future; it is distinct from identification accuracy and from the qualitative figures' RGB error.",
+        "k counts distinct, preceding same-regime context interactions, excluding the query. IIDA+ (WM) and IPA Policy+ (WAM) encode realized futures; DDM encodes residuals. These enhanced history baselines match DDM's context budget, reference warm start, context encoder, optimization, evaluation, and iteration-matched checkpoints.",
+        "These five tables report simulation results. The manuscript's real-world chair-pushing check is separate and is not included here. Values retain the manuscript's printed precision. — means not reported, not zero."
       ],
       "provenance": {
         "label": "tab:toss-wm",
-        "line": 530,
-        "sha256": "08248638a04b909561360dd85ed74f7df07654a0241cc569d7a7811124e790c0"
+        "line": 377,
+        "sha256": "abec4154b11be491102393101c1495cf37e75b34fba185cda9e09cd1af93144a"
       }
     },
     {
@@ -272,119 +260,102 @@
       "columns": [
         "Method / context interactions k",
         "Success (%) ↑",
-        "95% confidence interval (%)",
-        "Δ vs matched dense CP (pp; p)"
+        "Δ vs matched dense CP (pp)"
       ],
       "rows": [
         {
           "cells": [
+            "Cosmos Policy (matched dense target)",
+            "45.25",
+            "—"
+          ],
+          "source_cells": [
+            "Cosmos Policy (matched)",
+            "~\\num{45.25}",
+            "---"
+          ]
+        },
+        {
+          "cells": [
+            "IPA Policy+, k=2",
+            "46.37",
+            "+1.1"
+          ],
+          "source_cells": [
+            "\\ipap{}, $k=2$",
+            "~\\num{46.37}",
+            "~\\num{+1.1}"
+          ]
+        },
+        {
+          "cells": [
+            "IPA Policy+, k=4",
+            "45.75",
+            "+0.5"
+          ],
+          "source_cells": [
+            "\\ipap{}, $k=4$",
+            "~\\num{45.75}",
+            "~\\num{+0.5}"
+          ]
+        },
+        {
+          "cells": [
+            "IPA Policy+, k=8",
+            "46.75",
+            "+1.5"
+          ],
+          "source_cells": [
+            "\\ipap{}, $k=8$",
+            "~\\num{46.75}",
+            "~\\num{+1.5}"
+          ]
+        },
+        {
+          "cells": [
             "DDM, k=2",
             "55.13",
-            "[50.8,59.5]",
-            "+9.9 (2e-07)"
+            "+9.9"
           ],
           "source_cells": [
             "\\method{}, $k=2$",
             "~\\num{55.13}",
-            "{\\scriptsize[50.8,59.5]}",
-            "~\\num{+9.9}\\,{\\scriptsize(2e-07)}"
+            "~\\num{+9.9}"
           ]
         },
         {
           "cells": [
             "DDM, k=4",
             "55.75",
-            "[51.3,60.1]",
-            "+10.5 (1e-07)"
+            "+10.5"
           ],
           "source_cells": [
             "\\method{}, $k=4$",
             "~\\num{55.75}",
-            "{\\scriptsize[51.3,60.1]}",
-            "~\\num{+10.5}\\,{\\scriptsize(1e-07)}"
+            "~\\num{+10.5}"
           ]
         },
         {
           "cells": [
             "DDM, k=8",
             "57.63",
-            "[53.4,61.9]",
-            "+12.4 (2.6e-10)"
+            "+12.4"
           ],
           "source_cells": [
             "\\textbf{\\method{}, $k=8$}",
             "\\textbf{\\num{57.63}}",
-            "{\\scriptsize[53.4,61.9]}",
-            "~\\num{+12.4}\\,{\\scriptsize(2.6e-10)}"
+            "\\textbf{\\num{+12.4}}"
           ]
         },
         {
           "cells": [
             "DDM k=8, RDD=0",
             "45.25",
-            "—",
             "—"
           ],
           "source_cells": [
             "\\quad \\method{} $k=8$, RDD$=0$",
             "~\\num{45.25}",
-            "---",
-            "---"
-          ]
-        },
-        {
-          "cells": [
-            "Two-stage history, k=2",
-            "46.37",
-            "[41.6,51.0]",
-            "+1.1 (0.57)"
-          ],
-          "source_cells": [
-            "Two-stage hist., $k=2$",
-            "~\\num{46.37}",
-            "{\\scriptsize[41.6,51.0]}",
-            "~\\num{+1.1}\\,{\\scriptsize(0.57)}"
-          ]
-        },
-        {
-          "cells": [
-            "Two-stage history, k=4",
-            "45.75",
-            "[41.4,50.1]",
-            "+0.5 (0.84)"
-          ],
-          "source_cells": [
-            "Two-stage hist., $k=4$",
-            "~\\num{45.75}",
-            "{\\scriptsize[41.4,50.1]}",
-            "~\\num{+0.5}\\,{\\scriptsize(0.84)}"
-          ]
-        },
-        {
-          "cells": [
-            "Two-stage history, k=8",
-            "46.75",
-            "[42.4,51.1]",
-            "+1.5 (0.46)"
-          ],
-          "source_cells": [
-            "Two-stage hist., $k=8$",
-            "~\\num{46.75}",
-            "{\\scriptsize[42.4,51.1]}",
-            "~\\num{+1.5}\\,{\\scriptsize(0.46)}"
-          ]
-        },
-        {
-          "cells": [
-            "IPA Policy+, k=8",
-            "54.13",
-            "—",
-            "—"
-          ],
-          "source_cells": [
-            "\\ipap{}, $k=8$",
-            "~\\num{54.13}",
-            "---",
             "---"
           ]
         },
@@ -392,42 +363,27 @@
           "cells": [
             "Dynamics oracle",
             "75.12",
-            "[71.1,79.0]",
-            "+29.9 (4e-47)"
+            "+29.9"
           ],
           "source_cells": [
             "Dynamics oracle",
             "~\\num{75.12}",
-            "{\\scriptsize[71.1,79.0]}",
-            "~\\num{+29.9}\\,{\\scriptsize(4e-47)}"
-          ]
-        },
-        {
-          "cells": [
-            "Cosmos Policy (matched dense target)",
-            "45.25",
-            "[40.8,49.8]",
-            "—"
-          ],
-          "source_cells": [
-            "Cosmos Policy (matched)",
-            "~\\num{45.25}",
-            "{\\scriptsize[40.8,49.8]}",
-            "---"
+            "~\\num{+29.9}"
           ]
         }
       ],
       "notes": [
-        "800 evaluations from 200 held-out goal windows over the four training dynamics regimes. One sampled action is executed open-loop; success requires both position error <1.5 cm and yaw error <2°. Higher is better.",
+        "Held-out goal windows over the four training dynamics regimes. One sampled action is executed open-loop; success requires reaching within 1.5 cm and 2° of the goal. Higher is better.",
         "Cosmos Policy (matched dense target) is the context-free reference used for these controlled WAM comparisons. The default controlled WAM models share dense future targets; it is distinct from the regular repeated-terminal Cosmos Policy in the RoboCasa table. k counts complete context interactions.",
-        "95% intervals cluster over goal windows; p-values use paired McNemar tests. Δ is in percentage points versus matched dense Cosmos Policy, printed to one decimal exactly as in the table (for example, +12.4; the prose reports +12.38). Unreported intervals and comparisons remain —.",
-        "RDD=0 evaluates the same DDM k=8 checkpoint with its residual descriptor zeroed; its 45.25% success merely equals the CP rate numerically. The dynamics oracle supplies ground-truth dynamics through the same modulation interface. IPA Policy+ uses complete interactions and is a scaled adaptation; its 12,000-iteration result is descriptive, versus 10,000 iterations for the matched models.",
-        "All experiments are in simulation. Each model is trained once; reported intervals describe evaluation-unit variation, not variation across training runs. Values retain the manuscript's printed precision. — means not reported, not zero."
+        "Δ is in percentage points versus matched dense Cosmos Policy, printed to one decimal exactly as in the table (for example, +12.4). The printed table reports no confidence intervals or p-values; unreported comparisons remain —.",
+        "RDD=0 evaluates the same DDM k=8 checkpoint with its residual descriptor zeroed, returning success to 45.25%. The dynamics oracle supplies ground-truth dynamics through the same modulation interface.",
+        "k counts distinct, preceding same-regime context interactions, excluding the query. IIDA+ (WM) and IPA Policy+ (WAM) encode realized futures; DDM encodes residuals. These enhanced history baselines match DDM's context budget, reference warm start, context encoder, optimization, evaluation, and iteration-matched checkpoints.",
+        "These five tables report simulation results. The manuscript's real-world chair-pushing check is separate and is not included here. Values retain the manuscript's printed precision. — means not reported, not zero."
       ],
       "provenance": {
         "label": "tab:policy",
-        "line": 603,
-        "sha256": "ea01f6e1488d70f1fa8a65911b7aec1c56dd80489e6382d43a09db50895658fc"
+        "line": 571,
+        "sha256": "c63bd6b89b6f3881191a30efd33d83fc8bd5b6d78e6e3a70871066d4da7c8730"
       }
     },
     {
@@ -436,8 +392,8 @@
       "title": "Toss-cube · World-action model",
       "columns": [
         "Method / context interactions k",
-        "Unseen goals (cm; n=480) ↓",
-        "Unseen dynamics (cm; n=616) ↓"
+        "Unseen goals (cm) ↓",
+        "Unseen dynamics (cm) ↓"
       ],
       "rows": [
         {
@@ -454,36 +410,36 @@
         },
         {
           "cells": [
-            "Two-stage history, k=2",
+            "IPA Policy+, k=2",
             "1.29",
             "3.03"
           ],
           "source_cells": [
-            "Two-stage hist., $k=2$",
+            "\\ipap{}, $k=2$",
             "\\textbf{\\num{1.29}}",
             "~\\num{3.03}"
           ]
         },
         {
           "cells": [
-            "Two-stage history, k=4",
+            "IPA Policy+, k=4",
             "1.29",
             "3.05"
           ],
           "source_cells": [
-            "Two-stage hist., $k=4$",
+            "\\ipap{}, $k=4$",
             "\\textbf{\\num{1.29}}",
             "~\\num{3.05}"
           ]
         },
         {
           "cells": [
-            "Two-stage history, k=8",
+            "IPA Policy+, k=8",
             "1.36",
             "3.05"
           ],
           "source_cells": [
-            "Two-stage hist., $k=8$",
+            "\\ipap{}, $k=8$",
             "~\\num{1.36}",
             "~\\num{3.05}"
           ]
@@ -526,15 +482,16 @@
         }
       ],
       "notes": [
-        "Oracle-relative landing regret, not raw goal distance: generated actions are snapped to the nearest of 180 pre-rolled candidate actions and scored relative to the oracle in the same dynamics regime. Lower is better; the lookup protocol has an empirical floor of 1.2 cm.",
-        "Unseen goals: 480 pairs over 24 trained dynamics regimes. Unseen dynamics: 616 pairs over 11 held-out regimes. k counts complete same-regime context interactions.",
-        "Cosmos Policy (matched dense target) is the context-free reference. Controlled WAM comparisons share dense targets; two-stage history and DDM share the reference warm start, context budget, encoder path, store, and optimization. No confidence intervals are reported in this table.",
-        "All experiments are in simulation. Each model is trained once; reported intervals describe evaluation-unit variation, not variation across training runs. Values retain the manuscript's printed precision. — means not reported, not zero."
+        "Landing regret subtracts the best bank-action landing distance from the policy's landing-to-goal distance in the same regime. Generated actions are snapped to the nearest pre-rolled action before scoring. Lower is better; the lookup protocol has an empirical floor of 1.2 cm.",
+        "Unseen goals use held-out locations over 24 trained dynamics regimes. Unseen dynamics retain training goals over 11 held-out regimes. The two columns measure different evaluation settings and are not directly ordered.",
+        "Cosmos Policy (matched dense target) is the context-free reference and shares DDM's dense future supervision. No confidence intervals are reported in this table.",
+        "k counts distinct, preceding same-regime context interactions, excluding the query. IIDA+ (WM) and IPA Policy+ (WAM) encode realized futures; DDM encodes residuals. These enhanced history baselines match DDM's context budget, reference warm start, context encoder, optimization, evaluation, and iteration-matched checkpoints.",
+        "These five tables report simulation results. The manuscript's real-world chair-pushing check is separate and is not included here. Values retain the manuscript's printed precision. — means not reported, not zero."
       ],
       "provenance": {
         "label": "tab:toss-wam",
-        "line": 654,
-        "sha256": "c93e61d42978d257c03d4049d35ad25161b70434f2e6df38a479d1b855e94e78"
+        "line": 620,
+        "sha256": "3fea698e688fe0423832c8be8a0b42847ce17dbdcd95c3f9dd18d3606c4c41ca"
       }
     },
     {
@@ -902,13 +859,13 @@
       "notes": [
         "Task success and the unweighted 24-task macro average; higher is better. Δ is DDM-pred minus Cosmos Policy in percentage points. PnP = pick-and-place; Cab. = cabinet; Micro. = microwave.",
         "Regular Cosmos Policy uses repeated-terminal future supervision. DDM-pred changes only that target to four distributed future observations within the same latent budget. This comparison has no DDM-cond residual conditioning and no controlled dynamics shifts; it is separate from the matched dense CP references in the controlled WAM tables.",
-        "Both arms train for 100,000 iterations on eight H100 GPUs. This is a descriptive single-checkpoint comparison, with no confidence intervals or significance tests reported. 18 tasks improve, 1 ties, and 5 decline. Macro averages and deltas retain the manuscript's printed precision.",
-        "All experiments are in simulation. Each model is trained once; reported intervals describe evaluation-unit variation, not variation across training runs. Values retain the manuscript's printed precision. — means not reported, not zero."
+        "Both arms train for 100,000 iterations on eight H100 GPUs. This is a descriptive comparison, with no confidence intervals or significance tests reported in the table. 18 tasks improve, 1 ties, and 5 decline. Macro averages and deltas retain the manuscript's printed precision.",
+        "These five tables report simulation results. The manuscript's real-world chair-pushing check is separate and is not included here. Values retain the manuscript's printed precision. — means not reported, not zero."
       ],
       "provenance": {
         "label": "tab:robocasa",
-        "line": 697,
-        "sha256": "9e1c128d49b3930b68c56ebe4dd1093e0860a42c0c92e94b53b3ee63d1d35d8a"
+        "line": 661,
+        "sha256": "765d3ffc51c6aeb0f8cfc0715e265bf11f296f6ccf7d1b12b4e5c3f3eab64882"
       }
     }
   ]
